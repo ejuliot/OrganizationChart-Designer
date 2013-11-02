@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.obeonetwork.dsl.organizationchart.presentation.OrganizationChartModelWizardID"
+            name="%_UI_OrganizationChartModelWizard_label"
+            class="org.obeonetwork.dsl.organizationchart.presentation.OrganizationChartModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OrganizationChartModelFile.gif">
+         <description>%_UI_OrganizationChartModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.obeonetwork.dsl.organizationchart.presentation.OrganizationChartEditorID"
+            name="%_UI_OrganizationChartEditor_label"
+            icon="icons/full/obj16/OrganizationChartModelFile.gif"
+            extensions="orgchart"
+            class="org.obeonetwork.dsl.organizationchart.presentation.OrganizationChartEditor"
+            contributorClass="org.obeonetwork.dsl.organizationchart.presentation.OrganizationChartActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
