@@ -7,7 +7,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="function" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="manages" upperBound="-1"
-        eType="#//Employee"/>
+        eType="#//Employee" eOpposite="#//Employee/manager"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//Service"
         eOpposite="#//Service/employees"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
@@ -15,6 +15,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="isInChargeOf" eType="#//Service"
         eOpposite="#//Service/manager"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigraph" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manager" eType="#//Employee"
+        eOpposite="#//Employee/manages"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Organization">
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"

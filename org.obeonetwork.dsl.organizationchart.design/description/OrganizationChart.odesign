@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="OrganizationChart" version="7.0.0">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="OrganizationChart" version="7.0.0">
   <ownedViewpoints name="OrganizationChart" modelFileExtension="orgchart">
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Services Organization" titleExpression="Organigramme des services" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Services Organization" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Managers n-1">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@containerMappings[name='SO_Service']/@subNodeMappings[name='OS_S_Employee']" semanticConditionExpression="[isInChargeOf.oclIsUndefined()/]"/>
@@ -15,7 +15,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="SO_Service" preconditionExpression="&lt;%employee.manages.nSize()%>" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@toolSections.0/@ownedTools[name='SO_Service_DE']" semanticCandidatesExpression="[services/]" domainClass="organizationchart.Service" dropDescriptions="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='ServicesTest']/@defaultLayer/@toolSections.0/@ownedTools[name='Services_Drop'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@toolSections.0/@ownedTools[name='SO_Drop_Employee']" childrenPresentation="List">
+        <containerMappings name="SO_Service" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@toolSections.0/@ownedTools[name='SO_Service_DE']" semanticCandidatesExpression="feature:services" domainClass="organizationchart.Service" dropDescriptions="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='ServicesTest']/@defaultLayer/@toolSections.0/@ownedTools[name='Services_Drop'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@toolSections.0/@ownedTools[name='SO_Drop_Employee']" childrenPresentation="List">
           <borderedNodeMappings name="Manager" semanticCandidatesExpression="feature:manager" domainClass="organizationchart.Employee">
             <style xsi:type="style:SquareDescription" labelExpression="[trigraph/]" sizeComputationExpression="2" labelPosition="node" width="6" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -278,7 +278,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Management Hierarchy" titleExpression="Organigramme Général" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Management Hierarchy" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
         <edgeMappings name="MH_Hierarchy" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@containerMappings[name='MH_Employee']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@containerMappings[name='MH_Employee']" targetFinderExpression="feature:manages">
@@ -289,7 +289,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="MH_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="feature:employees" domainClass="organizationchart.Employee">
+        <containerMappings name="MH_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="feature:employees" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" showIcon="false" labelExpression="[firstname + ' ' + lastname/]" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -340,10 +340,21 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="MH_Drop_Employee" precondition="[oclAsType(Employee)/]" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@containerMappings[name='MH_Employee']" dragSource="BOTH">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:newSemanticContainer">
+                <subModelOperations xsi:type="tool:SetValue" featureName="manages" valueExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='EmployeeDrop'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='ServiceDrop']" name="Partial Organization Chart" titleExpression="Organigramme Libre" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='EmployeeDrop'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='ServiceDrop']" name="Partial Organization Chart" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="Partial_Service_Label" semanticCandidatesExpression="[services/]" createElements="false" domainClass="organizationchart.Service">
@@ -609,6 +620,37 @@
       <ownedColumnMappings name="Lastname" headerLabelExpression="Nom" featureName="lastname"/>
       <ownedColumnMappings name="Trigraf" headerLabelExpression="Trigramme" featureName="trigraf"/>
       <ownedColumnMappings name="Function" headerLabelExpression="Fonction" featureName="function"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Management Tree" domainClass="organizationchart.Organization">
+      <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
+      <subItemMappings name="MT_TopManager" domainClass="organizationchart.Employee" semanticCandidatesExpression="[employees->select(emp : Employee | emp.manager.oclIsUndefined())/]">
+        <defaultStyle labelExpression="[firstname + ' ' + lastname/]">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="MT_Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="feature:manages" reusedTreeItemMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Tree']/@subItemMappings[name='MT_TopManager']/@subItemMappings[name='MT_Employee']">
+          <defaultStyle labelFormat="bold" labelExpression="[firstname + ' ' + lastname/]">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <conditionalStyles predicateExpression="[manages->isEmpty()/]">
+            <style labelExpression="[firstname + ' ' + lastname/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionalStyles>
+        </subItemMappings>
+      </subItemMappings>
+      <dropTools name="MT_Drop_Employee" precondition="[oclIsTypeOf(organizationchart::Employee)/]" forceRefresh="true">
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:newContainer">
+          <subModelOperations xsi:type="tool:SetValue" featureName="manages" valueExpression="var:element"/>
+        </firstModelOperation>
+        <oldContainer name="oldContainer"/>
+        <newContainer name="newContainer"/>
+        <element name="element"/>
+        <newViewContainer name="newViewContainer"/>
+        <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+      </dropTools>
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="Incubation" modelFileExtension="orgchart">

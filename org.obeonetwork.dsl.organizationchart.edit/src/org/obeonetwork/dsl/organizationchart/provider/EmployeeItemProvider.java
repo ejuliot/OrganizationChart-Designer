@@ -68,6 +68,7 @@ public class EmployeeItemProvider
 			addLocationPropertyDescriptor(object);
 			addIsInChargeOfPropertyDescriptor(object);
 			addTrigraphPropertyDescriptor(object);
+			addManagerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -244,6 +245,28 @@ public class EmployeeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Manager feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addManagerPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Employee_manager_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_manager_feature", "_UI_Employee_type"),
+				 OrganizationChartPackage.Literals.EMPLOYEE__MANAGER,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

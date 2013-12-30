@@ -138,13 +138,22 @@ public interface OrganizationChartPackage extends EPackage {
 	int EMPLOYEE__TRIGRAPH = 7;
 
 	/**
+	 * The feature id for the '<em><b>Manager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__MANAGER = 8;
+
+	/**
 	 * The number of structural features of the '<em>Employee</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE_FEATURE_COUNT = 8;
+	int EMPLOYEE_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl <em>Organization</em>}' class.
@@ -384,6 +393,17 @@ public interface OrganizationChartPackage extends EPackage {
 	EAttribute getEmployee_Trigraph();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Employee#getManager <em>Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Manager</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getManager()
+	 * @see #getEmployee()
+	 * @generated
+	 */
+	EReference getEmployee_Manager();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.organizationchart.Organization <em>Organization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +627,14 @@ public interface OrganizationChartPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EMPLOYEE__TRIGRAPH = eINSTANCE.getEmployee_Trigraph();
+
+		/**
+		 * The meta object literal for the '<em><b>Manager</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EMPLOYEE__MANAGER = eINSTANCE.getEmployee_Manager();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl <em>Organization</em>}' class.

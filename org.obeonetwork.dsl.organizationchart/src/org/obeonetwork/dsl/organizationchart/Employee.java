@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLocation <em>Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getIsInChargeOf <em>Is In Charge Of</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getTrigraph <em>Trigraph</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getManager <em>Manager</em>}</li>
  * </ul>
  * </p>
  *
@@ -111,6 +112,7 @@ public interface Employee extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Manages</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.organizationchart.Employee}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Employee#getManager <em>Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Manages</em>' reference list isn't clear,
@@ -119,7 +121,8 @@ public interface Employee extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Manages</em>' reference list.
 	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Manages()
-	 * @model
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getManager
+	 * @model opposite="manager"
 	 * @generated
 	 */
 	EList<Employee> getManages();
@@ -233,5 +236,33 @@ public interface Employee extends EObject {
 	 * @generated
 	 */
 	void setTrigraph(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Manager</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Employee#getManages <em>Manages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Manager</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Manager</em>' reference.
+	 * @see #setManager(Employee)
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Manager()
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getManages
+	 * @model opposite="manages"
+	 * @generated
+	 */
+	Employee getManager();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Employee#getManager <em>Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Manager</em>' reference.
+	 * @see #getManager()
+	 * @generated
+	 */
+	void setManager(Employee value);
 
 } // Employee
