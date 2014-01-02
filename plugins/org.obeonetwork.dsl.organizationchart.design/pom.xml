@@ -24,7 +24,7 @@ Contributors:
   <artifactId>org.obeonetwork.dsl.organizationchart.design</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>Viewpoint Based Modeler for Organization Chart</name>
+  <name>OrganizationChart Designer</name>
 
  <build>
     <plugins>

@@ -16,7 +16,7 @@ Contributors:
   <parent>
     <groupId>org.obeonetwork.dsl.organizationchart</groupId>
     <artifactId>common.parent</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../../releng/org.obeonetwork.dsl.organizationchart.common.parent</relativePath>
   </parent>
   <groupId>org.obeonetwork.dsl.organizationchart</groupId>

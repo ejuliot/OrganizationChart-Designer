@@ -27,7 +27,10 @@ Contributors:
 
   <modules>
     <!-- Build plugins -->
-    <module>${root-path}/plugins/org.obeonetwork.gmf.runtime.diagram.ui.extension</module>
+    <!--module>${root-path}/plugins/org.obeonetwork.gmf.runtime.diagram.ui.extension</module-->
+    <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart</module>
+    <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.edit</module>
+    <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.editor</module>
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design</module>
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.branding</module>
     <!--module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design.doc</module-->

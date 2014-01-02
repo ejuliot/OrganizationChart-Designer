@@ -237,26 +237,6 @@ litigation.
          unpack="false"/-->
 
    <plugin
-         id="org.obeonetwork.dsl.organizationchart.design"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.obeonetwork.dsl.organizationchart.branding"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <!--plugin
-         id="org.obeonetwork.dsl.organizationchart.design.doc"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/-->
-
-   <plugin
          id="org.obeonetwork.dsl.organizationchart"
          download-size="0"
          install-size="0"
@@ -276,5 +256,25 @@ litigation.
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="org.obeonetwork.dsl.organizationchart.design"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.obeonetwork.dsl.organizationchart.branding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <!--plugin
+         id="org.obeonetwork.dsl.organizationchart.design.doc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/-->
 
 </feature>
