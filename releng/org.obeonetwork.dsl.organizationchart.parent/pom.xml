@@ -16,7 +16,7 @@ Contributors:
   <parent>
     <groupId>org.obeonetwork.dsl.organizationchart</groupId>
     <artifactId>common.parent</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../../releng/org.obeonetwork.dsl.organizationchart.common.parent</relativePath>
   </parent>
   <groupId>org.obeonetwork.dsl.organizationchart</groupId>
@@ -30,7 +30,7 @@ Contributors:
     <module>${root-path}/plugins/org.obeonetwork.gmf.runtime.diagram.ui.extension</module>
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design</module>
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.branding</module>
-    <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design.doc</module>
+    <!--module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design.doc</module-->
 
 
     <!-- Build test plugins -->

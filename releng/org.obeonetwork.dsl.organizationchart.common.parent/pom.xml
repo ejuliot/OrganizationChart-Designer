@@ -16,9 +16,10 @@ Contributors:
   <prerequisites>
   <maven>3.0</maven>
   </prerequisites>
+  
   <groupId>org.obeonetwork.dsl.organizationchart</groupId>
   <artifactId>common.parent</artifactId>
-  <version>4.0.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>OrganizationChart Common Parent</name>

@@ -221,21 +221,20 @@ litigation.
    </license>
 
    <requires>
-      <import feature="org.eclipse.organizationchart" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.gmf.runtime.notation" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime.acceleo" version="0.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.runtime.ide.eef" version="0.0.0" match="greaterOrEqual"/>
+      <!--import feature="org.eclipse.sirius.runtime.ide.eef" version="0.0.0" match="greaterOrEqual"/-->
       <import feature="org.eclipse.sirius.runtime.ide.ui" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime.ide.ui.acceleo" version="0.0.0" match="greaterOrEqual"/>
    </requires>
 
-   <plugin
+   <!--plugin
          id="org.obeonetwork.gmf.runtime.diagram.ui.extension"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
+         unpack="false"/-->
 
    <plugin
          id="org.obeonetwork.dsl.organizationchart.design"
@@ -251,11 +250,11 @@ litigation.
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
+   <!--plugin
          id="org.obeonetwork.dsl.organizationchart.design.doc"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"/-->
 
    <plugin
          id="org.obeonetwork.dsl.organizationchart"
