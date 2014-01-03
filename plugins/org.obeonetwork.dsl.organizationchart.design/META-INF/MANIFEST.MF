@@ -6,7 +6,15 @@ Bundle-Activator: org.obeonetwork.dsl.organizationchart.design.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.sirius,
- org.eclipse.sirius.common.acceleo.mtl.ide
+ org.eclipse.sirius.common.acceleo.mtl.ide,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.navigator,
+ org.obeonetwork.dsl.organizationchart;bundle-version="1.0.0",
+ org.eclipse.core.resources,
+ org.eclipse.emf.transaction,
+ org.eclipse.sirius.ui,
+ com.google.guava,
+ org.eclipse.sirius.common;bundle-version="0.9.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ManifestVersion: 2

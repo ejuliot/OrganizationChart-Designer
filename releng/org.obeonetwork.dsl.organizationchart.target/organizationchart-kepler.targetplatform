@@ -1,4 +1,4 @@
-target "UmlDesigner-kepler"
+target "OrganizationChartDesigner-kepler"
 
 // Eclipse release
 location "http://download.eclipse.org/releases/kepler" {

@@ -7,4 +7,48 @@
 	       name="OrganizationChart">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <wizard
+           category="org.obeonetwork.dsl.organizationchart.design.category"
+           class="org.obeonetwork.dsl.organizationchart.design.ui.wizards.newmodel.OrganizationChartModelWizard"
+           finalPerspective="org.eclipse.sirius.ui.tools.perspective.modeling"
+           icon="icons/NewOrganizationChartModel.gif"
+           id="org.obeonetwork.dsl.organizationchart.wizard.newOrganizationChartModel"
+           name="OrganizationChart Model"
+           preferredPerspectives="org.eclipse.sirius.ui.tools.perspective.modeling"
+           project="false">
+     </wizard>
+     <category
+           id="org.obeonetwork.dsl.organizationchart.design.category"
+           name="OrganizationChart">
+     </category>
+     <wizard
+           category="org.obeonetwork.dsl.organizationchart.design.category"
+           class="org.obeonetwork.dsl.organizationchart.design.ui.wizards.newmodel.OrganizationChartProjectWizard"
+           finalPerspective="org.eclipse.sirius.ui.tools.perspective.modeling"
+           icon="icons/NewOrganizationChartProject.gif"
+           id="org.obeonetwork.dsl.organizationchart.design.wizard.project"
+           name="OrganizationChart Project"
+           preferredPerspectives="org.eclipse.sirius.ui.tools.perspective.modeling"
+           project="true">
+     </wizard>
+  </extension>
+  
+  
+  <extension
+        point="org.eclipse.ui.navigator.navigatorContent">
+     <commonWizard
+           menuGroupId="org.eclipse.sirius.category"
+           type="new"
+           wizardId="org.obeonetwork.dsl.organizationchart.design.wizard.project">
+        <enablement>
+           <with variable="activeWorkbenchWindow.activePerspective">
+              <or>
+                 <equals value="org.eclipse.sirius.ui.tools.perspective.design"/>
+              </or>
+           </with>
+        </enablement>
+     </commonWizard>
+  </extension>
 </plugin>

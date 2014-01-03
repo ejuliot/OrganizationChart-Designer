@@ -26,7 +26,8 @@ Contributors:
   <name>OrganizationChart Product Parent</name>
 
   <properties>
-    <organizationchart-site>http://update.obeo.fr/integration/organizationchart/repository/</organizationchart-site>
+    <!--organizationchart-site>http://update.obeo.fr/integration/organizationchart/repository/</organizationchart-site--> 
+    <organizationchart-site>file:///C:/obeo/git/organizationchart/packaging/org.obeonetwork.dsl.organizationchart.update/target/repository/</organizationchart-site>
   </properties>
 
   <repositories>

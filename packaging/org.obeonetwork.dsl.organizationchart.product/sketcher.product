@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="OrganizationChart" uid="org.obeonetwork.dsl.organizationchart.branding.product" id="org.obeonetwork.dsl.organizationchart.branding.product" application="org.eclipse.ui.ide.workbench" version="4.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="OrganizationChart" uid="org.obeonetwork.dsl.organizationchart.branding.product" id="org.obeonetwork.dsl.organizationchart.branding.product" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="icons/about.gif"/>
@@ -121,7 +121,6 @@ The user is not authorized to install or make a technical means to hide within t
       <feature id="org.obeonetwork.dsl.organizationchart.runtime.feature"/>
       <feature id="org.eclipse.platform"/>
       <feature id="org.eclipse.epp.mpc"/>
-      <feature id="org.eclipse.uml2"/>
    </features>
 
    <configurations>
