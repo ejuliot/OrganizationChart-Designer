@@ -230,9 +230,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="viewpoint:DNodeListElement" xmi:id="_SxAVsUOKEeOo9a5F_9H0Tg" name="function : EString">
-          <target xmi:type="ecore:EAttribute" href="organizationChart.ecore#//Employee/function"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="organizationChart.ecore#//Employee/function"/>
+        <ownedElements xmi:type="viewpoint:DNodeListElement" xmi:id="_SxAVsUOKEeOo9a5F_9H0Tg" name="title : EString">
+          <target xmi:type="ecore:EAttribute" href="organizationChart.ecore#//Employee/title"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="organizationChart.ecore#//Employee/title"/>
           <ownedStyle xmi:type="viewpoint:BundledImage" xmi:id="_SxAVskOKEeOo9a5F_9H0Tg" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_SxAVs0OKEeOo9a5F_9H0Tg"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
@@ -384,8 +384,8 @@
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_SxAV9UOKEeOo9a5F_9H0Tg" name="[0..*] employees - [0..1] location" sourceNode="_SxAVoUOKEeOo9a5F_9H0Tg" targetNode="_SxAV0UOKEeOo9a5F_9H0Tg">
         <target xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/location"/>
-        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Location/employees"/>
         <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/location"/>
+        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Location/employees"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_SxAV9kOKEeOo9a5F_9H0Tg" targetArrow="NoDecoration" routingStyle="manhattan">
           <customFeatures>routingStyle</customFeatures>
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>

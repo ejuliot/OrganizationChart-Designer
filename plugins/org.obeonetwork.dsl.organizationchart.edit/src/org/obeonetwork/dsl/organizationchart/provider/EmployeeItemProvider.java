@@ -62,7 +62,7 @@ public class EmployeeItemProvider
 
 			addFirstnamePropertyDescriptor(object);
 			addLastnamePropertyDescriptor(object);
-			addFunctionPropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 			addManagesPropertyDescriptor(object);
 			addServicePropertyDescriptor(object);
 			addLocationPropertyDescriptor(object);
@@ -118,19 +118,19 @@ public class EmployeeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Function feature.
+	 * This adds a property descriptor for the Title feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFunctionPropertyDescriptor(Object object) {
+	protected void addTitlePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Employee_function_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_function_feature", "_UI_Employee_type"),
-				 OrganizationChartPackage.Literals.EMPLOYEE__FUNCTION,
+				 getString("_UI_Employee_title_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_title_feature", "_UI_Employee_type"),
+				 OrganizationChartPackage.Literals.EMPLOYEE__TITLE,
 				 true,
 				 false,
 				 false,
@@ -320,7 +320,7 @@ public class EmployeeItemProvider
 		switch (notification.getFeatureID(Employee.class)) {
 			case OrganizationChartPackage.EMPLOYEE__FIRSTNAME:
 			case OrganizationChartPackage.EMPLOYEE__LASTNAME:
-			case OrganizationChartPackage.EMPLOYEE__FUNCTION:
+			case OrganizationChartPackage.EMPLOYEE__TITLE:
 			case OrganizationChartPackage.EMPLOYEE__TRIGRAPH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

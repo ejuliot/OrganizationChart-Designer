@@ -144,7 +144,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEmployee_Function() {
+	public EAttribute getEmployee_Title() {
 		return (EAttribute)employeeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -341,7 +341,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		employeeEClass = createEClass(EMPLOYEE);
 		createEAttribute(employeeEClass, EMPLOYEE__FIRSTNAME);
 		createEAttribute(employeeEClass, EMPLOYEE__LASTNAME);
-		createEAttribute(employeeEClass, EMPLOYEE__FUNCTION);
+		createEAttribute(employeeEClass, EMPLOYEE__TITLE);
 		createEReference(employeeEClass, EMPLOYEE__MANAGES);
 		createEReference(employeeEClass, EMPLOYEE__SERVICE);
 		createEReference(employeeEClass, EMPLOYEE__LOCATION);
@@ -398,7 +398,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEmployee_Firstname(), ecorePackage.getEString(), "firstname", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEmployee_Lastname(), ecorePackage.getEString(), "lastname", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEmployee_Function(), ecorePackage.getEString(), "function", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmployee_Title(), ecorePackage.getEString(), "title", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Manages(), this.getEmployee(), this.getEmployee_Manager(), "manages", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Service(), this.getService(), this.getService_Employees(), "service", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Location(), this.getLocation(), this.getLocation_Employees(), "location", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

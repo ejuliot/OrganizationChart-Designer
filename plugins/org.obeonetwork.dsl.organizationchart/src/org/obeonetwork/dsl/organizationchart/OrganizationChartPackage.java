@@ -84,13 +84,13 @@ public interface OrganizationChartPackage extends EPackage {
 	int EMPLOYEE__LASTNAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Function</b></em>' attribute.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE__FUNCTION = 2;
+	int EMPLOYEE__TITLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Manages</b></em>' reference list.
@@ -327,15 +327,15 @@ public interface OrganizationChartPackage extends EPackage {
 	EAttribute getEmployee_Lastname();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.Employee#getFunction <em>Function</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.Employee#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Function</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Employee#getFunction()
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getTitle()
 	 * @see #getEmployee()
 	 * @generated
 	 */
-	EAttribute getEmployee_Function();
+	EAttribute getEmployee_Title();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.organizationchart.Employee#getManages <em>Manages</em>}'.
@@ -581,12 +581,12 @@ public interface OrganizationChartPackage extends EPackage {
 		EAttribute EMPLOYEE__LASTNAME = eINSTANCE.getEmployee_Lastname();
 
 		/**
-		 * The meta object literal for the '<em><b>Function</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EMPLOYEE__FUNCTION = eINSTANCE.getEmployee_Function();
+		EAttribute EMPLOYEE__TITLE = eINSTANCE.getEmployee_Title();
 
 		/**
 		 * The meta object literal for the '<em><b>Manages</b></em>' reference list feature.

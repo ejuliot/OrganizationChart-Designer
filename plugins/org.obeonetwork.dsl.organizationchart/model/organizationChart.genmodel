@@ -13,7 +13,7 @@
     <genClasses ecoreClass="organizationChart.ecore#//Employee" labelFeature="#//organizationchart/Employee/lastname">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/firstname"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/lastname"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/title"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/manages"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/service"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/location"/>

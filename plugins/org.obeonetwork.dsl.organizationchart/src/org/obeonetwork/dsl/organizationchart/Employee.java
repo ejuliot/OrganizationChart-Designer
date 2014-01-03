@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getFirstname <em>Firstname</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLastname <em>Lastname</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getFunction <em>Function</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getTitle <em>Title</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getManages <em>Manages</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getService <em>Service</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLocation <em>Location</em>}</li>
@@ -84,30 +84,30 @@ public interface Employee extends EObject {
 	void setLastname(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Function</b></em>' attribute.
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Function</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Function</em>' attribute.
-	 * @see #setFunction(String)
-	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Function()
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Title()
 	 * @model
 	 * @generated
 	 */
-	String getFunction();
+	String getTitle();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Employee#getFunction <em>Function</em>}' attribute.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Employee#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Function</em>' attribute.
-	 * @see #getFunction()
+	 * @param value the new value of the '<em>Title</em>' attribute.
+	 * @see #getTitle()
 	 * @generated
 	 */
-	void setFunction(String value);
+	void setTitle(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Manages</b></em>' reference list.

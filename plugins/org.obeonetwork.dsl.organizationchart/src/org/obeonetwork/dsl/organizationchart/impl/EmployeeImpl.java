@@ -33,7 +33,7 @@ import org.obeonetwork.dsl.organizationchart.Service;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getFirstname <em>Firstname</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getLastname <em>Lastname</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getFunction <em>Function</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getManages <em>Manages</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getService <em>Service</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getLocation <em>Location</em>}</li>
@@ -87,24 +87,24 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	protected String lastname = LASTNAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getFunction() <em>Function</em>}' attribute.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFunction()
+	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FUNCTION_EDEFAULT = null;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getFunction() <em>Function</em>}' attribute.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFunction()
+	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected String function = FUNCTION_EDEFAULT;
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getManages() <em>Manages</em>}' reference list.
@@ -242,8 +242,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFunction() {
-		return function;
+	public String getTitle() {
+		return title;
 	}
 
 	/**
@@ -251,11 +251,11 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFunction(String newFunction) {
-		String oldFunction = function;
-		function = newFunction;
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__FUNCTION, oldFunction, function));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -596,8 +596,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return getFirstname();
 			case OrganizationChartPackage.EMPLOYEE__LASTNAME:
 				return getLastname();
-			case OrganizationChartPackage.EMPLOYEE__FUNCTION:
-				return getFunction();
+			case OrganizationChartPackage.EMPLOYEE__TITLE:
+				return getTitle();
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				return getManages();
 			case OrganizationChartPackage.EMPLOYEE__SERVICE:
@@ -633,8 +633,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 			case OrganizationChartPackage.EMPLOYEE__LASTNAME:
 				setLastname((String)newValue);
 				return;
-			case OrganizationChartPackage.EMPLOYEE__FUNCTION:
-				setFunction((String)newValue);
+			case OrganizationChartPackage.EMPLOYEE__TITLE:
+				setTitle((String)newValue);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				getManages().clear();
@@ -673,8 +673,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 			case OrganizationChartPackage.EMPLOYEE__LASTNAME:
 				setLastname(LASTNAME_EDEFAULT);
 				return;
-			case OrganizationChartPackage.EMPLOYEE__FUNCTION:
-				setFunction(FUNCTION_EDEFAULT);
+			case OrganizationChartPackage.EMPLOYEE__TITLE:
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				getManages().clear();
@@ -710,8 +710,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return FIRSTNAME_EDEFAULT == null ? firstname != null : !FIRSTNAME_EDEFAULT.equals(firstname);
 			case OrganizationChartPackage.EMPLOYEE__LASTNAME:
 				return LASTNAME_EDEFAULT == null ? lastname != null : !LASTNAME_EDEFAULT.equals(lastname);
-			case OrganizationChartPackage.EMPLOYEE__FUNCTION:
-				return FUNCTION_EDEFAULT == null ? function != null : !FUNCTION_EDEFAULT.equals(function);
+			case OrganizationChartPackage.EMPLOYEE__TITLE:
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				return manages != null && !manages.isEmpty();
 			case OrganizationChartPackage.EMPLOYEE__SERVICE:
@@ -742,8 +742,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 		result.append(firstname);
 		result.append(", lastname: ");
 		result.append(lastname);
-		result.append(", function: ");
-		result.append(function);
+		result.append(", title: ");
+		result.append(title);
 		result.append(", trigraph: ");
 		result.append(trigraph);
 		result.append(')');
