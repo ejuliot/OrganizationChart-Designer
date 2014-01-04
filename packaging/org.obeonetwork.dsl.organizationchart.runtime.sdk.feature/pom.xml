@@ -24,6 +24,6 @@ Contributors:
   <artifactId>org.obeonetwork.dsl.organizationchart.runtime.sdk.feature</artifactId>
   <packaging>eclipse-feature</packaging>
 
-  <name>Sirius Based Modeler SDK for OrganizationChart Feature</name>
+  <name>OrganizationChart SDK Feature</name>
 
 </project>
