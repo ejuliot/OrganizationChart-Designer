@@ -46,13 +46,15 @@ location "http://download.eclipse.org/modeling/m2t/acceleo/updates/releases/3.4/
 }
 
 // EEF 2
-location "http://download.eclipse.org/modeling/emft/eef/updates/nightly/1.2/" {
+//location "http://download.eclipse.org/modeling/emft/eef/updates/nightly/1.2/" {
+location "http://download.eclipse.org/modeling/emft/eef/updates/releases/1.2/" {
 	with source, requirements
 	org.eclipse.emf.eef.runtime
 }
 
 // Sirius
-location "http://download.eclipse.org/sirius/updates/nightly/latest/kepler" {
+//location "http://download.eclipse.org/sirius/updates/nightly/latest/kepler" {
+location "http://download.eclipse.org/sirius/updates/releases/0.9.0/kepler" {
 	with source, requirements
 	//runtime
 	org.eclipse.sirius.runtime.feature.group
@@ -66,8 +68,9 @@ location "http://download.eclipse.org/sirius/updates/nightly/latest/kepler" {
 	org.eclipse.nebula.widgets.paperclips.feature.feature.group
 }
 
-location "http://update.obeo.fr/integration/viewpoint/master/kepler/repository/" {
-	with source, requirements
+//location "http://update.obeo.fr/integration/viewpoint/master/kepler/repository/" {
+//location "http://update.obeo.fr/release/viewpoint/6.8.0/kepler/repository/" {
+//	with source, requirements
 	//IDE
-	fr.obeo.dsl.viewpoint.runtime.ide.tests.support.feature.group
-}
+//	fr.obeo.dsl.viewpoint.runtime.ide.tests.support.feature.group
+//}
