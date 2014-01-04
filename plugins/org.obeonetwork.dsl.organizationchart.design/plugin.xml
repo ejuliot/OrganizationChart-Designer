@@ -45,10 +45,47 @@
         <enablement>
            <with variable="activeWorkbenchWindow.activePerspective">
               <or>
-                 <equals value="org.eclipse.sirius.ui.tools.perspective.design"/>
+                 <equals value="org.eclipse.sirius.ui.tools.perspective.design"/>                 
+              	 <or>
+                	 <equals value="org.eclipse.sirius.ui.tools.perspective.modeling"/>
+              	 </or>
               </or>
            </with>
         </enablement>
      </commonWizard>
   </extension>
+  
+  <extension
+        point="org.eclipse.ui.navigator.navigatorContent">
+     <commonWizard
+           menuGroupId="org.eclipse.sirius.category"
+           type="new"
+           wizardId="org.obeonetwork.dsl.organizationchart.wizard.newOrganizationChartModel">
+        <enablement>
+           <with variable="activeWorkbenchWindow.activePerspective">
+              <or>
+                 <equals value="org.eclipse.sirius.ui.tools.perspective.design"/>                 
+              	 <or>
+                	 <equals value="org.eclipse.sirius.ui.tools.perspective.modeling"/>
+              	 </or>
+              </or>
+           </with>
+        </enablement>
+     </commonWizard>
+  </extension>
+  
+  
+      <extension
+          point="org.eclipse.ui.perspectiveExtensions">
+       <perspectiveExtension
+             targetID="org.eclipse.sirius.ui.tools.perspective.modeling">
+          <newWizardShortcut
+                id="org.obeonetwork.dsl.organizationchart.wizard.newOrganizationChartModel">
+          </newWizardShortcut>
+          <newWizardShortcut
+                id="org.obeonetwork.dsl.organizationchart.design.wizard.project">
+          </newWizardShortcut>
+       </perspectiveExtension>
+    </extension>
+  
 </plugin>
