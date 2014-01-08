@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="OrganizationChart" version="7.0.0">
   <ownedViewpoints name="OrganizationChart" modelFileExtension="orgchart">
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Services Organization" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Services Organization" titleExpression="Services Organization" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Managers n-1">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@containerMappings[name='SO_Service']/@subNodeMappings[name='OS_S_Employee']" semanticConditionExpression="[isInChargeOf.oclIsUndefined()/]"/>
       </filters>
+      <layout xsi:type="description:CompositeLayout"/>
       <defaultLayer name="Default">
         <edgeMappings name="SO_Link_Manager" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@containerMappings[name='SO_Service']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Services%20Organization']/@defaultLayer/@containerMappings[name='SO_Service']/@borderedNodeMappings[name='Manager']" targetFinderExpression="[employees->select(isInChargeOf.oclIsUndefined())->union(self.manager.manages->reject(isInChargeOf.oclIsUndefined()))/]">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree">
@@ -278,8 +279,9 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Management Hierarchy" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Management Hierarchy" titleExpression="Management Hierarchy" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
+      <layout xsi:type="description:CompositeLayout"/>
       <defaultLayer name="Default">
         <edgeMappings name="MH_Hierarchy" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@containerMappings[name='MH_Employee']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@containerMappings[name='MH_Employee']" targetFinderExpression="feature:manages">
           <style sizeComputationExpression="2" routingStyle="tree">
@@ -354,7 +356,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='EmployeeDrop'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='ServiceDrop']" name="Partial Organization Chart" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='EmployeeDrop'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Partial%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='ServiceDrop']" name="Partial Organization Chart" titleExpression="Enter a name for this chart" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="Partial_Service_Label" semanticCandidatesExpression="[services/]" createElements="false" domainClass="organizationchart.Service">
@@ -607,7 +609,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Employees Description" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Employees Description" titleExpression="All Employees Description" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <ownedLineMappings name="Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="feature:employees"/>
       <ownedCreateLine name="Add a new Employee">
@@ -621,7 +623,7 @@
       <ownedColumnMappings name="Trigraf" headerLabelExpression="Trigraf" featureName="trigraf"/>
       <ownedColumnMappings name="Title" headerLabelExpression="Title" featureName="title"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Management Tree" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Management Tree" titleExpression="Management Tree" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <subItemMappings name="MT_TopManager" domainClass="organizationchart.Employee" semanticCandidatesExpression="[employees->select(emp : Employee | emp.manager.oclIsUndefined())/]">
         <defaultStyle labelExpression="[firstname + ' ' + lastname/]">
@@ -652,9 +654,37 @@
         <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
       </dropTools>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Services Tree" titleExpression="Services Tree" domainClass="organizationchart.Organization">
+      <subItemMappings name="ST_Service" domainClass="organizationchart.Service" semanticCandidatesExpression="feature:services">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="ST_S_Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="feature:employees">
+          <defaultStyle labelExpression="[firstname + ' ' + lastname/]">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+        </subItemMappings>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Locations Tree" titleExpression="Services Tree" domainClass="organizationchart.Organization">
+      <subItemMappings name="ST_Service" domainClass="organizationchart.Service" semanticCandidatesExpression="feature:services">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="ST_S_Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="feature:employees">
+          <defaultStyle labelExpression="[firstname + ' ' + lastname/]">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+        </subItemMappings>
+      </subItemMappings>
+    </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="Incubation" modelFileExtension="orgchart">
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="ServicesTest" titleExpression="Organigramme Complet" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="ServicesTest" titleExpression="All Services" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
         <edgeMappings name="Hierarchy" sourceMapping="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='ServicesTest']/@defaultLayer/@containerMappings[name='Service']/@subContainerMappings[name='Employé'] //@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='ServicesTest']/@defaultLayer/@containerMappings[name='Service_Employee_withoutservice']" targetMapping="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='ServicesTest']/@defaultLayer/@containerMappings[name='Service']/@subContainerMappings[name='Employé'] //@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='ServicesTest']/@defaultLayer/@containerMappings[name='Service_Employee_withoutservice']" targetFinderExpression="feature:manages">
@@ -726,7 +756,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Service Detail" titleExpression="Organisation des services" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Service Detail" titleExpression="Service Detail" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="Employee" labelDirectEdit="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Service%20Detail']/@defaultLayer/@toolSections.0/@ownedTools[name='Employee_DE']" semanticCandidatesExpression="feature:employees" domainClass="organizationchart.Employee">
