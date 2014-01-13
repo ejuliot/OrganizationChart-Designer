@@ -1,6 +1,6 @@
-h1. Welcome to OrganizationChart by Obeo Network
+h1. Welcome to OrganizationChart Designer
 
-This modeler provides a set of common diagrams to work with OrganizationChart models. 
+This modeler provides a set of common diagrams to work with Organization Chart. 
 
 These plugins are released under the EPL Open-Source License.
 
@@ -18,16 +18,13 @@ h3. Update Sites
 Nightly 1.0  (Sirius based) : http://marketplace.obeonetwork.com/updates/nightly/organizationchart/1.0.0/repository
 
 
-h1. Building the Module for Obeo Designer or Sirius
-
+h1. Building the updatesite for Sirius
 
 You'll need "Apache Maven 3":http://maven.apache.org/download.html to be installed on your computer.
 
 To launch the build, go to the root of your git repository and type :
 
 @mvn clean package@
-
-bq.  You might want to build with another version of Obeo Designer as an input (for instance a beta or an integration build) You can do so using the *od-site* property : @@ mvn clean package -Dod-site="http://www.mydomain.com/some/update/site/"@@
 
 Maven will bootstrap itself, download all the dependencies and build OrganizationChart. The output of the build is a p2 repository (an update site) generated here : 
 
@@ -42,28 +39,26 @@ Launching the test is not harder, just type :
 Maven will launch the tests and give you the result. 
 Code coverage is captured thanks to Jacoco.
 
-h1. Building the Module for an alternate installation of Viewpoint.
+h1. Building the standalone application
 
-The build instructions are the same as for an Obeo Designer installation. It will require you Maven 3, Java and an internet connection.
+After building the update sites, you can create a standalone application for end user which are not Eclipse users.
 
-To launch the build, go to the root of your git repository and type :
+Go to the directory:
 
-@mvn clean package -P!od-build@
+@packaging/org.obeonetwork.dsl.organizationchart.product@
 
-bq. If you are using bash, you might need to escape the @!@.
+Launch:
+
+@mvn clean package@
+
+You will find several zip file for each platform at:
+
+@packaging/org.obeonetwork.dsl.organizationchart.product/target/products@
 
 
-OrganizationChart technically only depend on the *Sirius* component of Obeo Designer but to ease installation for end user the OrganizationChart feature specify some explicit dependencies on some of the Obeo Designer features.
-
-It might be a problem for you if you use a different distribution of *Sirius*. To cover those use cases we defined an alternate packaging for OrganizationChart. After kicking the build you'll find another update site in  :
-   
-@features/fr.obeo.dsl.organizationchart.update/target@
-
-which aggregates a specific feature which does not depend on Obeo Designer by itself.
- 
 h1. Contributing
 
-Just use github, fork our "main repository":https://github.com/ObeoNetwork/organizationchart do your changes and trigger a "pull request":https://help.github.com/articles/using-pull-requests , we'll be happy to consider it for inclusion.  
+Just use github, fork our "main repository":https://github.com/ejuliot/OrganizationChart-Designer do your changes and trigger a "pull request":https://help.github.com/articles/using-pull-requests , we'll be happy to consider it for inclusion.  
 
 
 
