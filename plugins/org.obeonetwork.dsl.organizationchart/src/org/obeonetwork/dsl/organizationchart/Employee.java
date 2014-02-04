@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLastname <em>Lastname</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getTitle <em>Title</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getManages <em>Manages</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getService <em>Service</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getBelongsTo <em>Belongs To</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLocation <em>Location</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getIsInChargeOf <em>Is In Charge Of</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getTrigraph <em>Trigraph</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getManager <em>Manager</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getPerforms <em>Performs</em>}</li>
  * </ul>
  * </p>
  *
@@ -128,32 +128,32 @@ public interface Employee extends EObject {
 	EList<Employee> getManages();
 
 	/**
-	 * Returns the value of the '<em><b>Service</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Service#getEmployees <em>Employees</em>}'.
+	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getEmployees <em>Employees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Service</em>' reference isn't clear,
+	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service</em>' reference.
-	 * @see #setService(Service)
-	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Service()
-	 * @see org.obeonetwork.dsl.organizationchart.Service#getEmployees
+	 * @return the value of the '<em>Belongs To</em>' reference.
+	 * @see #setBelongsTo(OrganizationalStructure)
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_BelongsTo()
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getEmployees
 	 * @model opposite="employees"
 	 * @generated
 	 */
-	Service getService();
+	OrganizationalStructure getBelongsTo();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Employee#getService <em>Service</em>}' reference.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Employee#getBelongsTo <em>Belongs To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service</em>' reference.
-	 * @see #getService()
+	 * @param value the new value of the '<em>Belongs To</em>' reference.
+	 * @see #getBelongsTo()
 	 * @generated
 	 */
-	void setService(Service value);
+	void setBelongsTo(OrganizationalStructure value);
 
 	/**
 	 * Returns the value of the '<em><b>Location</b></em>' reference.
@@ -182,34 +182,6 @@ public interface Employee extends EObject {
 	 * @generated
 	 */
 	void setLocation(Location value);
-
-	/**
-	 * Returns the value of the '<em><b>Is In Charge Of</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Service#getManager <em>Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is In Charge Of</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is In Charge Of</em>' reference.
-	 * @see #setIsInChargeOf(Service)
-	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_IsInChargeOf()
-	 * @see org.obeonetwork.dsl.organizationchart.Service#getManager
-	 * @model opposite="manager"
-	 * @generated
-	 */
-	Service getIsInChargeOf();
-
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Employee#getIsInChargeOf <em>Is In Charge Of</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is In Charge Of</em>' reference.
-	 * @see #getIsInChargeOf()
-	 * @generated
-	 */
-	void setIsInChargeOf(Service value);
 
 	/**
 	 * Returns the value of the '<em><b>Trigraph</b></em>' attribute.
@@ -264,5 +236,23 @@ public interface Employee extends EObject {
 	 * @generated
 	 */
 	void setManager(Employee value);
+
+	/**
+	 * Returns the value of the '<em><b>Performs</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.organizationchart.Function}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Function#getIsPerformedBy <em>Is Performed By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Performs</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Performs</em>' reference list.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Performs()
+	 * @see org.obeonetwork.dsl.organizationchart.Function#getIsPerformedBy
+	 * @model opposite="isPerformedBy"
+	 * @generated
+	 */
+	EList<Function> getPerforms();
 
 } // Employee

@@ -4,17 +4,21 @@ package org.obeonetwork.dsl.organizationchart.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.obeonetwork.dsl.organizationchart.Employee;
+import org.obeonetwork.dsl.organizationchart.Function;
 import org.obeonetwork.dsl.organizationchart.Location;
 import org.obeonetwork.dsl.organizationchart.Organization;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartFactory;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartPackage;
+import org.obeonetwork.dsl.organizationchart.OrganizationalStructure;
 import org.obeonetwork.dsl.organizationchart.Service;
+import org.obeonetwork.dsl.organizationchart.StructureType;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +46,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass serviceEClass = null;
+	private EClass organizationalStructureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -50,6 +54,20 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * @generated
 	 */
 	private EClass locationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum structureTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -162,7 +180,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEmployee_Service() {
+	public EReference getEmployee_BelongsTo() {
 		return (EReference)employeeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -180,17 +198,8 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEmployee_IsInChargeOf() {
-		return (EReference)employeeEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getEmployee_Trigraph() {
-		return (EAttribute)employeeEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)employeeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -199,6 +208,15 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * @generated
 	 */
 	public EReference getEmployee_Manager() {
+		return (EReference)employeeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEmployee_Performs() {
 		return (EReference)employeeEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -225,7 +243,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrganization_Services() {
+	public EReference getOrganization_Structures() {
 		return (EReference)organizationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -252,8 +270,8 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getService() {
-		return serviceEClass;
+	public EClass getOrganizationalStructure() {
+		return organizationalStructureEClass;
 	}
 
 	/**
@@ -261,8 +279,8 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getService_Name() {
-		return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
+	public EAttribute getOrganizationalStructure_Name() {
+		return (EAttribute)organizationalStructureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -270,8 +288,8 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getService_Employees() {
-		return (EReference)serviceEClass.getEStructuralFeatures().get(1);
+	public EReference getOrganizationalStructure_Employees() {
+		return (EReference)organizationalStructureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -279,8 +297,35 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getService_Manager() {
-		return (EReference)serviceEClass.getEStructuralFeatures().get(2);
+	public EAttribute getOrganizationalStructure_Type() {
+		return (EAttribute)organizationalStructureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOrganizationalStructure_SubStructures() {
+		return (EReference)organizationalStructureEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOrganizationalStructure_Owns() {
+		return (EReference)organizationalStructureEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOrganizationalStructure_Manager() {
+		return (EReference)organizationalStructureEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -308,6 +353,51 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 */
 	public EReference getLocation_Employees() {
 		return (EReference)locationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFunction() {
+		return functionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunction_Name() {
+		return (EAttribute)functionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunction_IsPerformedBy() {
+		return (EReference)functionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunction_Manages() {
+		return (EReference)functionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getStructureType() {
+		return structureTypeEEnum;
 	}
 
 	/**
@@ -343,26 +433,37 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		createEAttribute(employeeEClass, EMPLOYEE__LASTNAME);
 		createEAttribute(employeeEClass, EMPLOYEE__TITLE);
 		createEReference(employeeEClass, EMPLOYEE__MANAGES);
-		createEReference(employeeEClass, EMPLOYEE__SERVICE);
+		createEReference(employeeEClass, EMPLOYEE__BELONGS_TO);
 		createEReference(employeeEClass, EMPLOYEE__LOCATION);
-		createEReference(employeeEClass, EMPLOYEE__IS_IN_CHARGE_OF);
 		createEAttribute(employeeEClass, EMPLOYEE__TRIGRAPH);
 		createEReference(employeeEClass, EMPLOYEE__MANAGER);
+		createEReference(employeeEClass, EMPLOYEE__PERFORMS);
 
 		organizationEClass = createEClass(ORGANIZATION);
 		createEReference(organizationEClass, ORGANIZATION__EMPLOYEES);
-		createEReference(organizationEClass, ORGANIZATION__SERVICES);
+		createEReference(organizationEClass, ORGANIZATION__STRUCTURES);
 		createEAttribute(organizationEClass, ORGANIZATION__NAME);
 		createEReference(organizationEClass, ORGANIZATION__LOCATIONS);
 
-		serviceEClass = createEClass(SERVICE);
-		createEAttribute(serviceEClass, SERVICE__NAME);
-		createEReference(serviceEClass, SERVICE__EMPLOYEES);
-		createEReference(serviceEClass, SERVICE__MANAGER);
+		organizationalStructureEClass = createEClass(ORGANIZATIONAL_STRUCTURE);
+		createEAttribute(organizationalStructureEClass, ORGANIZATIONAL_STRUCTURE__NAME);
+		createEReference(organizationalStructureEClass, ORGANIZATIONAL_STRUCTURE__EMPLOYEES);
+		createEAttribute(organizationalStructureEClass, ORGANIZATIONAL_STRUCTURE__TYPE);
+		createEReference(organizationalStructureEClass, ORGANIZATIONAL_STRUCTURE__SUB_STRUCTURES);
+		createEReference(organizationalStructureEClass, ORGANIZATIONAL_STRUCTURE__OWNS);
+		createEReference(organizationalStructureEClass, ORGANIZATIONAL_STRUCTURE__MANAGER);
 
 		locationEClass = createEClass(LOCATION);
 		createEAttribute(locationEClass, LOCATION__NAME);
 		createEReference(locationEClass, LOCATION__EMPLOYEES);
+
+		functionEClass = createEClass(FUNCTION);
+		createEAttribute(functionEClass, FUNCTION__NAME);
+		createEReference(functionEClass, FUNCTION__IS_PERFORMED_BY);
+		createEReference(functionEClass, FUNCTION__MANAGES);
+
+		// Create enums
+		structureTypeEEnum = createEEnum(STRUCTURE_TYPE);
 	}
 
 	/**
@@ -400,26 +501,42 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		initEAttribute(getEmployee_Lastname(), ecorePackage.getEString(), "lastname", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEmployee_Title(), ecorePackage.getEString(), "title", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Manages(), this.getEmployee(), this.getEmployee_Manager(), "manages", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEmployee_Service(), this.getService(), this.getService_Employees(), "service", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEmployee_BelongsTo(), this.getOrganizationalStructure(), this.getOrganizationalStructure_Employees(), "belongsTo", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Location(), this.getLocation(), this.getLocation_Employees(), "location", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEmployee_IsInChargeOf(), this.getService(), this.getService_Manager(), "isInChargeOf", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEmployee_Trigraph(), ecorePackage.getEString(), "trigraph", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Manager(), this.getEmployee(), this.getEmployee_Manages(), "manager", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEmployee_Performs(), this.getFunction(), this.getFunction_IsPerformedBy(), "performs", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(organizationEClass, Organization.class, "Organization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrganization_Employees(), this.getEmployee(), null, "employees", null, 0, -1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOrganization_Services(), this.getService(), null, "services", null, 0, -1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrganization_Structures(), this.getOrganizationalStructure(), null, "structures", null, 0, -1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrganization_Name(), ecorePackage.getEString(), "name", null, 0, 1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOrganization_Locations(), this.getLocation(), null, "locations", null, 0, -1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_Employees(), this.getEmployee(), this.getEmployee_Service(), "employees", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_Manager(), this.getEmployee(), this.getEmployee_IsInChargeOf(), "manager", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(organizationalStructureEClass, OrganizationalStructure.class, "OrganizationalStructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOrganizationalStructure_Name(), ecorePackage.getEString(), "name", null, 0, 1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrganizationalStructure_Employees(), this.getEmployee(), this.getEmployee_BelongsTo(), "employees", null, 0, -1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrganizationalStructure_Type(), this.getStructureType(), "type", null, 0, 1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrganizationalStructure_SubStructures(), this.getOrganizationalStructure(), null, "subStructures", null, 0, -1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrganizationalStructure_Owns(), this.getFunction(), null, "owns", null, 0, -1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrganizationalStructure_Manager(), this.getFunction(), this.getFunction_Manages(), "manager", null, 0, 1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLocation_Employees(), this.getEmployee(), this.getEmployee_Location(), "employees", null, 0, -1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_IsPerformedBy(), this.getEmployee(), this.getEmployee_Performs(), "isPerformedBy", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_Manages(), this.getOrganizationalStructure(), this.getOrganizationalStructure_Manager(), "manages", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(structureTypeEEnum, StructureType.class, "StructureType");
+		addEEnumLiteral(structureTypeEEnum, StructureType.TEAM);
+		addEEnumLiteral(structureTypeEEnum, StructureType.SERVICE);
+		addEEnumLiteral(structureTypeEEnum, StructureType.DEPARTMENT);
+		addEEnumLiteral(structureTypeEEnum, StructureType.BUSINESS_UNIT);
+		addEEnumLiteral(structureTypeEEnum, StructureType.DIVISION);
 
 		// Create resource
 		createResource(eNS_URI);

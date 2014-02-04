@@ -78,15 +78,21 @@ public class OrganizationChartSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OrganizationChartPackage.SERVICE: {
-				Service service = (Service)theEObject;
-				T result = caseService(service);
+			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE: {
+				OrganizationalStructure organizationalStructure = (OrganizationalStructure)theEObject;
+				T result = caseOrganizationalStructure(organizationalStructure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case OrganizationChartPackage.LOCATION: {
 				Location location = (Location)theEObject;
 				T result = caseLocation(location);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrganizationChartPackage.FUNCTION: {
+				Function function = (Function)theEObject;
+				T result = caseFunction(function);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,17 +131,17 @@ public class OrganizationChartSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Organizational Structure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Organizational Structure</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseService(Service object) {
+	public T caseOrganizationalStructure(OrganizationalStructure object) {
 		return null;
 	}
 
@@ -151,6 +157,21 @@ public class OrganizationChartSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLocation(Location object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunction(Function object) {
 		return null;
 	}
 

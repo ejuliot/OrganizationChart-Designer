@@ -64,11 +64,11 @@ public class EmployeeItemProvider
 			addLastnamePropertyDescriptor(object);
 			addTitlePropertyDescriptor(object);
 			addManagesPropertyDescriptor(object);
-			addServicePropertyDescriptor(object);
+			addBelongsToPropertyDescriptor(object);
 			addLocationPropertyDescriptor(object);
-			addIsInChargeOfPropertyDescriptor(object);
 			addTrigraphPropertyDescriptor(object);
 			addManagerPropertyDescriptor(object);
+			addPerformsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -162,19 +162,19 @@ public class EmployeeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Service feature.
+	 * This adds a property descriptor for the Belongs To feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addServicePropertyDescriptor(Object object) {
+	protected void addBelongsToPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Employee_service_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_service_feature", "_UI_Employee_type"),
-				 OrganizationChartPackage.Literals.EMPLOYEE__SERVICE,
+				 getString("_UI_Employee_belongsTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_belongsTo_feature", "_UI_Employee_type"),
+				 OrganizationChartPackage.Literals.EMPLOYEE__BELONGS_TO,
 				 true,
 				 false,
 				 true,
@@ -197,28 +197,6 @@ public class EmployeeItemProvider
 				 getString("_UI_Employee_location_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_location_feature", "_UI_Employee_type"),
 				 OrganizationChartPackage.Literals.EMPLOYEE__LOCATION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Is In Charge Of feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsInChargeOfPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Employee_isInChargeOf_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_isInChargeOf_feature", "_UI_Employee_type"),
-				 OrganizationChartPackage.Literals.EMPLOYEE__IS_IN_CHARGE_OF,
 				 true,
 				 false,
 				 true,
@@ -263,6 +241,28 @@ public class EmployeeItemProvider
 				 getString("_UI_Employee_manager_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_manager_feature", "_UI_Employee_type"),
 				 OrganizationChartPackage.Literals.EMPLOYEE__MANAGER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Performs feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPerformsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Employee_performs_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_performs_feature", "_UI_Employee_type"),
+				 OrganizationChartPackage.Literals.EMPLOYEE__PERFORMS,
 				 true,
 				 false,
 				 true,

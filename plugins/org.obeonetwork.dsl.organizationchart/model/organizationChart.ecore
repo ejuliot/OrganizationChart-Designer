@@ -8,35 +8,54 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="manages" upperBound="-1"
         eType="#//Employee" eOpposite="#//Employee/manager"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//Service"
-        eOpposite="#//Service/employees"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" eType="#//OrganizationalStructure"
+        eOpposite="#//OrganizationalStructure/employees"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
         eOpposite="#//Location/employees"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="isInChargeOf" eType="#//Service"
-        eOpposite="#//Service/manager"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigraph" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="manager" eType="#//Employee"
         eOpposite="#//Employee/manages"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performs" upperBound="-1"
+        eType="#//Function" eOpposite="#//Function/isPerformedBy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Organization">
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"
         eType="#//Employee" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="#//OrganizationalStructure" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
         eType="#//Location" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Service">
+  <eClassifiers xsi:type="ecore:EClass" name="OrganizationalStructure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"
-        eType="#//Employee" eOpposite="#//Employee/service"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="manager" eType="#//Employee"
-        eOpposite="#//Employee/isInChargeOf"/>
+        eType="#//Employee" eOpposite="#//Employee/belongsTo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//StructureType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subStructures" upperBound="-1"
+        eType="#//OrganizationalStructure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owns" upperBound="-1" eType="#//Function"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manager" eType="#//Function"
+        eOpposite="#//Function/manages"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"
         eType="#//Employee" eOpposite="#//Employee/location"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StructureType">
+    <eLiterals name="team" value="1"/>
+    <eLiterals name="service" value="2"/>
+    <eLiterals name="department" value="3"/>
+    <eLiterals name="businessUnit" value="4" literal="businessUnit"/>
+    <eLiterals name="division" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isPerformedBy" upperBound="-1"
+        eType="#//Employee" eOpposite="#//Employee/performs"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manages" eType="#//OrganizationalStructure"
+        eOpposite="#//OrganizationalStructure/manager"/>
   </eClassifiers>
 </ecore:EPackage>

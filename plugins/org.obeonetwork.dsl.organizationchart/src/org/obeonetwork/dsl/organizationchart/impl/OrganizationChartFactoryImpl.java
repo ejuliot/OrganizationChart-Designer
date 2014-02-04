@@ -3,6 +3,7 @@
 package org.obeonetwork.dsl.organizationchart.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -58,10 +59,41 @@ public class OrganizationChartFactoryImpl extends EFactoryImpl implements Organi
 		switch (eClass.getClassifierID()) {
 			case OrganizationChartPackage.EMPLOYEE: return createEmployee();
 			case OrganizationChartPackage.ORGANIZATION: return createOrganization();
-			case OrganizationChartPackage.SERVICE: return createService();
+			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE: return createOrganizationalStructure();
 			case OrganizationChartPackage.LOCATION: return createLocation();
+			case OrganizationChartPackage.FUNCTION: return createFunction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case OrganizationChartPackage.STRUCTURE_TYPE:
+				return createStructureTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case OrganizationChartPackage.STRUCTURE_TYPE:
+				return convertStructureTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -90,9 +122,9 @@ public class OrganizationChartFactoryImpl extends EFactoryImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service createService() {
-		ServiceImpl service = new ServiceImpl();
-		return service;
+	public OrganizationalStructure createOrganizationalStructure() {
+		OrganizationalStructureImpl organizationalStructure = new OrganizationalStructureImpl();
+		return organizationalStructure;
 	}
 
 	/**
@@ -103,6 +135,36 @@ public class OrganizationChartFactoryImpl extends EFactoryImpl implements Organi
 	public Location createLocation() {
 		LocationImpl location = new LocationImpl();
 		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Function createFunction() {
+		FunctionImpl function = new FunctionImpl();
+		return function;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureType createStructureTypeFromString(EDataType eDataType, String initialValue) {
+		StructureType result = StructureType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertStructureTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

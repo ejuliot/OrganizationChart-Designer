@@ -118,26 +118,26 @@ public class OrganizationChartItemProviderAdapterFactory extends OrganizationCha
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.obeonetwork.dsl.organizationchart.Service} instances.
+	 * This keeps track of the one adapter used for all {@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceItemProvider serviceItemProvider;
+	protected OrganizationalStructureItemProvider organizationalStructureItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.obeonetwork.dsl.organizationchart.Service}.
+	 * This creates an adapter for a {@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceAdapter() {
-		if (serviceItemProvider == null) {
-			serviceItemProvider = new ServiceItemProvider(this);
+	public Adapter createOrganizationalStructureAdapter() {
+		if (organizationalStructureItemProvider == null) {
+			organizationalStructureItemProvider = new OrganizationalStructureItemProvider(this);
 		}
 
-		return serviceItemProvider;
+		return organizationalStructureItemProvider;
 	}
 
 	/**
@@ -161,6 +161,29 @@ public class OrganizationChartItemProviderAdapterFactory extends OrganizationCha
 		}
 
 		return locationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.obeonetwork.dsl.organizationchart.Function} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionItemProvider functionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.obeonetwork.dsl.organizationchart.Function}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionAdapter() {
+		if (functionItemProvider == null) {
+			functionItemProvider = new FunctionItemProvider(this);
+		}
+
+		return functionItemProvider;
 	}
 
 	/**
@@ -264,8 +287,9 @@ public class OrganizationChartItemProviderAdapterFactory extends OrganizationCha
 	public void dispose() {
 		if (employeeItemProvider != null) employeeItemProvider.dispose();
 		if (organizationItemProvider != null) organizationItemProvider.dispose();
-		if (serviceItemProvider != null) serviceItemProvider.dispose();
+		if (organizationalStructureItemProvider != null) organizationalStructureItemProvider.dispose();
 		if (locationItemProvider != null) locationItemProvider.dispose();
+		if (functionItemProvider != null) functionItemProvider.dispose();
 	}
 
 }

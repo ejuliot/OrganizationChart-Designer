@@ -4,6 +4,7 @@ package org.obeonetwork.dsl.organizationchart;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -102,13 +103,13 @@ public interface OrganizationChartPackage extends EPackage {
 	int EMPLOYEE__MANAGES = 3;
 
 	/**
-	 * The feature id for the '<em><b>Service</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE__SERVICE = 4;
+	int EMPLOYEE__BELONGS_TO = 4;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
@@ -120,22 +121,13 @@ public interface OrganizationChartPackage extends EPackage {
 	int EMPLOYEE__LOCATION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Is In Charge Of</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE__IS_IN_CHARGE_OF = 6;
-
-	/**
 	 * The feature id for the '<em><b>Trigraph</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE__TRIGRAPH = 7;
+	int EMPLOYEE__TRIGRAPH = 6;
 
 	/**
 	 * The feature id for the '<em><b>Manager</b></em>' reference.
@@ -144,7 +136,16 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE__MANAGER = 8;
+	int EMPLOYEE__MANAGER = 7;
+
+	/**
+	 * The feature id for the '<em><b>Performs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__PERFORMS = 8;
 
 	/**
 	 * The number of structural features of the '<em>Employee</em>' class.
@@ -175,13 +176,13 @@ public interface OrganizationChartPackage extends EPackage {
 	int ORGANIZATION__EMPLOYEES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORGANIZATION__SERVICES = 1;
+	int ORGANIZATION__STRUCTURES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -211,14 +212,14 @@ public interface OrganizationChartPackage extends EPackage {
 	int ORGANIZATION_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.obeonetwork.dsl.organizationchart.impl.ServiceImpl <em>Service</em>}' class.
+	 * The meta object id for the '{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl <em>Organizational Structure</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.obeonetwork.dsl.organizationchart.impl.ServiceImpl
-	 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getService()
+	 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl
+	 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getOrganizationalStructure()
 	 * @generated
 	 */
-	int SERVICE = 2;
+	int ORGANIZATIONAL_STRUCTURE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -227,7 +228,7 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__NAME = 0;
+	int ORGANIZATIONAL_STRUCTURE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Employees</b></em>' reference list.
@@ -236,7 +237,34 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__EMPLOYEES = 1;
+	int ORGANIZATIONAL_STRUCTURE__EMPLOYEES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORGANIZATIONAL_STRUCTURE__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Sub Structures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORGANIZATIONAL_STRUCTURE__SUB_STRUCTURES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Owns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORGANIZATIONAL_STRUCTURE__OWNS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Manager</b></em>' reference.
@@ -245,16 +273,16 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__MANAGER = 2;
+	int ORGANIZATIONAL_STRUCTURE__MANAGER = 5;
 
 	/**
-	 * The number of structural features of the '<em>Service</em>' class.
+	 * The number of structural features of the '<em>Organizational Structure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = 3;
+	int ORGANIZATIONAL_STRUCTURE_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.organizationchart.impl.LocationImpl <em>Location</em>}' class.
@@ -292,6 +320,63 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCATION_FEATURE_COUNT = 2;
+
+
+	/**
+	 * The meta object id for the '{@link org.obeonetwork.dsl.organizationchart.impl.FunctionImpl <em>Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.obeonetwork.dsl.organizationchart.impl.FunctionImpl
+	 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getFunction()
+	 * @generated
+	 */
+	int FUNCTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Is Performed By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__IS_PERFORMED_BY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Manages</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__MANAGES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link org.obeonetwork.dsl.organizationchart.StructureType <em>Structure Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.obeonetwork.dsl.organizationchart.StructureType
+	 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getStructureType()
+	 * @generated
+	 */
+	int STRUCTURE_TYPE = 5;
 
 
 	/**
@@ -349,15 +434,15 @@ public interface OrganizationChartPackage extends EPackage {
 	EReference getEmployee_Manages();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Employee#getService <em>Service</em>}'.
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Employee#getBelongsTo <em>Belongs To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Service</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Employee#getService()
+	 * @return the meta object for the reference '<em>Belongs To</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getBelongsTo()
 	 * @see #getEmployee()
 	 * @generated
 	 */
-	EReference getEmployee_Service();
+	EReference getEmployee_BelongsTo();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Employee#getLocation <em>Location</em>}'.
@@ -369,17 +454,6 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEmployee_Location();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Employee#getIsInChargeOf <em>Is In Charge Of</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Is In Charge Of</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Employee#getIsInChargeOf()
-	 * @see #getEmployee()
-	 * @generated
-	 */
-	EReference getEmployee_IsInChargeOf();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.Employee#getTrigraph <em>Trigraph</em>}'.
@@ -404,6 +478,17 @@ public interface OrganizationChartPackage extends EPackage {
 	EReference getEmployee_Manager();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.organizationchart.Employee#getPerforms <em>Performs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Performs</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getPerforms()
+	 * @see #getEmployee()
+	 * @generated
+	 */
+	EReference getEmployee_Performs();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.organizationchart.Organization <em>Organization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -425,15 +510,15 @@ public interface OrganizationChartPackage extends EPackage {
 	EReference getOrganization_Employees();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.organizationchart.Organization#getServices <em>Services</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.organizationchart.Organization#getStructures <em>Structures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Services</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Organization#getServices()
+	 * @return the meta object for the containment reference list '<em>Structures</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Organization#getStructures()
 	 * @see #getOrganization()
 	 * @generated
 	 */
-	EReference getOrganization_Services();
+	EReference getOrganization_Structures();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.Organization#getName <em>Name</em>}'.
@@ -458,47 +543,80 @@ public interface OrganizationChartPackage extends EPackage {
 	EReference getOrganization_Locations();
 
 	/**
-	 * Returns the meta object for class '{@link org.obeonetwork.dsl.organizationchart.Service <em>Service</em>}'.
+	 * Returns the meta object for class '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure <em>Organizational Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Service</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Service
+	 * @return the meta object for class '<em>Organizational Structure</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure
 	 * @generated
 	 */
-	EClass getService();
+	EClass getOrganizationalStructure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.Service#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Service#getName()
-	 * @see #getService()
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getName()
+	 * @see #getOrganizationalStructure()
 	 * @generated
 	 */
-	EAttribute getService_Name();
+	EAttribute getOrganizationalStructure_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.organizationchart.Service#getEmployees <em>Employees</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getEmployees <em>Employees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Employees</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Service#getEmployees()
-	 * @see #getService()
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getEmployees()
+	 * @see #getOrganizationalStructure()
 	 * @generated
 	 */
-	EReference getService_Employees();
+	EReference getOrganizationalStructure_Employees();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Service#getManager <em>Manager</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getType()
+	 * @see #getOrganizationalStructure()
+	 * @generated
+	 */
+	EAttribute getOrganizationalStructure_Type();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getSubStructures <em>Sub Structures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sub Structures</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getSubStructures()
+	 * @see #getOrganizationalStructure()
+	 * @generated
+	 */
+	EReference getOrganizationalStructure_SubStructures();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getOwns <em>Owns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owns</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getOwns()
+	 * @see #getOrganizationalStructure()
+	 * @generated
+	 */
+	EReference getOrganizationalStructure_Owns();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager <em>Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Manager</em>'.
-	 * @see org.obeonetwork.dsl.organizationchart.Service#getManager()
-	 * @see #getService()
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager()
+	 * @see #getOrganizationalStructure()
 	 * @generated
 	 */
-	EReference getService_Manager();
+	EReference getOrganizationalStructure_Manager();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.organizationchart.Location <em>Location</em>}'.
@@ -531,6 +649,59 @@ public interface OrganizationChartPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLocation_Employees();
+
+	/**
+	 * Returns the meta object for class '{@link org.obeonetwork.dsl.organizationchart.Function <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Function
+	 * @generated
+	 */
+	EClass getFunction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.organizationchart.Function#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Function#getName()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EAttribute getFunction_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.organizationchart.Function#getIsPerformedBy <em>Is Performed By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Performed By</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Function#getIsPerformedBy()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_IsPerformedBy();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.organizationchart.Function#getManages <em>Manages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Manages</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.Function#getManages()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_Manages();
+
+	/**
+	 * Returns the meta object for enum '{@link org.obeonetwork.dsl.organizationchart.StructureType <em>Structure Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Structure Type</em>'.
+	 * @see org.obeonetwork.dsl.organizationchart.StructureType
+	 * @generated
+	 */
+	EEnum getStructureType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -597,12 +768,12 @@ public interface OrganizationChartPackage extends EPackage {
 		EReference EMPLOYEE__MANAGES = eINSTANCE.getEmployee_Manages();
 
 		/**
-		 * The meta object literal for the '<em><b>Service</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EMPLOYEE__SERVICE = eINSTANCE.getEmployee_Service();
+		EReference EMPLOYEE__BELONGS_TO = eINSTANCE.getEmployee_BelongsTo();
 
 		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.
@@ -611,14 +782,6 @@ public interface OrganizationChartPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EMPLOYEE__LOCATION = eINSTANCE.getEmployee_Location();
-
-		/**
-		 * The meta object literal for the '<em><b>Is In Charge Of</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMPLOYEE__IS_IN_CHARGE_OF = eINSTANCE.getEmployee_IsInChargeOf();
 
 		/**
 		 * The meta object literal for the '<em><b>Trigraph</b></em>' attribute feature.
@@ -635,6 +798,14 @@ public interface OrganizationChartPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EMPLOYEE__MANAGER = eINSTANCE.getEmployee_Manager();
+
+		/**
+		 * The meta object literal for the '<em><b>Performs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EMPLOYEE__PERFORMS = eINSTANCE.getEmployee_Performs();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl <em>Organization</em>}' class.
@@ -655,12 +826,12 @@ public interface OrganizationChartPackage extends EPackage {
 		EReference ORGANIZATION__EMPLOYEES = eINSTANCE.getOrganization_Employees();
 
 		/**
-		 * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Structures</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORGANIZATION__SERVICES = eINSTANCE.getOrganization_Services();
+		EReference ORGANIZATION__STRUCTURES = eINSTANCE.getOrganization_Structures();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -679,14 +850,14 @@ public interface OrganizationChartPackage extends EPackage {
 		EReference ORGANIZATION__LOCATIONS = eINSTANCE.getOrganization_Locations();
 
 		/**
-		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.impl.ServiceImpl <em>Service</em>}' class.
+		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl <em>Organizational Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.obeonetwork.dsl.organizationchart.impl.ServiceImpl
-		 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getService()
+		 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl
+		 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getOrganizationalStructure()
 		 * @generated
 		 */
-		EClass SERVICE = eINSTANCE.getService();
+		EClass ORGANIZATIONAL_STRUCTURE = eINSTANCE.getOrganizationalStructure();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -694,7 +865,7 @@ public interface OrganizationChartPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
+		EAttribute ORGANIZATIONAL_STRUCTURE__NAME = eINSTANCE.getOrganizationalStructure_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Employees</b></em>' reference list feature.
@@ -702,7 +873,31 @@ public interface OrganizationChartPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE__EMPLOYEES = eINSTANCE.getService_Employees();
+		EReference ORGANIZATIONAL_STRUCTURE__EMPLOYEES = eINSTANCE.getOrganizationalStructure_Employees();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORGANIZATIONAL_STRUCTURE__TYPE = eINSTANCE.getOrganizationalStructure_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Structures</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORGANIZATIONAL_STRUCTURE__SUB_STRUCTURES = eINSTANCE.getOrganizationalStructure_SubStructures();
+
+		/**
+		 * The meta object literal for the '<em><b>Owns</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORGANIZATIONAL_STRUCTURE__OWNS = eINSTANCE.getOrganizationalStructure_Owns();
 
 		/**
 		 * The meta object literal for the '<em><b>Manager</b></em>' reference feature.
@@ -710,7 +905,7 @@ public interface OrganizationChartPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE__MANAGER = eINSTANCE.getService_Manager();
+		EReference ORGANIZATIONAL_STRUCTURE__MANAGER = eINSTANCE.getOrganizationalStructure_Manager();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.impl.LocationImpl <em>Location</em>}' class.
@@ -737,6 +932,50 @@ public interface OrganizationChartPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCATION__EMPLOYEES = eINSTANCE.getLocation_Employees();
+
+		/**
+		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.impl.FunctionImpl <em>Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.obeonetwork.dsl.organizationchart.impl.FunctionImpl
+		 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getFunction()
+		 * @generated
+		 */
+		EClass FUNCTION = eINSTANCE.getFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION__NAME = eINSTANCE.getFunction_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Performed By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__IS_PERFORMED_BY = eINSTANCE.getFunction_IsPerformedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Manages</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__MANAGES = eINSTANCE.getFunction_Manages();
+
+		/**
+		 * The meta object literal for the '{@link org.obeonetwork.dsl.organizationchart.StructureType <em>Structure Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.obeonetwork.dsl.organizationchart.StructureType
+		 * @see org.obeonetwork.dsl.organizationchart.impl.OrganizationChartPackageImpl#getStructureType()
+		 * @generated
+		 */
+		EEnum STRUCTURE_TYPE = eINSTANCE.getStructureType();
 
 	}
 

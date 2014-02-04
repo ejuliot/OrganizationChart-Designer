@@ -76,12 +76,16 @@ public class OrganizationChartAdapterFactory extends AdapterFactoryImpl {
 				return createOrganizationAdapter();
 			}
 			@Override
-			public Adapter caseService(Service object) {
-				return createServiceAdapter();
+			public Adapter caseOrganizationalStructure(OrganizationalStructure object) {
+				return createOrganizationalStructureAdapter();
 			}
 			@Override
 			public Adapter caseLocation(Location object) {
 				return createLocationAdapter();
+			}
+			@Override
+			public Adapter caseFunction(Function object) {
+				return createFunctionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -132,16 +136,16 @@ public class OrganizationChartAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.obeonetwork.dsl.organizationchart.Service <em>Service</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure <em>Organizational Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.obeonetwork.dsl.organizationchart.Service
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure
 	 * @generated
 	 */
-	public Adapter createServiceAdapter() {
+	public Adapter createOrganizationalStructureAdapter() {
 		return null;
 	}
 
@@ -156,6 +160,20 @@ public class OrganizationChartAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.obeonetwork.dsl.organizationchart.Function <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.obeonetwork.dsl.organizationchart.Function
+	 * @generated
+	 */
+	public Adapter createFunctionAdapter() {
 		return null;
 	}
 

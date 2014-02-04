@@ -22,6 +22,7 @@ import org.obeonetwork.dsl.organizationchart.Employee;
 import org.obeonetwork.dsl.organizationchart.Location;
 import org.obeonetwork.dsl.organizationchart.Organization;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartPackage;
+import org.obeonetwork.dsl.organizationchart.OrganizationalStructure;
 import org.obeonetwork.dsl.organizationchart.Service;
 
 /**
@@ -32,7 +33,7 @@ import org.obeonetwork.dsl.organizationchart.Service;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getEmployees <em>Employees</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getStructures <em>Structures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getLocations <em>Locations</em>}</li>
  * </ul>
@@ -52,14 +53,14 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 	protected EList<Employee> employees;
 
 	/**
-	 * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
+	 * The cached value of the '{@link #getStructures() <em>Structures</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getServices()
+	 * @see #getStructures()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Service> services;
+	protected EList<OrganizationalStructure> structures;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -127,11 +128,11 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Service> getServices() {
-		if (services == null) {
-			services = new EObjectContainmentEList<Service>(Service.class, this, OrganizationChartPackage.ORGANIZATION__SERVICES);
+	public EList<OrganizationalStructure> getStructures() {
+		if (structures == null) {
+			structures = new EObjectContainmentEList<OrganizationalStructure>(OrganizationalStructure.class, this, OrganizationChartPackage.ORGANIZATION__STRUCTURES);
 		}
-		return services;
+		return structures;
 	}
 
 	/**
@@ -177,8 +178,8 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 		switch (featureID) {
 			case OrganizationChartPackage.ORGANIZATION__EMPLOYEES:
 				return ((InternalEList<?>)getEmployees()).basicRemove(otherEnd, msgs);
-			case OrganizationChartPackage.ORGANIZATION__SERVICES:
-				return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
+			case OrganizationChartPackage.ORGANIZATION__STRUCTURES:
+				return ((InternalEList<?>)getStructures()).basicRemove(otherEnd, msgs);
 			case OrganizationChartPackage.ORGANIZATION__LOCATIONS:
 				return ((InternalEList<?>)getLocations()).basicRemove(otherEnd, msgs);
 		}
@@ -195,8 +196,8 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 		switch (featureID) {
 			case OrganizationChartPackage.ORGANIZATION__EMPLOYEES:
 				return getEmployees();
-			case OrganizationChartPackage.ORGANIZATION__SERVICES:
-				return getServices();
+			case OrganizationChartPackage.ORGANIZATION__STRUCTURES:
+				return getStructures();
 			case OrganizationChartPackage.ORGANIZATION__NAME:
 				return getName();
 			case OrganizationChartPackage.ORGANIZATION__LOCATIONS:
@@ -218,9 +219,9 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 				getEmployees().clear();
 				getEmployees().addAll((Collection<? extends Employee>)newValue);
 				return;
-			case OrganizationChartPackage.ORGANIZATION__SERVICES:
-				getServices().clear();
-				getServices().addAll((Collection<? extends Service>)newValue);
+			case OrganizationChartPackage.ORGANIZATION__STRUCTURES:
+				getStructures().clear();
+				getStructures().addAll((Collection<? extends OrganizationalStructure>)newValue);
 				return;
 			case OrganizationChartPackage.ORGANIZATION__NAME:
 				setName((String)newValue);
@@ -244,8 +245,8 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 			case OrganizationChartPackage.ORGANIZATION__EMPLOYEES:
 				getEmployees().clear();
 				return;
-			case OrganizationChartPackage.ORGANIZATION__SERVICES:
-				getServices().clear();
+			case OrganizationChartPackage.ORGANIZATION__STRUCTURES:
+				getStructures().clear();
 				return;
 			case OrganizationChartPackage.ORGANIZATION__NAME:
 				setName(NAME_EDEFAULT);
@@ -267,8 +268,8 @@ public class OrganizationImpl extends EObjectImpl implements Organization {
 		switch (featureID) {
 			case OrganizationChartPackage.ORGANIZATION__EMPLOYEES:
 				return employees != null && !employees.isEmpty();
-			case OrganizationChartPackage.ORGANIZATION__SERVICES:
-				return services != null && !services.isEmpty();
+			case OrganizationChartPackage.ORGANIZATION__STRUCTURES:
+				return structures != null && !structures.isEmpty();
 			case OrganizationChartPackage.ORGANIZATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrganizationChartPackage.ORGANIZATION__LOCATIONS:

@@ -20,8 +20,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.obeonetwork.dsl.organizationchart.Employee;
+import org.obeonetwork.dsl.organizationchart.Function;
 import org.obeonetwork.dsl.organizationchart.Location;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartPackage;
+import org.obeonetwork.dsl.organizationchart.OrganizationalStructure;
 import org.obeonetwork.dsl.organizationchart.Service;
 
 /**
@@ -35,11 +37,11 @@ import org.obeonetwork.dsl.organizationchart.Service;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getLastname <em>Lastname</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getManages <em>Manages</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getService <em>Service</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getBelongsTo <em>Belongs To</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getIsInChargeOf <em>Is In Charge Of</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getTrigraph <em>Trigraph</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getManager <em>Manager</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getPerforms <em>Performs</em>}</li>
  * </ul>
  * </p>
  *
@@ -117,14 +119,14 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	protected EList<Employee> manages;
 
 	/**
-	 * The cached value of the '{@link #getService() <em>Service</em>}' reference.
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getService()
+	 * @see #getBelongsTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected Service service;
+	protected OrganizationalStructure belongsTo;
 
 	/**
 	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
@@ -135,16 +137,6 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * @ordered
 	 */
 	protected Location location;
-
-	/**
-	 * The cached value of the '{@link #getIsInChargeOf() <em>Is In Charge Of</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsInChargeOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected Service isInChargeOf;
 
 	/**
 	 * The default value of the '{@link #getTrigraph() <em>Trigraph</em>}' attribute.
@@ -175,6 +167,16 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * @ordered
 	 */
 	protected Employee manager;
+
+	/**
+	 * The cached value of the '{@link #getPerforms() <em>Performs</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPerforms()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Function> performs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -275,16 +277,16 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service getService() {
-		if (service != null && service.eIsProxy()) {
-			InternalEObject oldService = (InternalEObject)service;
-			service = (Service)eResolveProxy(oldService);
-			if (service != oldService) {
+	public OrganizationalStructure getBelongsTo() {
+		if (belongsTo != null && belongsTo.eIsProxy()) {
+			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
+			belongsTo = (OrganizationalStructure)eResolveProxy(oldBelongsTo);
+			if (belongsTo != oldBelongsTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrganizationChartPackage.EMPLOYEE__SERVICE, oldService, service));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrganizationChartPackage.EMPLOYEE__BELONGS_TO, oldBelongsTo, belongsTo));
 			}
 		}
-		return service;
+		return belongsTo;
 	}
 
 	/**
@@ -292,8 +294,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service basicGetService() {
-		return service;
+	public OrganizationalStructure basicGetBelongsTo() {
+		return belongsTo;
 	}
 
 	/**
@@ -301,11 +303,11 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetService(Service newService, NotificationChain msgs) {
-		Service oldService = service;
-		service = newService;
+	public NotificationChain basicSetBelongsTo(OrganizationalStructure newBelongsTo, NotificationChain msgs) {
+		OrganizationalStructure oldBelongsTo = belongsTo;
+		belongsTo = newBelongsTo;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__SERVICE, oldService, newService);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__BELONGS_TO, oldBelongsTo, newBelongsTo);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -316,18 +318,18 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setService(Service newService) {
-		if (newService != service) {
+	public void setBelongsTo(OrganizationalStructure newBelongsTo) {
+		if (newBelongsTo != belongsTo) {
 			NotificationChain msgs = null;
-			if (service != null)
-				msgs = ((InternalEObject)service).eInverseRemove(this, OrganizationChartPackage.SERVICE__EMPLOYEES, Service.class, msgs);
-			if (newService != null)
-				msgs = ((InternalEObject)newService).eInverseAdd(this, OrganizationChartPackage.SERVICE__EMPLOYEES, Service.class, msgs);
-			msgs = basicSetService(newService, msgs);
+			if (belongsTo != null)
+				msgs = ((InternalEObject)belongsTo).eInverseRemove(this, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__EMPLOYEES, OrganizationalStructure.class, msgs);
+			if (newBelongsTo != null)
+				msgs = ((InternalEObject)newBelongsTo).eInverseAdd(this, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__EMPLOYEES, OrganizationalStructure.class, msgs);
+			msgs = basicSetBelongsTo(newBelongsTo, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__SERVICE, newService, newService));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__BELONGS_TO, newBelongsTo, newBelongsTo));
 	}
 
 	/**
@@ -388,66 +390,6 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__LOCATION, newLocation, newLocation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Service getIsInChargeOf() {
-		if (isInChargeOf != null && isInChargeOf.eIsProxy()) {
-			InternalEObject oldIsInChargeOf = (InternalEObject)isInChargeOf;
-			isInChargeOf = (Service)eResolveProxy(oldIsInChargeOf);
-			if (isInChargeOf != oldIsInChargeOf) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF, oldIsInChargeOf, isInChargeOf));
-			}
-		}
-		return isInChargeOf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Service basicGetIsInChargeOf() {
-		return isInChargeOf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetIsInChargeOf(Service newIsInChargeOf, NotificationChain msgs) {
-		Service oldIsInChargeOf = isInChargeOf;
-		isInChargeOf = newIsInChargeOf;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF, oldIsInChargeOf, newIsInChargeOf);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsInChargeOf(Service newIsInChargeOf) {
-		if (newIsInChargeOf != isInChargeOf) {
-			NotificationChain msgs = null;
-			if (isInChargeOf != null)
-				msgs = ((InternalEObject)isInChargeOf).eInverseRemove(this, OrganizationChartPackage.SERVICE__MANAGER, Service.class, msgs);
-			if (newIsInChargeOf != null)
-				msgs = ((InternalEObject)newIsInChargeOf).eInverseAdd(this, OrganizationChartPackage.SERVICE__MANAGER, Service.class, msgs);
-			msgs = basicSetIsInChargeOf(newIsInChargeOf, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF, newIsInChargeOf, newIsInChargeOf));
 	}
 
 	/**
@@ -536,28 +478,38 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Function> getPerforms() {
+		if (performs == null) {
+			performs = new EObjectWithInverseResolvingEList.ManyInverse<Function>(Function.class, this, OrganizationChartPackage.EMPLOYEE__PERFORMS, OrganizationChartPackage.FUNCTION__IS_PERFORMED_BY);
+		}
+		return performs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getManages()).basicAdd(otherEnd, msgs);
-			case OrganizationChartPackage.EMPLOYEE__SERVICE:
-				if (service != null)
-					msgs = ((InternalEObject)service).eInverseRemove(this, OrganizationChartPackage.SERVICE__EMPLOYEES, Service.class, msgs);
-				return basicSetService((Service)otherEnd, msgs);
+			case OrganizationChartPackage.EMPLOYEE__BELONGS_TO:
+				if (belongsTo != null)
+					msgs = ((InternalEObject)belongsTo).eInverseRemove(this, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__EMPLOYEES, OrganizationalStructure.class, msgs);
+				return basicSetBelongsTo((OrganizationalStructure)otherEnd, msgs);
 			case OrganizationChartPackage.EMPLOYEE__LOCATION:
 				if (location != null)
 					msgs = ((InternalEObject)location).eInverseRemove(this, OrganizationChartPackage.LOCATION__EMPLOYEES, Location.class, msgs);
 				return basicSetLocation((Location)otherEnd, msgs);
-			case OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF:
-				if (isInChargeOf != null)
-					msgs = ((InternalEObject)isInChargeOf).eInverseRemove(this, OrganizationChartPackage.SERVICE__MANAGER, Service.class, msgs);
-				return basicSetIsInChargeOf((Service)otherEnd, msgs);
 			case OrganizationChartPackage.EMPLOYEE__MANAGER:
 				if (manager != null)
 					msgs = ((InternalEObject)manager).eInverseRemove(this, OrganizationChartPackage.EMPLOYEE__MANAGES, Employee.class, msgs);
 				return basicSetManager((Employee)otherEnd, msgs);
+			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPerforms()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -572,14 +524,14 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 		switch (featureID) {
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				return ((InternalEList<?>)getManages()).basicRemove(otherEnd, msgs);
-			case OrganizationChartPackage.EMPLOYEE__SERVICE:
-				return basicSetService(null, msgs);
+			case OrganizationChartPackage.EMPLOYEE__BELONGS_TO:
+				return basicSetBelongsTo(null, msgs);
 			case OrganizationChartPackage.EMPLOYEE__LOCATION:
 				return basicSetLocation(null, msgs);
-			case OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF:
-				return basicSetIsInChargeOf(null, msgs);
 			case OrganizationChartPackage.EMPLOYEE__MANAGER:
 				return basicSetManager(null, msgs);
+			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
+				return ((InternalEList<?>)getPerforms()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -600,20 +552,19 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return getTitle();
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				return getManages();
-			case OrganizationChartPackage.EMPLOYEE__SERVICE:
-				if (resolve) return getService();
-				return basicGetService();
+			case OrganizationChartPackage.EMPLOYEE__BELONGS_TO:
+				if (resolve) return getBelongsTo();
+				return basicGetBelongsTo();
 			case OrganizationChartPackage.EMPLOYEE__LOCATION:
 				if (resolve) return getLocation();
 				return basicGetLocation();
-			case OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF:
-				if (resolve) return getIsInChargeOf();
-				return basicGetIsInChargeOf();
 			case OrganizationChartPackage.EMPLOYEE__TRIGRAPH:
 				return getTrigraph();
 			case OrganizationChartPackage.EMPLOYEE__MANAGER:
 				if (resolve) return getManager();
 				return basicGetManager();
+			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
+				return getPerforms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -640,20 +591,21 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				getManages().clear();
 				getManages().addAll((Collection<? extends Employee>)newValue);
 				return;
-			case OrganizationChartPackage.EMPLOYEE__SERVICE:
-				setService((Service)newValue);
+			case OrganizationChartPackage.EMPLOYEE__BELONGS_TO:
+				setBelongsTo((OrganizationalStructure)newValue);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__LOCATION:
 				setLocation((Location)newValue);
-				return;
-			case OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF:
-				setIsInChargeOf((Service)newValue);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__TRIGRAPH:
 				setTrigraph((String)newValue);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__MANAGER:
 				setManager((Employee)newValue);
+				return;
+			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
+				getPerforms().clear();
+				getPerforms().addAll((Collection<? extends Function>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -679,20 +631,20 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				getManages().clear();
 				return;
-			case OrganizationChartPackage.EMPLOYEE__SERVICE:
-				setService((Service)null);
+			case OrganizationChartPackage.EMPLOYEE__BELONGS_TO:
+				setBelongsTo((OrganizationalStructure)null);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__LOCATION:
 				setLocation((Location)null);
-				return;
-			case OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF:
-				setIsInChargeOf((Service)null);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__TRIGRAPH:
 				setTrigraph(TRIGRAPH_EDEFAULT);
 				return;
 			case OrganizationChartPackage.EMPLOYEE__MANAGER:
 				setManager((Employee)null);
+				return;
+			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
+				getPerforms().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -714,16 +666,16 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OrganizationChartPackage.EMPLOYEE__MANAGES:
 				return manages != null && !manages.isEmpty();
-			case OrganizationChartPackage.EMPLOYEE__SERVICE:
-				return service != null;
+			case OrganizationChartPackage.EMPLOYEE__BELONGS_TO:
+				return belongsTo != null;
 			case OrganizationChartPackage.EMPLOYEE__LOCATION:
 				return location != null;
-			case OrganizationChartPackage.EMPLOYEE__IS_IN_CHARGE_OF:
-				return isInChargeOf != null;
 			case OrganizationChartPackage.EMPLOYEE__TRIGRAPH:
 				return TRIGRAPH_EDEFAULT == null ? trigraph != null : !TRIGRAPH_EDEFAULT.equals(trigraph);
 			case OrganizationChartPackage.EMPLOYEE__MANAGER:
 				return manager != null;
+			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
+				return performs != null && !performs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

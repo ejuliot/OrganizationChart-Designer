@@ -1,4 +1,13 @@
 /**
+ * Copyright (c) 2014, Obeo
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *    Etienne Juliot - initial API and implementation
+ * 
  */
 package org.obeonetwork.dsl.organizationchart.provider;
 
@@ -11,6 +20,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,16 +33,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.obeonetwork.dsl.organizationchart.OrganizationChartFactory;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartPackage;
-import org.obeonetwork.dsl.organizationchart.Service;
+import org.obeonetwork.dsl.organizationchart.OrganizationalStructure;
 
 /**
- * This is the item provider adapter for a {@link org.obeonetwork.dsl.organizationchart.Service} object.
+ * This is the item provider adapter for a {@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ServiceItemProvider
+public class OrganizationalStructureItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +57,7 @@ public class ServiceItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceItemProvider(AdapterFactory adapterFactory) {
+	public OrganizationalStructureItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,6 +74,7 @@ public class ServiceItemProvider
 
 			addNamePropertyDescriptor(object);
 			addEmployeesPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 			addManagerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -78,9 +91,9 @@ public class ServiceItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_name_feature", "_UI_Service_type"),
-				 OrganizationChartPackage.Literals.SERVICE__NAME,
+				 getString("_UI_OrganizationalStructure_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrganizationalStructure_name_feature", "_UI_OrganizationalStructure_type"),
+				 OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__NAME,
 				 true,
 				 false,
 				 false,
@@ -100,13 +113,35 @@ public class ServiceItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_employees_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_employees_feature", "_UI_Service_type"),
-				 OrganizationChartPackage.Literals.SERVICE__EMPLOYEES,
+				 getString("_UI_OrganizationalStructure_employees_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrganizationalStructure_employees_feature", "_UI_OrganizationalStructure_type"),
+				 OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__EMPLOYEES,
 				 true,
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OrganizationalStructure_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrganizationalStructure_type_feature", "_UI_OrganizationalStructure_type"),
+				 OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -122,9 +157,9 @@ public class ServiceItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_manager_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_manager_feature", "_UI_Service_type"),
-				 OrganizationChartPackage.Literals.SERVICE__MANAGER,
+				 getString("_UI_OrganizationalStructure_manager_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrganizationalStructure_manager_feature", "_UI_OrganizationalStructure_type"),
+				 OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__MANAGER,
 				 true,
 				 false,
 				 true,
@@ -134,14 +169,45 @@ public class ServiceItemProvider
 	}
 
 	/**
-	 * This returns Service.gif.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__SUB_STRUCTURES);
+			childrenFeatures.add(OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__OWNS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
+	 * This returns OrganizationalStructure.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Service"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/OrganizationalStructure"));
 	}
 
 	/**
@@ -162,10 +228,10 @@ public class ServiceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Service)object).getName();
+		String label = ((OrganizationalStructure)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Service_type") :
-			getString("_UI_Service_type") + " " + label;
+			getString("_UI_OrganizationalStructure_type") :
+			getString("_UI_OrganizationalStructure_type") + " " + label;
 	}
 
 	/**
@@ -179,9 +245,14 @@ public class ServiceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Service.class)) {
-			case OrganizationChartPackage.SERVICE__NAME:
+		switch (notification.getFeatureID(OrganizationalStructure.class)) {
+			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__NAME:
+			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__SUB_STRUCTURES:
+			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__OWNS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -197,6 +268,16 @@ public class ServiceItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__SUB_STRUCTURES,
+				 OrganizationChartFactory.eINSTANCE.createOrganizationalStructure()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OrganizationChartPackage.Literals.ORGANIZATIONAL_STRUCTURE__OWNS,
+				 OrganizationChartFactory.eINSTANCE.createFunction()));
 	}
 
 	/**

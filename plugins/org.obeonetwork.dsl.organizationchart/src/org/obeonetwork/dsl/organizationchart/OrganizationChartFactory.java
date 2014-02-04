@@ -40,13 +40,13 @@ public interface OrganizationChartFactory extends EFactory {
 	Organization createOrganization();
 
 	/**
-	 * Returns a new object of class '<em>Service</em>'.
+	 * Returns a new object of class '<em>Organizational Structure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service</em>'.
+	 * @return a new object of class '<em>Organizational Structure</em>'.
 	 * @generated
 	 */
-	Service createService();
+	OrganizationalStructure createOrganizationalStructure();
 
 	/**
 	 * Returns a new object of class '<em>Location</em>'.
@@ -56,6 +56,15 @@ public interface OrganizationChartFactory extends EFactory {
 	 * @generated
 	 */
 	Location createLocation();
+
+	/**
+	 * Returns a new object of class '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function</em>'.
+	 * @generated
+	 */
+	Function createFunction();
 
 	/**
 	 * Returns the package supported by this factory.

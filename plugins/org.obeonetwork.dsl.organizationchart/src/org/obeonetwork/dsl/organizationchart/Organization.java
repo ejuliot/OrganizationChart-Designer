@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getEmployees <em>Employees</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getServices <em>Services</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getStructures <em>Structures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getLocations <em>Locations</em>}</li>
  * </ul>
@@ -43,20 +43,20 @@ public interface Organization extends EObject {
 	EList<Employee> getEmployees();
 
 	/**
-	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.organizationchart.Service}.
+	 * Returns the value of the '<em><b>Structures</b></em>' containment reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Services</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Structures</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getOrganization_Services()
+	 * @return the value of the '<em>Structures</em>' containment reference list.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getOrganization_Structures()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Service> getServices();
+	EList<OrganizationalStructure> getStructures();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

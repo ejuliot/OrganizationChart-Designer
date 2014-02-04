@@ -1,4 +1,13 @@
 /**
+ * Copyright (c) 2014, Obeo
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *    Etienne Juliot - initial API and implementation
+ * 
  */
 package org.obeonetwork.dsl.organizationchart.provider;
 
@@ -11,8 +20,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,17 +31,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.obeonetwork.dsl.organizationchart.Organization;
-import org.obeonetwork.dsl.organizationchart.OrganizationChartFactory;
+import org.obeonetwork.dsl.organizationchart.Function;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartPackage;
 
 /**
- * This is the item provider adapter for a {@link org.obeonetwork.dsl.organizationchart.Organization} object.
+ * This is the item provider adapter for a {@link org.obeonetwork.dsl.organizationchart.Function} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OrganizationItemProvider
+public class FunctionItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -48,7 +54,7 @@ public class OrganizationItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrganizationItemProvider(AdapterFactory adapterFactory) {
+	public FunctionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,6 +70,8 @@ public class OrganizationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addIsPerformedByPropertyDescriptor(object);
+			addManagesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,9 +87,9 @@ public class OrganizationItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Organization_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Organization_name_feature", "_UI_Organization_type"),
-				 OrganizationChartPackage.Literals.ORGANIZATION__NAME,
+				 getString("_UI_Function_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_name_feature", "_UI_Function_type"),
+				 OrganizationChartPackage.Literals.FUNCTION__NAME,
 				 true,
 				 false,
 				 false,
@@ -91,46 +99,58 @@ public class OrganizationItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Is Performed By feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(OrganizationChartPackage.Literals.ORGANIZATION__EMPLOYEES);
-			childrenFeatures.add(OrganizationChartPackage.Literals.ORGANIZATION__STRUCTURES);
-			childrenFeatures.add(OrganizationChartPackage.Literals.ORGANIZATION__LOCATIONS);
-		}
-		return childrenFeatures;
+	protected void addIsPerformedByPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_isPerformedBy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_isPerformedBy_feature", "_UI_Function_type"),
+				 OrganizationChartPackage.Literals.FUNCTION__IS_PERFORMED_BY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
+	 * This adds a property descriptor for the Manages feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addManagesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_manages_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_manages_feature", "_UI_Function_type"),
+				 OrganizationChartPackage.Literals.FUNCTION__MANAGES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This returns Organization.gif.
+	 * This returns Function.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Organization"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Function"));
 	}
 
 	/**
@@ -151,10 +171,10 @@ public class OrganizationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Organization)object).getName();
+		String label = ((Function)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Organization_type") :
-			getString("_UI_Organization_type") + " " + label;
+			getString("_UI_Function_type") :
+			getString("_UI_Function_type") + " " + label;
 	}
 
 	/**
@@ -168,14 +188,9 @@ public class OrganizationItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Organization.class)) {
-			case OrganizationChartPackage.ORGANIZATION__NAME:
+		switch (notification.getFeatureID(Function.class)) {
+			case OrganizationChartPackage.FUNCTION__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case OrganizationChartPackage.ORGANIZATION__EMPLOYEES:
-			case OrganizationChartPackage.ORGANIZATION__STRUCTURES:
-			case OrganizationChartPackage.ORGANIZATION__LOCATIONS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -191,21 +206,6 @@ public class OrganizationItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OrganizationChartPackage.Literals.ORGANIZATION__EMPLOYEES,
-				 OrganizationChartFactory.eINSTANCE.createEmployee()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OrganizationChartPackage.Literals.ORGANIZATION__STRUCTURES,
-				 OrganizationChartFactory.eINSTANCE.createOrganizationalStructure()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OrganizationChartPackage.Literals.ORGANIZATION__LOCATIONS,
-				 OrganizationChartFactory.eINSTANCE.createLocation()));
 	}
 
 	/**
