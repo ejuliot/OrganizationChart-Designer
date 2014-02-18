@@ -296,11 +296,11 @@ public class EmployeeItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @NOTgenerated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Employee)object).getLastname();
+		String label = ((Employee)object).getFirstname() + " " + ((Employee)object).getLastname();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Employee_type") :
 			getString("_UI_Employee_type") + " " + label;
