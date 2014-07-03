@@ -1,0 +1,33 @@
+Tools
+	Operations
+		For
+			i variable is not available 
+				(The actual syntax will vary depending on the query language; for the legacy query language it would be $i, for Acceleo 3 simply i. )
+		Create Edge View, Edge Style
+			preSource is not available
+				SR_Structure_Link
+		Create view
+			... should be proposed
+		Action
+			a v ariable on the semantic element should available		
+		For
+			Need to convert a set to a sequence (without, classcastexception)
+			SR tool populate
+		Operation
+			only views variable available, with nothing possible
+		Precondition
+			during validate, should verify the query answer a boolean
+		Variable
+			ability to type variables
+		
+Tree
+	Drop doesn't work
+	
+edge
+	SR manager + SC struct function
+		it's hard to do a conditional style based on target or source
+		
+	
+	
+Q
+	Del et unset dans SC Del FctEmp

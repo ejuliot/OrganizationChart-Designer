@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+Copyright (c) 2009, 2011 Obeo.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Etienne Juliot - initial API and implementation
+-->
+<plugin>
+    <extension
+        point="org.eclipse.help.toc">
+        <toc
+            file="doc/OrganizationChart Designer User Guide-toc.xml"
+            primary="true">
+        </toc>
+    </extension>
+
+    <extension point="org.eclipse.emf.common.ui.examples">
+        <example wizardID="org.obeonetwork.dsl.organizationchart.design.doc.TravelAgencyWizard">
+            <projectDescriptor name="TravelAgency"
+                contentURI="contents/TravelAgencyOrga/" />
+        </example>
+    </extension>
+
+    <extension point="org.eclipse.ui.newWizards">
+        <category
+            id="org.obeonetwork.dsl.organizationchart.examples.category"
+            name="OrganizationChart"
+            parentCategory="org.eclipse.ui.Examples">
+        </category>
+        <wizard
+            category="org.eclipse.ui.Examples/org.obeonetwork.dsl.organizationchart.examples.category"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            finalPerspective="org.eclipse.sirius.ui.tools.perspective.modeling"
+            icon="icons/NewOrganizationChartModel.gif"
+            id="org.obeonetwork.dsl.organizationchart.design.doc.TravelAgencyWizard"
+            name="Travel Agency OrganizationChart"
+            project="true">
+            <description>A OrganizationChart model for a travel agency organization.</description>
+        </wizard>
+    </extension>
+
+    <!--extension
+        point="org.eclipse.ui.intro.configExtension">
+        <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sdk_extension_welcome_intro.xml"/>
+        <configExtension
+              configId="org.obeonetwork.dsl.organizationchart.design.welcome.config"
+              content="intro/product_welcome_intro.xml">
+        </configExtension>  
+    </extension-->
+
+    <!--extension
+        point="org.eclipse.help.contexts">
+        <contexts
+            file="doc/contexts.xml"
+            plugin="org.obeonetwork.dsl.organizationchart.design">
+        </contexts>
+    </extension-->
+    <!--extension
+          point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+       <cheatsheet
+             category="org.obeonetwork.dsl.organizationchart"
+             composite="false"
+             contentFile="doc/cheatsheets/CreateProject.xml"
+             id="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.createProject"
+             name="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.createProject">
+       </cheatsheet>
+       <cheatsheet
+             category="org.obeonetwork.dsl.organizationchart"
+             composite="false"
+             contentFile="doc/cheatsheets/CreateRepresentation.xml"
+             id="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.createRepresentation"
+             name="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.createRepresentation">
+       </cheatsheet>
+       <cheatsheet
+             category="org.obeonetwork.dsl.organizationchart"
+             composite="false"
+             contentFile="doc/cheatsheets/ImportModel.xml"
+             id="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.importModel"
+             name="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.importModel">
+       </cheatsheet>
+       <cheatsheet
+             category="org.obeonetwork.dsl.organizationchart"
+             composite="false"
+             contentFile="doc/cheatsheets/SampleModel.xml"
+             id="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.sampleModel"
+             name="org.obeonetwork.dsl.organizationchart.design.doc.cheatsheets.sampleModel">
+       </cheatsheet>
+    </extension-->
+
+
+</plugin>

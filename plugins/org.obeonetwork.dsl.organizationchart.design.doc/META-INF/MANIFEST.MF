@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OrganizationChart Designer Documentation
+Bundle-SymbolicName: org.obeonetwork.dsl.organizationchart.design.doc;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.help,
+ org.eclipse.emf.common.ui,
+ org.eclipse.ui.cheatsheets
+Bundle-Localization: plugin
+Bundle-Vendor: Etienne Juliot

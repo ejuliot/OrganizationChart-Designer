@@ -466,8 +466,8 @@
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_SxAV9UOKEeOo9a5F_9H0Tg" name="[0..*] employees - [0..1] location" sourceNode="_SxAVoUOKEeOo9a5F_9H0Tg" targetNode="_SxAV0UOKEeOo9a5F_9H0Tg">
         <target xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/location"/>
-        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/location"/>
         <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Location/employees"/>
+        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/location"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_SxAV9kOKEeOo9a5F_9H0Tg" targetArrow="NoDecoration" routingStyle="manhattan">
           <customFeatures>routingStyle</customFeatures>
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
@@ -480,8 +480,8 @@
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_EFRtAHFpEeOieaecLDb4KQ" name="[0..1] manager - [0..*] manages" sourceNode="_SxAVoUOKEeOo9a5F_9H0Tg" targetNode="_SxAVoUOKEeOo9a5F_9H0Tg">
         <target xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/manages"/>
-        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/manages"/>
         <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/manager"/>
+        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/manages"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_EFRtAXFpEeOieaecLDb4KQ" targetArrow="NoDecoration" routingStyle="manhattan">
           <customFeatures>routingStyle</customFeatures>
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
@@ -617,8 +617,8 @@
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__yAFsIntEeOSscYZaU0TtA" name="[0..*] isPerformedBy - [0..*] performs" sourceNode="_SxAVoUOKEeOo9a5F_9H0Tg" targetNode="_86MLEIntEeOSscYZaU0TtA">
         <target xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/performs"/>
-        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Function/isPerformedBy"/>
         <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Employee/performs"/>
+        <semanticElements xmi:type="ecore:EReference" href="organizationChart.ecore#//Function/isPerformedBy"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__yBT0IntEeOSscYZaU0TtA" targetArrow="NoDecoration">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__yBT0YntEeOSscYZaU0TtA" red="136" green="136" blue="136"/>
