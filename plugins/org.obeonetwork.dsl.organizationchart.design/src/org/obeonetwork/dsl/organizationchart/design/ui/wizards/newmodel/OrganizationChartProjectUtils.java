@@ -21,8 +21,8 @@ import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
 import org.obeonetwork.dsl.organizationchart.Organization;
 import org.obeonetwork.dsl.organizationchart.OrganizationChartFactory;
 import org.obeonetwork.dsl.organizationchart.design.OrganizationChartDesignerPlugin;
-import org.eclipse.sirius.common.tools.api.util.Option;
-import org.eclipse.sirius.common.tools.api.util.Options;
+import org.eclipse.sirius.ext.base.Option;
+import org.eclipse.sirius.ext.base.Options;
 
 import com.google.common.collect.Maps;
 
