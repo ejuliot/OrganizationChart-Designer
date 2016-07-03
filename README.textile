@@ -5,10 +5,9 @@ This modeler provides a set of common diagrams to work with Organization Chart.
 These plugins are released under the EPL Open-Source License.
 
 More details about features, screenshots, release notes, dependencies here:
+ * https://github.com/ejuliot/OrganizationChart-Designer
 
- * http://marketplace.obeonetwork.com/module/organizationchart
- * http://docs.obeonetwork.com/organizationchart
- * http://www.obeodesigner.com
+This tool isn't yet stable. 
 
 
 h2. Download
@@ -20,7 +19,7 @@ Nightly 1.0  (Sirius based) : http://marketplace.obeonetwork.com/updates/nightly
 
 h1. Building the updatesite for Sirius
 
-You'll need "Apache Maven 3":http://maven.apache.org/download.html to be installed on your computer.
+You'll need "Apache Maven 3": http://maven.apache.org/download.html to be installed on your computer.
 
 To launch the build, go to the root of your git repository and type :
 
@@ -58,7 +57,8 @@ You will find several zip file for each platform at:
 
 h1. Contributing
 
-Just use github, fork our "main repository":https://github.com/ejuliot/OrganizationChart-Designer do your changes and trigger a "pull request":https://help.github.com/articles/using-pull-requests , we'll be happy to consider it for inclusion.  
+Just use github, fork our "main repository":https://github.com/ejuliot/OrganizationChart-Designer do your changes and trigger a "pull request":https://help.github.com/articles/using-pull-requests , we'll be happy to consider it for inclusion.
+To setup your dev environment, just download Obeo Designer 9, configure EGit and import all these projects.  
 
 
 
