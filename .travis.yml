@@ -3,27 +3,26 @@ jdk: oraclejdk8
 env:
   global:
     - MAVEN_OPTS="-XX:MaxPermSize=512m"
-    - secure: "KpzAMqnf5+K5PNmZbcoiaSjWS//sVkPlbjrpb662rrkQcZHslqnAVmy2h+OsSaA6pefhRpzrSmys9vu7Ou4ZPNOBgxlmePOUl+MfEXOe+9EO3G6GLooyvzzk/9rsOYuHMiM6hrJZsPWF2NyIibElqE/l6YKuTUH9XOWnVbGZ+oY="
-    
+   
 
 sudo: false
-before_script:
-- gem install jekyll --version '= 1.5.1'
-- gem install RedCloth
+#before_script:
+#- gem install jekyll --version '= 1.5.1'
+#- gem install RedCloth
 
 script:
 # Build documentation web site
-- cd documentation
-- ls
-- jekyll build
-- ls
-- cd ../
+#- cd documentation
+#- ls
+#- jekyll build
+#- ls
+#- cd ../
 # Integrate the documentation to Eclipse
-- rm -rf plugins/org.obeonetwork.dsl.organizationchart.design.doc/html
-- cp -r documentation/_site plugins/org.obeonetwork.dsl.organizationchart.design.doc/html
-- ls plugins/org.obeonetwork.dsl.organizationchart.design.doc/html
+#- rm -rf plugins/org.obeonetwork.dsl.organizationchart.design.doc/html
+#- cp -r documentation/_site plugins/org.obeonetwork.dsl.organizationchart.design.doc/html
+#- ls plugins/org.obeonetwork.dsl.organizationchart.design.doc/html
 # Build organizationchart
-- mvn clean verify
+#- mvn clean verify
 # Build organizationchart products
 - mvn clean package -f releng/org.obeonetwork.dsl.organizationchart.product.parent/pom.xml
 # Prepare local dirs to deploy: copy repository, bundles and tp
@@ -44,7 +43,7 @@ after_script:
 #deploy:
   #provider: releases
   #api_key: "GITHUB OAUTH TOKEN"
-  #file: "FILE TO UPLOAD"
+  #file:  packaging/org.obeonetwork.dsl.organizationchart.product/target/products/*.zip
   #skip_cleanup: true
   #on:
   #  tags: true

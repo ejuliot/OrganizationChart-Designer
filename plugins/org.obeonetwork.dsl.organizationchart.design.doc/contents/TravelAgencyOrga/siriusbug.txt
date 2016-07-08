@@ -19,6 +19,8 @@ Tools
 			during validate, should verify the query answer a boolean
 		Variable
 			ability to type variables
+		Pane Base Selection
+			no contexte and need to cast : Choose Functions
 		
 Tree
 	Drop doesn't work
@@ -31,3 +33,4 @@ edge
 	
 Q
 	Del et unset dans SC Del FctEmp
+	StructuresRelationShip : label on end (variable for target ?)

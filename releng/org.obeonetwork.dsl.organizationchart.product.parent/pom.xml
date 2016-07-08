@@ -27,7 +27,8 @@ Contributors:
 
   <properties>
     <!--organizationchart-site>http://update.obeo.fr/integration/organizationchart/repository/</organizationchart-site--> 
-    <organizationchart-site>file:///C:/obeo/git/organizationchart/packaging/org.obeonetwork.dsl.organizationchart.update/target/repository/</organizationchart-site>
+    <!--organizationchart-site>file:///C:/obeo/dev/OrgaChart/od9/git/packaging/org.obeonetwork.dsl.organizationchart.update/target/repository/</organizationchart-site-->
+    <organizationchart-site>file:${basedir}/../org.obeonetwork.dsl.organizationchart.update/target/repository</organizationchart-site>
   </properties>
 
   <repositories>
