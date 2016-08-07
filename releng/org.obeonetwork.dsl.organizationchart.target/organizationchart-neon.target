@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="OrganizationChart Designer Neon" sequenceNumber="1467577783">
+<target name="OrganizationChart Designer Neon" sequenceNumber="1468152651">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="com.google.guava" version="15.0.0.v201403281430"/>
@@ -16,7 +16,7 @@
       <repository location="http://download.eclipse.org/acceleo/updates/releases/3.6/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.emf.eef.runtime" version="0.0.0"/>
+      <unit id="org.eclipse.eef.sdk.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.platform.sdk" version="0.0.0"/>
       <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
@@ -39,6 +39,8 @@
       <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.tests.support.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sirius.aql.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.properties.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="0.0.0"/>
       <repository location="http://download.eclipse.org/sirius/updates/releases/4.0.0/neon/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">

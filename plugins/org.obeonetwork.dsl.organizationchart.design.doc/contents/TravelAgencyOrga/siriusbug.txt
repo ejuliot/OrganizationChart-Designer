@@ -21,7 +21,10 @@ Tools
 			ability to type variables
 		Pane Base Selection
 			no contexte and need to cast : Choose Functions
-		
+		Reconnection
+			otherEnd variable is not proposed in the children node of the tool
+			otherEnd should be rename otherEndView and a otherEnd variable should be provided to get access to semantic element without the need to do aql:otherEnd.oclAsType(diagram::DEdge).target
+			otherEnd is about DEdge for target reconnection and DNode for source reconnection. It is not consistent
 Tree
 	Drop doesn't work
 	
@@ -34,3 +37,8 @@ edge
 Q
 	Del et unset dans SC Del FctEmp
 	StructuresRelationShip : label on end (variable for target ?)
+  
+bundle
+  http://stackoverflow.com/questions/10999323/error-in-tycho-while-replacing-the-product-ico-files
+  http://www.vogella.com/tutorials/EclipseProductDeployment/article.html#overview_productapplications
+  http://andrius.velykis.lt/2012/10/creating-icons-for-eclipse-rcp-launcher/

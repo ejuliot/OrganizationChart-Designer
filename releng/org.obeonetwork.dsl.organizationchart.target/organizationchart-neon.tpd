@@ -41,7 +41,7 @@ location "http://download.eclipse.org/acceleo/updates/releases/3.6/" {
 
 // EEF 1.5
 location "http://download.eclipse.org/releases/neon/" {
-	org.eclipse.emf.eef.runtime lazy
+	org.eclipse.eef.sdk.feature.feature.group lazy
 }
 
 // Sirius
@@ -58,6 +58,8 @@ location "http://download.eclipse.org/sirius/updates/releases/4.0.0/neon/" {
 	org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group lazy
 	org.eclipse.sirius.tests.support.feature.group lazy
 	org.eclipse.sirius.aql.feature.group lazy
+	org.eclipse.sirius.properties.feature.feature.group lazy
+	org.eclipse.sirius.specifier.properties.feature.feature.group lazy
 }
 
 // EMF compare
