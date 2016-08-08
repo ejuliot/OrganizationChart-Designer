@@ -740,6 +740,7 @@
         <containerMappings name="SR_Structure" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@toolSections.0/@ownedTools[name='SR_Structure_DE']" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@toolSections.0/@ownedTools[name='DblClick%20Structure']" domainClass="organizationchart.OrganizationalStructure" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Organization']/@defaultLayer/@toolSections.0/@ownedTools[name='SO_Drop_Employee']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="15" heightComputationExpression="4">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
@@ -872,6 +873,19 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers name="Managers'Pictures">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="SR_MP_Structure" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']">
+          <borderedNodeMappings name="SR_MP_Manager" semanticCandidatesExpression="feature:manager" domainClass="organizationchart.Employee">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
+        </containerMappings>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structure Composition" titleExpression="[name + ' Functions'/]" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
@@ -1987,18 +2001,27 @@
         </directEdit>
       </intersection>
     </ownedRepresentations>
-    <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.common.tools.api.interpreter.StandardServices"/>
-  </ownedViewpoints>
-  <ownedViewpoints name="Incubation" modelFileExtension="orgchart">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Managers and Teams" titleExpression="Management Hierarchy 2" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Managers and Structures" titleExpression="Managers and Structures" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="MT_Manager" semanticCandidatesExpression="aql:self.employees->reject(myEmployee | myEmployee.manages->notEmpty())" doubleClickDescription="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Employee_DblClick']" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee']">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[firstname + ' ' + lastname/]" sizeComputationExpression="5" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="MT_Manager" semanticCandidatesExpression="aql:self.employees->select(myEmployee | myEmployee.leads->notEmpty())" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']"/>
+        <edgeMappings name="MT_Leads" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@nodeMappings[name='MT_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@containerMappings[name='MT_Structure']" targetFinderExpression="feature:leads">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
-        </nodeMappings>
+        </edgeMappings>
+        <edgeMappings name="MT_Employees" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@containerMappings[name='MT_Structure']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@nodeMappings[name='MT_Manager']" targetFinderExpression="aql:self.subStructures.manager">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="MT_Structure" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']"/>
         <toolSections name="Employees">
           <ownedTools xsi:type="tool:DirectEditLabel" name="NomEmployé">
             <mask mask="{0} {1}"/>
@@ -2010,7 +2033,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="manages" edgeMappings="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@additionalLayers[name='Direct%20Hierarchy']/@edgeMappings[name='MH_Hierarchy2']" iconPath="/org.obeonetwork.dsl.organizationchart.design/icons/hierarchical.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="manages" iconPath="/org.obeonetwork.dsl.organizationchart.design/icons/hierarchical.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2021,7 +2044,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="MH_Drop_Employee" precondition="[oclAsType(Employee)/]" mappings="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@nodeMappings[name='MT_Manager']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="MH_Drop_Employee" precondition="[oclAsType(Employee)/]" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -2044,14 +2067,14 @@
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="MH_Employee_DblClick" mappings="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@nodeMappings[name='MT_Manager']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="MH_Employee_DblClick">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Employee" nodeMappings="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@nodeMappings[name='MT_Manager']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Employee">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2074,34 +2097,10 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
-      <additionalLayers name="Direct Hierarchy">
-        <edgeMappings name="MH_Hierarchy2" sourceMapping="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@nodeMappings[name='MT_Manager']" targetMapping="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@nodeMappings[name='MT_Manager']" targetFinderExpression="feature:manages">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2" foldingStyle="SOURCE">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-      </additionalLayers>
-      <additionalLayers name="Structures" activeByDefault="true">
-        <nodeMappings name="MT_Structure" semanticCandidatesExpression="aql:self.eAllContents(organizationchart::OrganizationalStructure)" domainClass="organizationchart.OrganizationalStructure">
-          <style xsi:type="style:SquareDescription" labelPosition="node" width="15" height="3">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-          </style>
-        </nodeMappings>
-        <edgeMappings name="MH_Belongs" sourceMapping="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@additionalLayers[name='Structures']/@nodeMappings[name='MT_Structure']" targetMapping="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Managers%20and%20Teams']/@defaultLayer/@nodeMappings[name='MT_Manager']" targetFinderExpression="aql:self.employees->excluding(self.manager)">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-      </additionalLayers>
     </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.common.tools.api.interpreter.StandardServices"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Incubation" modelFileExtension="orgchart">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Custom%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='EmployeeDrop'] //@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Custom%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='StructureDrop']" name="Custom Organization Chart" titleExpression="Custom Organization Chart" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
