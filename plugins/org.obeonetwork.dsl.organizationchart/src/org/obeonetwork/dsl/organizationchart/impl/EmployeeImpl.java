@@ -32,6 +32,7 @@ import org.obeonetwork.dsl.organizationchart.Service;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getFirstname <em>Firstname</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getLastname <em>Lastname</em>}</li>
@@ -42,8 +43,8 @@ import org.obeonetwork.dsl.organizationchart.Service;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getTrigraph <em>Trigraph</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getManager <em>Manager</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getPerforms <em>Performs</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.EmployeeImpl#getLeads <em>Leads</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -177,6 +178,16 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * @ordered
 	 */
 	protected EList<Function> performs;
+
+	/**
+	 * The cached value of the '{@link #getLeads() <em>Leads</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLeads()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OrganizationalStructure> leads;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -490,6 +501,18 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OrganizationalStructure> getLeads() {
+		if (leads == null) {
+			leads = new EObjectWithInverseResolvingEList<OrganizationalStructure>(OrganizationalStructure.class, this, OrganizationChartPackage.EMPLOYEE__LEADS, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER);
+		}
+		return leads;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -510,6 +533,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return basicSetManager((Employee)otherEnd, msgs);
 			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPerforms()).basicAdd(otherEnd, msgs);
+			case OrganizationChartPackage.EMPLOYEE__LEADS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLeads()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -532,6 +557,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return basicSetManager(null, msgs);
 			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
 				return ((InternalEList<?>)getPerforms()).basicRemove(otherEnd, msgs);
+			case OrganizationChartPackage.EMPLOYEE__LEADS:
+				return ((InternalEList<?>)getLeads()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -565,6 +592,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return basicGetManager();
 			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
 				return getPerforms();
+			case OrganizationChartPackage.EMPLOYEE__LEADS:
+				return getLeads();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -607,6 +636,10 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				getPerforms().clear();
 				getPerforms().addAll((Collection<? extends Function>)newValue);
 				return;
+			case OrganizationChartPackage.EMPLOYEE__LEADS:
+				getLeads().clear();
+				getLeads().addAll((Collection<? extends OrganizationalStructure>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -646,6 +679,9 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
 				getPerforms().clear();
 				return;
+			case OrganizationChartPackage.EMPLOYEE__LEADS:
+				getLeads().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -676,6 +712,8 @@ public class EmployeeImpl extends EObjectImpl implements Employee {
 				return manager != null;
 			case OrganizationChartPackage.EMPLOYEE__PERFORMS:
 				return performs != null && !performs.isEmpty();
+			case OrganizationChartPackage.EMPLOYEE__LEADS:
+				return leads != null && !leads.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

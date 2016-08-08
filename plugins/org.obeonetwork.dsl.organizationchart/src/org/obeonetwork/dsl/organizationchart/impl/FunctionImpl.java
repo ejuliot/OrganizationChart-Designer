@@ -38,12 +38,11 @@ import org.obeonetwork.dsl.organizationchart.OrganizationalStructure;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.FunctionImpl#getIsPerformedBy <em>Is Performed By</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.FunctionImpl#getManages <em>Manages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,16 +76,6 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	 * @ordered
 	 */
 	protected EList<Employee> isPerformedBy;
-
-	/**
-	 * The cached value of the '{@link #getManages() <em>Manages</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getManages()
-	 * @generated
-	 * @ordered
-	 */
-	protected OrganizationalStructure manages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,76 +134,12 @@ public class FunctionImpl extends EObjectImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrganizationalStructure getManages() {
-		if (manages != null && manages.eIsProxy()) {
-			InternalEObject oldManages = (InternalEObject)manages;
-			manages = (OrganizationalStructure)eResolveProxy(oldManages);
-			if (manages != oldManages) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrganizationChartPackage.FUNCTION__MANAGES, oldManages, manages));
-			}
-		}
-		return manages;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public OrganizationalStructure basicGetManages() {
-		return manages;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetManages(OrganizationalStructure newManages, NotificationChain msgs) {
-		OrganizationalStructure oldManages = manages;
-		manages = newManages;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.FUNCTION__MANAGES, oldManages, newManages);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setManages(OrganizationalStructure newManages) {
-		if (newManages != manages) {
-			NotificationChain msgs = null;
-			if (manages != null)
-				msgs = ((InternalEObject)manages).eInverseRemove(this, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER, OrganizationalStructure.class, msgs);
-			if (newManages != null)
-				msgs = ((InternalEObject)newManages).eInverseAdd(this, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER, OrganizationalStructure.class, msgs);
-			msgs = basicSetManages(newManages, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.FUNCTION__MANAGES, newManages, newManages));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case OrganizationChartPackage.FUNCTION__IS_PERFORMED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsPerformedBy()).basicAdd(otherEnd, msgs);
-			case OrganizationChartPackage.FUNCTION__MANAGES:
-				if (manages != null)
-					msgs = ((InternalEObject)manages).eInverseRemove(this, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER, OrganizationalStructure.class, msgs);
-				return basicSetManages((OrganizationalStructure)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -229,8 +154,6 @@ public class FunctionImpl extends EObjectImpl implements Function {
 		switch (featureID) {
 			case OrganizationChartPackage.FUNCTION__IS_PERFORMED_BY:
 				return ((InternalEList<?>)getIsPerformedBy()).basicRemove(otherEnd, msgs);
-			case OrganizationChartPackage.FUNCTION__MANAGES:
-				return basicSetManages(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -247,9 +170,6 @@ public class FunctionImpl extends EObjectImpl implements Function {
 				return getName();
 			case OrganizationChartPackage.FUNCTION__IS_PERFORMED_BY:
 				return getIsPerformedBy();
-			case OrganizationChartPackage.FUNCTION__MANAGES:
-				if (resolve) return getManages();
-				return basicGetManages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -270,9 +190,6 @@ public class FunctionImpl extends EObjectImpl implements Function {
 				getIsPerformedBy().clear();
 				getIsPerformedBy().addAll((Collection<? extends Employee>)newValue);
 				return;
-			case OrganizationChartPackage.FUNCTION__MANAGES:
-				setManages((OrganizationalStructure)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -291,9 +208,6 @@ public class FunctionImpl extends EObjectImpl implements Function {
 			case OrganizationChartPackage.FUNCTION__IS_PERFORMED_BY:
 				getIsPerformedBy().clear();
 				return;
-			case OrganizationChartPackage.FUNCTION__MANAGES:
-				setManages((OrganizationalStructure)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -310,8 +224,6 @@ public class FunctionImpl extends EObjectImpl implements Function {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrganizationChartPackage.FUNCTION__IS_PERFORMED_BY:
 				return isPerformedBy != null && !isPerformedBy.isEmpty();
-			case OrganizationChartPackage.FUNCTION__MANAGES:
-				return manages != null;
 		}
 		return super.eIsSet(featureID);
 	}

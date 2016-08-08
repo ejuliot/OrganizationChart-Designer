@@ -31,13 +31,13 @@ import org.obeonetwork.dsl.organizationchart.Service;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getEmployees <em>Employees</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getStructures <em>Structures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationImpl#getLocations <em>Locations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -3,43 +3,43 @@
   <employees firstname="Albert" lastname="Addams" belongsTo="//@structures.0" trigraph="AAD" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@owns.4"/>
   <employees firstname="Erwan" lastname="Pineau" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="EPI" manager="//@employees.3"/>
   <employees firstname="Michel" lastname="Dubois" belongsTo="//@structures.0/@subStructures.0" location="//@locations.0" trigraph="MDU" manager="//@employees.8"/>
-  <employees firstname="Christophe" lastname="Dubois" manages="//@employees.4 //@employees.1" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="CDU" manager="//@employees.13"/>
+  <employees firstname="Christophe" lastname="Dubois" manages="//@employees.4 //@employees.1" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="CDU" manager="//@employees.13" leads="//@structures.0/@subStructures.1"/>
   <employees firstname="Stéphan" lastname="Dubois" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="SDU" manager="//@employees.3"/>
   <employees firstname="Dana" lastname="Bertrand" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="DBE" manager="//@employees.8"/>
   <employees firstname="Elodie" lastname="Pineau" title="dir comme" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="EPI" manager="//@employees.11"/>
   <employees firstname="Alice" lastname="Royanne" manages="//@employees.15" belongsTo="//@structures.0" trigraph="ARO" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@subStructures.5/@owns.0"/>
-  <employees firstname="Jean" lastname="Dubois" manages="//@employees.2 //@employees.5" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="JDU" manager="//@employees.13"/>
+  <employees firstname="Jean" lastname="Dubois" manages="//@employees.2 //@employees.5" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="JDU" manager="//@employees.13" leads="//@structures.0/@subStructures.2 //@structures.0/@subStructures.0"/>
   <employees firstname="Didier Wayne" lastname="Addams" belongsTo="//@structures.0/@subStructures.5/@subStructures.0" location="//@locations.3" trigraph="DAD" manager="//@employees.16"/>
   <employees firstname="Florent" lastname="Pineau" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="FPI" manager="//@employees.11"/>
-  <employees firstname="Gabriel" lastname="Pineau" manages="//@employees.6 //@employees.10" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="GPI" manager="//@employees.13" performs="//@structures.0/@owns.3"/>
-  <employees firstname="David" lastname="Pineau" manages="//@employees.14 //@employees.21" belongsTo="//@structures.0/@subStructures.4" location="//@locations.0" trigraph="DPI" manager="//@employees.13" performs="//@structures.0/@subStructures.4/@owns.0 //@structures.0/@owns.2"/>
-  <employees firstname="Alain" lastname="Brooks" title="President" manages="//@employees.8 //@employees.0 //@employees.7 //@employees.12 //@employees.11 //@employees.23 //@employees.3" belongsTo="//@structures.0" location="//@locations.2" trigraph="ABR" performs="//@structures.0/@owns.1"/>
+  <employees firstname="Gabriel" lastname="Pineau" manages="//@employees.6 //@employees.10" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="GPI" manager="//@employees.13" performs="//@structures.0/@owns.3" leads="//@structures.0/@subStructures.3"/>
+  <employees firstname="David" lastname="Pineau" manages="//@employees.14 //@employees.21" belongsTo="//@structures.0/@subStructures.4" location="//@locations.0" trigraph="DPI" manager="//@employees.13" performs="//@structures.0/@subStructures.4/@owns.0 //@structures.0/@owns.2" leads="//@structures.0/@subStructures.4"/>
+  <employees firstname="Alain" lastname="Brooks" title="President" manages="//@employees.8 //@employees.0 //@employees.7 //@employees.12 //@employees.11 //@employees.23 //@employees.3" belongsTo="//@structures.0" location="//@locations.2" trigraph="ABR" performs="//@structures.0/@owns.1" leads="//@structures.0"/>
   <employees firstname="Dave" lastname="Brooks" belongsTo="//@structures.0/@subStructures.4" location="//@locations.2" trigraph="DBR" manager="//@employees.12"/>
-  <employees firstname="Marie" lastname="Dubois" manages="//@employees.16 //@employees.17 //@employees.19" belongsTo="//@structures.0/@subStructures.5" location="//@locations.1" trigraph="MDU" manager="//@employees.7" performs="//@structures.0/@subStructures.5/@owns.0"/>
-  <employees firstname="Virginie" lastname="Ashley" manages="//@employees.9" belongsTo="//@structures.0/@subStructures.5/@subStructures.0" location="//@locations.3" trigraph="VAS" manager="//@employees.15"/>
-  <employees firstname="Isabelle" lastname="Pineau" manages="//@employees.18 //@employees.20" belongsTo="//@structures.0/@subStructures.5/@subStructures.2" location="//@locations.0" trigraph="IPI" manager="//@employees.15"/>
+  <employees firstname="Marie" lastname="Dubois" manages="//@employees.16 //@employees.17 //@employees.19" belongsTo="//@structures.0/@subStructures.5" location="//@locations.1" trigraph="MDU" manager="//@employees.7" performs="//@structures.0/@subStructures.5/@owns.0" leads="//@structures.0/@subStructures.5 //@structures.0/@subStructures.5/@subStructures.1"/>
+  <employees firstname="Virginie" lastname="Ashley" manages="//@employees.9" belongsTo="//@structures.0/@subStructures.5/@subStructures.0" location="//@locations.3" trigraph="VAS" manager="//@employees.15" leads="//@structures.0/@subStructures.5/@subStructures.0"/>
+  <employees firstname="Isabelle" lastname="Pineau" manages="//@employees.18 //@employees.20" belongsTo="//@structures.0/@subStructures.5/@subStructures.2" location="//@locations.0" trigraph="IPI" manager="//@employees.15" leads="//@structures.0/@subStructures.5/@subStructures.2"/>
   <employees firstname="Sylvie" lastname="Pineau" belongsTo="//@structures.0/@subStructures.5/@subStructures.2" location="//@locations.1" trigraph="SPI" manager="//@employees.17"/>
   <employees firstname="Bryan" lastname="Brooks" belongsTo="//@structures.0/@subStructures.5/@subStructures.1" location="//@locations.2" trigraph="BBR" manager="//@employees.15"/>
   <employees firstname="Paul" lastname="Clerck" belongsTo="//@structures.0/@subStructures.5/@subStructures.2" location="//@locations.2" trigraph="PCL" manager="//@employees.17"/>
   <employees firstname="Fiona" lastname="Clerck" manages="//@employees.22" belongsTo="//@structures.0/@subStructures.4" location="//@locations.2" trigraph="FCL" manager="//@employees.12"/>
   <employees firstname="Dany" lastname="Brooks" belongsTo="//@structures.0/@subStructures.4" location="//@locations.2" trigraph="CBR" manager="//@employees.21"/>
   <employees firstname="Anna" lastname="Clerck" belongsTo="//@structures.0" location="//@locations.2" trigraph="ACL" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@owns.3"/>
-  <structures name="Direction" employees="//@employees.13 //@employees.0 //@employees.7 //@employees.23" manager="//@structures.0/@owns.1">
-    <subStructures name="Human Ressource" employees="//@employees.2"/>
-    <subStructures name="IT" employees="//@employees.3 //@employees.1 //@employees.4"/>
-    <subStructures name="Finance &amp; Adminisitrative" employees="//@employees.8 //@employees.5"/>
-    <subStructures name="Sails" employees="//@employees.11 //@employees.6 //@employees.10"/>
-    <subStructures name="Marketing" employees="//@employees.14 //@employees.12 //@employees.21 //@employees.22" manager="//@structures.0/@subStructures.4/@owns.0">
-      <owns name="Manager" isPerformedBy="//@employees.12" manages="//@structures.0/@subStructures.4"/>
+  <structures name="Direction" employees="//@employees.13 //@employees.0 //@employees.7 //@employees.23" manager="//@employees.13">
+    <subStructures name="Human Ressource" employees="//@employees.2" manager="//@employees.8"/>
+    <subStructures name="IT" employees="//@employees.3 //@employees.1 //@employees.4" manager="//@employees.3"/>
+    <subStructures name="Finance &amp; Adminisitrative" employees="//@employees.8 //@employees.5" manager="//@employees.8"/>
+    <subStructures name="Sails" employees="//@employees.11 //@employees.6 //@employees.10" manager="//@employees.11"/>
+    <subStructures name="Marketing" employees="//@employees.14 //@employees.12 //@employees.21 //@employees.22" manager="//@employees.12">
+      <owns name="Manager" isPerformedBy="//@employees.12"/>
     </subStructures>
-    <subStructures name="Production" employees="//@employees.15" manager="//@structures.0/@subStructures.5/@owns.0">
-      <subStructures name="Consulting" employees="//@employees.16 //@employees.9"/>
-      <subStructures name="Support" employees="//@employees.19"/>
-      <subStructures name="Research &amp; Development" employees="//@employees.17 //@employees.20 //@employees.18"/>
-      <owns name="Recruitement" isPerformedBy="//@employees.7 //@employees.15" manages="//@structures.0/@subStructures.5"/>
+    <subStructures name="Production" employees="//@employees.15" manager="//@employees.15">
+      <subStructures name="Consulting" employees="//@employees.16 //@employees.9" manager="//@employees.16"/>
+      <subStructures name="Support" employees="//@employees.19" manager="//@employees.15"/>
+      <subStructures name="Research &amp; Development" employees="//@employees.17 //@employees.20 //@employees.18" manager="//@employees.17"/>
+      <owns name="Recruitement" isPerformedBy="//@employees.7 //@employees.15"/>
     </subStructures>
     <owns name="Vice President" isPerformedBy="//@employees.0 //@employees.7 //@employees.23"/>
-    <owns name="Strategy" isPerformedBy="//@employees.13" manages="//@structures.0"/>
+    <owns name="Strategy" isPerformedBy="//@employees.13"/>
     <owns name="Recruitement" isPerformedBy="//@employees.12"/>
     <owns name="Accounting" isPerformedBy="//@employees.11 //@employees.23"/>
     <owns name="International" isPerformedBy="//@employees.0"/>

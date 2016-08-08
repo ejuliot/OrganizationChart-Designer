@@ -69,6 +69,7 @@ public class EmployeeItemProvider
 			addTrigraphPropertyDescriptor(object);
 			addManagerPropertyDescriptor(object);
 			addPerformsPropertyDescriptor(object);
+			addLeadsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -263,6 +264,28 @@ public class EmployeeItemProvider
 				 getString("_UI_Employee_performs_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_performs_feature", "_UI_Employee_type"),
 				 OrganizationChartPackage.Literals.EMPLOYEE__PERFORMS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Leads feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLeadsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Employee_leads_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Employee_leads_feature", "_UI_Employee_type"),
+				 OrganizationChartPackage.Literals.EMPLOYEE__LEADS,
 				 true,
 				 false,
 				 true,

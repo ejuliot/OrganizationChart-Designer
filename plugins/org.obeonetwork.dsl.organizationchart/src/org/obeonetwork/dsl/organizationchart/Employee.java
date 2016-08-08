@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getFirstname <em>Firstname</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLastname <em>Lastname</em>}</li>
@@ -23,8 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getTrigraph <em>Trigraph</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getManager <em>Manager</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getPerforms <em>Performs</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.organizationchart.Employee#getLeads <em>Leads</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee()
  * @model
@@ -254,5 +255,23 @@ public interface Employee extends EObject {
 	 * @generated
 	 */
 	EList<Function> getPerforms();
+
+	/**
+	 * Returns the value of the '<em><b>Leads</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager <em>Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Leads</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Leads</em>' reference list.
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getEmployee_Leads()
+	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager
+	 * @model opposite="manager"
+	 * @generated
+	 */
+	EList<OrganizationalStructure> getLeads();
 
 } // Employee

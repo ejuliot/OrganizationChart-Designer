@@ -28,11 +28,11 @@ import org.obeonetwork.dsl.organizationchart.OrganizationChartPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.LocationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.LocationImpl#getEmployees <em>Employees</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

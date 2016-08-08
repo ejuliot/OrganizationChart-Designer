@@ -17,6 +17,8 @@
         eOpposite="#//Employee/manages"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="performs" upperBound="-1"
         eType="#//Function" eOpposite="#//Function/isPerformedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leads" upperBound="-1"
+        eType="#//OrganizationalStructure" eOpposite="#//OrganizationalStructure/manager"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Organization">
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"
@@ -36,8 +38,8 @@
         eType="#//OrganizationalStructure" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owns" upperBound="-1" eType="#//Function"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="manager" eType="#//Function"
-        eOpposite="#//Function/manages"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manager" eType="#//Employee"
+        eOpposite="#//Employee/leads"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -55,7 +57,5 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isPerformedBy" upperBound="-1"
         eType="#//Employee" eOpposite="#//Employee/performs"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="manages" eType="#//OrganizationalStructure"
-        eOpposite="#//OrganizationalStructure/manager"/>
   </eClassifiers>
 </ecore:EPackage>

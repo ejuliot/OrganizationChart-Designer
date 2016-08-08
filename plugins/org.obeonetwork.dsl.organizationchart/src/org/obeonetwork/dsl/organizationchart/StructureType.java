@@ -179,6 +179,8 @@ public enum StructureType implements Enumerator {
 	 * Returns the '<em><b>Structure Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static StructureType get(String literal) {
@@ -195,6 +197,8 @@ public enum StructureType implements Enumerator {
 	 * Returns the '<em><b>Structure Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static StructureType getByName(String name) {
@@ -211,6 +215,8 @@ public enum StructureType implements Enumerator {
 	 * Returns the '<em><b>Structure Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static StructureType get(int value) {

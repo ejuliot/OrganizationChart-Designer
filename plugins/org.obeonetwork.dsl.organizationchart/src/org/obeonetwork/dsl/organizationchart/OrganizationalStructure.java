@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getEmployees <em>Employees</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getOwns <em>Owns</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager <em>Manager</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getOrganizationalStructure()
  * @model
@@ -144,7 +144,7 @@ public interface OrganizationalStructure extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Manager</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Function#getManages <em>Manages</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.Employee#getLeads <em>Leads</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Manager</em>' reference isn't clear,
@@ -152,13 +152,13 @@ public interface OrganizationalStructure extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Manager</em>' reference.
-	 * @see #setManager(Function)
+	 * @see #setManager(Employee)
 	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getOrganizationalStructure_Manager()
-	 * @see org.obeonetwork.dsl.organizationchart.Function#getManages
-	 * @model opposite="manages"
+	 * @see org.obeonetwork.dsl.organizationchart.Employee#getLeads
+	 * @model opposite="leads"
 	 * @generated
 	 */
-	Function getManager();
+	Employee getManager();
 
 	/**
 	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager <em>Manager</em>}' reference.
@@ -168,6 +168,6 @@ public interface OrganizationalStructure extends EObject {
 	 * @see #getManager()
 	 * @generated
 	 */
-	void setManager(Function value);
+	void setManager(Employee value);
 
 } // OrganizationalStructure

@@ -22,12 +22,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Function#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Function#getIsPerformedBy <em>Is Performed By</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.organizationchart.Function#getManages <em>Manages</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getFunction()
  * @model
@@ -77,33 +76,5 @@ public interface Function extends EObject {
 	 * @generated
 	 */
 	EList<Employee> getIsPerformedBy();
-
-	/**
-	 * Returns the value of the '<em><b>Manages</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager <em>Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Manages</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Manages</em>' reference.
-	 * @see #setManages(OrganizationalStructure)
-	 * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getFunction_Manages()
-	 * @see org.obeonetwork.dsl.organizationchart.OrganizationalStructure#getManager
-	 * @model opposite="manager"
-	 * @generated
-	 */
-	OrganizationalStructure getManages();
-
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.organizationchart.Function#getManages <em>Manages</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Manages</em>' reference.
-	 * @see #getManages()
-	 * @generated
-	 */
-	void setManages(OrganizationalStructure value);
 
 } // Function

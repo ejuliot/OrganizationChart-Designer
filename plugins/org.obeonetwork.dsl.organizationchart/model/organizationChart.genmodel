@@ -10,6 +10,13 @@
   <foreignModel>organizationChart.ecore</foreignModel>
   <genPackages prefix="OrganizationChart" basePackage="org.obeonetwork.dsl" disposableProviderFactory="true"
       fileExtensions="orgchart" ecorePackage="organizationChart.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="organizationChart.ecore#//StructureType">
+      <genEnumLiterals ecoreEnumLiteral="organizationChart.ecore#//StructureType/team"/>
+      <genEnumLiterals ecoreEnumLiteral="organizationChart.ecore#//StructureType/service"/>
+      <genEnumLiterals ecoreEnumLiteral="organizationChart.ecore#//StructureType/department"/>
+      <genEnumLiterals ecoreEnumLiteral="organizationChart.ecore#//StructureType/businessUnit"/>
+      <genEnumLiterals ecoreEnumLiteral="organizationChart.ecore#//StructureType/division"/>
+    </genEnums>
     <genClasses ecoreClass="organizationChart.ecore#//Employee" labelFeature="#//organizationchart/Employee/lastname">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/firstname"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/lastname"/>
@@ -17,23 +24,32 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/manages"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/belongsTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/location"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/isInChargeOf"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Employee/trigraph"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/manager"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/performs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Employee/leads"/>
     </genClasses>
     <genClasses ecoreClass="organizationChart.ecore#//Organization">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Organization/employees"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Organization/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Organization/structures"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Organization/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Organization/locations"/>
     </genClasses>
     <genClasses ecoreClass="organizationChart.ecore#//OrganizationalStructure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//OrganizationalStructure/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//OrganizationalStructure/employees"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//OrganizationalStructure/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference organizationChart.ecore#//OrganizationalStructure/subStructures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference organizationChart.ecore#//OrganizationalStructure/owns"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//OrganizationalStructure/manager"/>
     </genClasses>
     <genClasses ecoreClass="organizationChart.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Location/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Location/employees"/>
+    </genClasses>
+    <genClasses ecoreClass="organizationChart.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute organizationChart.ecore#//Function/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference organizationChart.ecore#//Function/isPerformedBy"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

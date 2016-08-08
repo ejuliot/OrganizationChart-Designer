@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getEmployees <em>Employees</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getStructures <em>Structures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.Organization#getLocations <em>Locations</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.organizationchart.OrganizationChartPackage#getOrganization()
  * @model

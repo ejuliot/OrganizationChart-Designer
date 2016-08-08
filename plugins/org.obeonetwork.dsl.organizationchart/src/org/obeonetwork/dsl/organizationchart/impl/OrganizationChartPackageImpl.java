@@ -225,6 +225,15 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getEmployee_Leads() {
+		return (EReference)employeeEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOrganization() {
 		return organizationEClass;
 	}
@@ -387,15 +396,6 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunction_Manages() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getStructureType() {
 		return structureTypeEEnum;
 	}
@@ -438,6 +438,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		createEAttribute(employeeEClass, EMPLOYEE__TRIGRAPH);
 		createEReference(employeeEClass, EMPLOYEE__MANAGER);
 		createEReference(employeeEClass, EMPLOYEE__PERFORMS);
+		createEReference(employeeEClass, EMPLOYEE__LEADS);
 
 		organizationEClass = createEClass(ORGANIZATION);
 		createEReference(organizationEClass, ORGANIZATION__EMPLOYEES);
@@ -460,7 +461,6 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		functionEClass = createEClass(FUNCTION);
 		createEAttribute(functionEClass, FUNCTION__NAME);
 		createEReference(functionEClass, FUNCTION__IS_PERFORMED_BY);
-		createEReference(functionEClass, FUNCTION__MANAGES);
 
 		// Create enums
 		structureTypeEEnum = createEEnum(STRUCTURE_TYPE);
@@ -506,6 +506,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		initEAttribute(getEmployee_Trigraph(), ecorePackage.getEString(), "trigraph", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Manager(), this.getEmployee(), this.getEmployee_Manages(), "manager", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmployee_Performs(), this.getFunction(), this.getFunction_IsPerformedBy(), "performs", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEmployee_Leads(), this.getOrganizationalStructure(), this.getOrganizationalStructure_Manager(), "leads", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(organizationEClass, Organization.class, "Organization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrganization_Employees(), this.getEmployee(), null, "employees", null, 0, -1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -519,7 +520,7 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		initEAttribute(getOrganizationalStructure_Type(), this.getStructureType(), "type", null, 0, 1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOrganizationalStructure_SubStructures(), this.getOrganizationalStructure(), null, "subStructures", null, 0, -1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOrganizationalStructure_Owns(), this.getFunction(), null, "owns", null, 0, -1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOrganizationalStructure_Manager(), this.getFunction(), this.getFunction_Manages(), "manager", null, 0, 1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrganizationalStructure_Manager(), this.getEmployee(), this.getEmployee_Leads(), "manager", null, 0, 1, OrganizationalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -528,7 +529,6 @@ public class OrganizationChartPackageImpl extends EPackageImpl implements Organi
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunction_IsPerformedBy(), this.getEmployee(), this.getEmployee_Performs(), "isPerformedBy", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Manages(), this.getOrganizationalStructure(), this.getOrganizationalStructure_Manager(), "manages", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(structureTypeEEnum, StructureType.class, "StructureType");

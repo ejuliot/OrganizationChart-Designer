@@ -40,6 +40,7 @@ import org.obeonetwork.dsl.organizationchart.StructureType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl#getEmployees <em>Employees</em>}</li>
@@ -48,7 +49,6 @@ import org.obeonetwork.dsl.organizationchart.StructureType;
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl#getOwns <em>Owns</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.organizationchart.impl.OrganizationalStructureImpl#getManager <em>Manager</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -131,7 +131,7 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 	 * @generated
 	 * @ordered
 	 */
-	protected Function manager;
+	protected Employee manager;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,10 +235,10 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function getManager() {
+	public Employee getManager() {
 		if (manager != null && manager.eIsProxy()) {
 			InternalEObject oldManager = (InternalEObject)manager;
-			manager = (Function)eResolveProxy(oldManager);
+			manager = (Employee)eResolveProxy(oldManager);
 			if (manager != oldManager) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER, oldManager, manager));
@@ -252,7 +252,7 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function basicGetManager() {
+	public Employee basicGetManager() {
 		return manager;
 	}
 
@@ -261,8 +261,8 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetManager(Function newManager, NotificationChain msgs) {
-		Function oldManager = manager;
+	public NotificationChain basicSetManager(Employee newManager, NotificationChain msgs) {
+		Employee oldManager = manager;
 		manager = newManager;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER, oldManager, newManager);
@@ -276,13 +276,13 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setManager(Function newManager) {
+	public void setManager(Employee newManager) {
 		if (newManager != manager) {
 			NotificationChain msgs = null;
 			if (manager != null)
-				msgs = ((InternalEObject)manager).eInverseRemove(this, OrganizationChartPackage.FUNCTION__MANAGES, Function.class, msgs);
+				msgs = ((InternalEObject)manager).eInverseRemove(this, OrganizationChartPackage.EMPLOYEE__LEADS, Employee.class, msgs);
 			if (newManager != null)
-				msgs = ((InternalEObject)newManager).eInverseAdd(this, OrganizationChartPackage.FUNCTION__MANAGES, Function.class, msgs);
+				msgs = ((InternalEObject)newManager).eInverseAdd(this, OrganizationChartPackage.EMPLOYEE__LEADS, Employee.class, msgs);
 			msgs = basicSetManager(newManager, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -303,8 +303,8 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEmployees()).basicAdd(otherEnd, msgs);
 			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER:
 				if (manager != null)
-					msgs = ((InternalEObject)manager).eInverseRemove(this, OrganizationChartPackage.FUNCTION__MANAGES, Function.class, msgs);
-				return basicSetManager((Function)otherEnd, msgs);
+					msgs = ((InternalEObject)manager).eInverseRemove(this, OrganizationChartPackage.EMPLOYEE__LEADS, Employee.class, msgs);
+				return basicSetManager((Employee)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -382,7 +382,7 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 				getOwns().addAll((Collection<? extends Function>)newValue);
 				return;
 			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER:
-				setManager((Function)newValue);
+				setManager((Employee)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -412,7 +412,7 @@ public class OrganizationalStructureImpl extends EObjectImpl implements Organiza
 				getOwns().clear();
 				return;
 			case OrganizationChartPackage.ORGANIZATIONAL_STRUCTURE__MANAGER:
-				setManager((Function)null);
+				setManager((Employee)null);
 				return;
 		}
 		super.eUnset(featureID);
