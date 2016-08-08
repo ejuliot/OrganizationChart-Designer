@@ -1963,9 +1963,11 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_3:CrossTableDescription" name="Functions Matrix" titleExpression="Functions Matrix" initialisation="true" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
-      <ownedLineMappings name="FM_Function" domainClass="organizationchart.Function" headerLabelExpression="feature:name"/>
+      <ownedLineMappings name="FM_Structure" domainClass="organizationchart.OrganizationalStructure" headerLabelExpression="feature:name">
+        <ownedSubLines name="FM_Function" domainClass="organizationchart.Function" semanticCandidatesExpression="feature:owns" headerLabelExpression="feature:name"/>
+      </ownedLineMappings>
       <ownedColumnMappings name="FM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee"/>
-      <intersection name="FM_Performed" lineMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']" columnMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="feature:isPerformedBy">
+      <intersection name="FM_Performed" lineMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']" columnMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="feature:isPerformedBy">
         <directEdit>
           <variables name="element" documentation="The semantic currently edited element."/>
           <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>

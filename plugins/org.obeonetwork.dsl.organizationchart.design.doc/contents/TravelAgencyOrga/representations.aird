@@ -18793,104 +18793,154 @@
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']"/>
       <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
     </ownedRepresentations>
-    <ownedRepresentations xmi:type="table:DTable" xmi:id="_YxX6EEHLEeaV_dDlKYcASQ" name="Functions Matrix" headerColumnWidth="119">
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_YxX6EEHLEeaV_dDlKYcASQ" name="Functions Matrix" headerColumnWidth="213">
       <target xmi:type="organizationChart:Organization" href="agency.orgchart#/"/>
-      <lines xmi:type="table:DLine" xmi:id="_YxX6EUHLEeaV_dDlKYcASQ" label="Manager">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxX6EkHLEeaV_dDlKYcASQ" label="X" column="_YxYhNEHLEeaV_dDlKYcASQ">
-          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
-          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-      </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxX6E0HLEeaV_dDlKYcASQ" label="Recruitement">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxX6FEHLEeaV_dDlKYcASQ" label="X" column="_YxYhL0HLEeaV_dDlKYcASQ">
-          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
-          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-        <cells xmi:type="table:DCell" xmi:id="_SNaWcEHOEeaV_dDlKYcASQ" label="X" column="_YxYhN0HLEeaV_dDlKYcASQ">
-          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
-          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-      </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxX6FUHLEeaV_dDlKYcASQ" label="Vice President">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxX6FkHLEeaV_dDlKYcASQ" label="X" column="_YxYhKEHLEeaV_dDlKYcASQ">
+      <lines xmi:type="table:DLine" xmi:id="_YueJEF1AEeaytv-9eH-Oog" label="Direction">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
+        <lines xmi:type="table:DLine" xmi:id="_YuhMYF1AEeaytv-9eH-Oog" label="Vice President">
           <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
           <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-        <cells xmi:type="table:DCell" xmi:id="_YxX6F0HLEeaV_dDlKYcASQ" label="X" column="_YxYhL0HLEeaV_dDlKYcASQ">
-          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-        <cells xmi:type="table:DCell" xmi:id="_YxX6GEHLEeaV_dDlKYcASQ" label="X" column="_YxYhP0HLEeaV_dDlKYcASQ">
-          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-      </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxX6GUHLEeaV_dDlKYcASQ" label="Strategy">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxYhIEHLEeaV_dDlKYcASQ" label="X" column="_YxYhNUHLEeaV_dDlKYcASQ">
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Yuk2wF1AEeaytv-9eH-Oog" label="X" column="_YxYhKEHLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_Yuld0F1AEeaytv-9eH-Oog" label="X" column="_YxYhL0HLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_Yuld0V1AEeaytv-9eH-Oog" label="X" column="_YxYhP0HLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_YuhzcF1AEeaytv-9eH-Oog" label="Strategy">
           <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
           <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-      </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxYhIUHLEeaV_dDlKYcASQ" label="Recruitement">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxYhIkHLEeaV_dDlKYcASQ" label="X" column="_YxYhNEHLEeaV_dDlKYcASQ">
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_YumE4F1AEeaytv-9eH-Oog" label="X" column="_YxYhNUHLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_YuhzcV1AEeaytv-9eH-Oog" label="Recruitement">
           <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
           <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-      </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxYhI0HLEeaV_dDlKYcASQ" label="Accounting">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxYhJEHLEeaV_dDlKYcASQ" label="X" column="_YxYhM0HLEeaV_dDlKYcASQ">
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_YumE4V1AEeaytv-9eH-Oog" label="X" column="_YxYhNEHLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Yuhzcl1AEeaytv-9eH-Oog" label="Accounting">
           <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
           <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-        <cells xmi:type="table:DCell" xmi:id="_BefXgEHNEeaV_dDlKYcASQ" label="X" column="_YxYhP0HLEeaV_dDlKYcASQ">
-          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
-      </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxYhJUHLEeaV_dDlKYcASQ" label="International">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
-        <cells xmi:type="table:DCell" xmi:id="_YxYhJkHLEeaV_dDlKYcASQ" label="X" column="_YxYhKEHLEeaV_dDlKYcASQ">
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Yumr8F1AEeaytv-9eH-Oog" label="X" column="_YxYhM0HLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_Yumr8V1AEeaytv-9eH-Oog" label="X" column="_YxYhP0HLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Yuhzc11AEeaytv-9eH-Oog" label="International">
           <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
           <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
-          <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
-        </cells>
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_YunTAF1AEeaytv-9eH-Oog" label="X" column="_YxYhKEHLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_YuhzdF1AEeaytv-9eH-Oog" label="InBounding">
+          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
+          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+        </lines>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_YxYhJ0HLEeaV_dDlKYcASQ" label="InBounding">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
-        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Function']"/>
+      <lines xmi:type="table:DLine" xmi:id="_YuewIF1AEeaytv-9eH-Oog" label="Human Ressource">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.0"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.0"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
       </lines>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhKEHLEeaV_dDlKYcASQ" label="AAD" cells="_YxX6FkHLEeaV_dDlKYcASQ _YxYhJkHLEeaV_dDlKYcASQ" width="67">
+      <lines xmi:type="table:DLine" xmi:id="_YuewIV1AEeaytv-9eH-Oog" label="IT">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.1"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.1"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YufXMF1AEeaytv-9eH-Oog" label="Finance &amp; Adminisitrative">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.2"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.2"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YufXMV1AEeaytv-9eH-Oog" label="Sails">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.3"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.3"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YufXMl1AEeaytv-9eH-Oog" label="Marketing">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.4"/>
+        <lines xmi:type="table:DLine" xmi:id="_YuiagF1AEeaytv-9eH-Oog" label="Manager">
+          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
+          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_YunTAV1AEeaytv-9eH-Oog" label="X" column="_YxYhNEHLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.4/@owns.0"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.4"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YufXM11AEeaytv-9eH-Oog" label="Production">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5"/>
+        <lines xmi:type="table:DLine" xmi:id="_YuiagV1AEeaytv-9eH-Oog" label="Recruitement">
+          <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
+          <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
+          <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']"/>
+          <cells xmi:type="table:DCell" xmi:id="_YunTAl1AEeaytv-9eH-Oog" label="X" column="_YxYhL0HLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_YunTA11AEeaytv-9eH-Oog" label="X" column="_YxYhN0HLEeaV_dDlKYcASQ">
+            <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
+            <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@subStructures.5/@owns.0"/>
+            <intersectionMapping xmi:type="description_3:IntersectionMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@intersection.0"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Yuf-QF1AEeaytv-9eH-Oog" label="Consulting">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5/@subStructures.0"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5/@subStructures.0"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Yuf-QV1AEeaytv-9eH-Oog" label="Support">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5/@subStructures.1"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5/@subStructures.1"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Yuf-Ql1AEeaytv-9eH-Oog" label="Research &amp; Development">
+        <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5/@subStructures.2"/>
+        <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.5/@subStructures.2"/>
+        <originMapping xmi:type="description_3:LineMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']"/>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhKEHLEeaV_dDlKYcASQ" label="AAD" cells="_Yuk2wF1AEeaytv-9eH-Oog _YunTAF1AEeaytv-9eH-Oog" width="67">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
@@ -18925,7 +18975,7 @@
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.6"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
       </columns>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhL0HLEeaV_dDlKYcASQ" label="ARO" cells="_YxX6FEHLEeaV_dDlKYcASQ _YxX6F0HLEeaV_dDlKYcASQ" width="67">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhL0HLEeaV_dDlKYcASQ" label="ARO" cells="_Yuld0F1AEeaytv-9eH-Oog _YunTAl1AEeaytv-9eH-Oog" width="67">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.7"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.7"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
@@ -18945,17 +18995,17 @@
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.10"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
       </columns>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhM0HLEeaV_dDlKYcASQ" label="GPI" cells="_YxYhJEHLEeaV_dDlKYcASQ" width="61">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhM0HLEeaV_dDlKYcASQ" label="GPI" cells="_Yumr8F1AEeaytv-9eH-Oog" width="61">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
       </columns>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhNEHLEeaV_dDlKYcASQ" label="DPI" cells="_YxX6EkHLEeaV_dDlKYcASQ _YxYhIkHLEeaV_dDlKYcASQ" width="61">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhNEHLEeaV_dDlKYcASQ" label="DPI" cells="_YumE4V1AEeaytv-9eH-Oog _YunTAV1AEeaytv-9eH-Oog" width="61">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
       </columns>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhNUHLEeaV_dDlKYcASQ" label="ABR" cells="_YxYhIEHLEeaV_dDlKYcASQ" width="65">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhNUHLEeaV_dDlKYcASQ" label="ABR" cells="_YumE4F1AEeaytv-9eH-Oog" width="65">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
@@ -18965,7 +19015,7 @@
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.14"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
       </columns>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhN0HLEeaV_dDlKYcASQ" label="MDU" cells="_SNaWcEHOEeaV_dDlKYcASQ" width="70">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhN0HLEeaV_dDlKYcASQ" label="MDU" cells="_YunTA11AEeaytv-9eH-Oog" width="70">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.15"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.15"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
@@ -19005,7 +19055,7 @@
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.22"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
       </columns>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhP0HLEeaV_dDlKYcASQ" label="ACL" cells="_YxX6GEHLEeaV_dDlKYcASQ _BefXgEHNEeaV_dDlKYcASQ" width="65">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_YxYhP0HLEeaV_dDlKYcASQ" label="ACL" cells="_Yuld0V1AEeaytv-9eH-Oog _Yumr8V1AEeaytv-9eH-Oog" width="65">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
         <originMapping xmi:type="description_3:ElementColumnMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0"/>
