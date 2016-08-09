@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<toc topic="doc/UML Designer User Guide.html" label="UML Designer User Guide">
-	<topic href="doc/UML Designer User Guide.html" label="Providing Feedback"></topic>
+<toc topic="doc/OrganizationChart User Guide.html" label="OrganizationChart Designer User Guide">
+	<topic href="doc/OrganizationChart User Guide.html" label="Providing Feedback"></topic>
 	<topic href="doc/UML Designer User Guide.html#GettingStarted" label="Getting Started">
 		<topic href="doc/UML Designer User Guide.html#StartingfromtheTravelAgencyexample" label="Starting from the Travel Agency example"></topic>
 		<topic href="doc/UML Designer User Guide.html#CreateanewUMLmodelUMLproject" label="Create a new UML model &amp; UML project"></topic>

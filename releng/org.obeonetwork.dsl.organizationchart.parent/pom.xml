@@ -33,7 +33,7 @@ Contributors:
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.editor</module>
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design</module>
     <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.branding</module>
-    <!--module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design.doc</module-->
+    <module>${root-path}/plugins/org.obeonetwork.dsl.organizationchart.design.doc</module>
 
 
     <!-- Build test plugins -->

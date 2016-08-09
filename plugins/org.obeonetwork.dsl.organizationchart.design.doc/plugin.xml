@@ -11,13 +11,6 @@ Contributors:
     Etienne Juliot - initial API and implementation
 -->
 <plugin>
-    <extension
-        point="org.eclipse.help.toc">
-        <toc
-            file="doc/OrganizationChart Designer User Guide-toc.xml"
-            primary="true">
-        </toc>
-    </extension>
 
     <extension point="org.eclipse.emf.common.ui.examples">
         <example wizardID="org.obeonetwork.dsl.organizationchart.design.doc.TravelAgencyWizard">
