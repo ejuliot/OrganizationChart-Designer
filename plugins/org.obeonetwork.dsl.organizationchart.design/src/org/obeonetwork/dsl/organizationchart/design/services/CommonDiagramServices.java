@@ -58,6 +58,8 @@ public class CommonDiagramServices {
 		for (String ext : imgExt) {			
 			if (folder.findMember(filename + '.' + ext) != null)
 				return filename + '.' + ext;
+			if (folder.findMember(filename + '.' + ext.toUpperCase()) != null)
+				return filename + '.' + ext.toUpperCase();
 		}
 		return null;
 	};

@@ -172,12 +172,12 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Locations with Employees" titleExpression="Locations Tree" initialisation="true" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
-      <subItemMappings name="LOC_Location" domainClass="organizationchart.Location" semanticCandidatesExpression="feature:locations">
+      <subItemMappings name="LOC_Location" domainClass="organizationchart.Location" semanticCandidatesExpression="aql:self.locations->sortedBy(loc|loc.name)">
         <defaultStyle>
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="LOC_L_Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="feature:employees">
+        <subItemMappings name="LOC_L_Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->sortedBy(emp|emp.firstname)">
           <defaultStyle labelExpression="aql:self.firstname + ' ' + self.lastname">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -221,7 +221,7 @@
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Managers only">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']" semanticConditionExpression="aql:self not self.manages->isEmpty()"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']" semanticConditionExpression="aql:not self.manages->isEmpty()"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Employees without Location">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Without%20Location']"/>
@@ -994,7 +994,7 @@
           </style>
         </containerMappings>
         <containerMappings name="SC_WithOutFunction" preconditionExpression="aql:not self.employees->select(emp | emp.performs = null)->isEmpty()" semanticCandidatesExpression="var:self" domainClass="organizationchart.OrganizationalStructure" childrenPresentation="List">
-          <subNodeMappings name="SC_WithOutFunction_Emp" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="aql:not self.employees->select(emp | emp.performs = null)" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='Dbl_Click']" domainClass="organizationchart.Employee">
+          <subNodeMappings name="SC_WithOutFunction_Emp" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="aql:self.employees->select(emp | emp.performs = null)" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='Dbl_Click']" domainClass="organizationchart.Employee">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1917,7 +1917,7 @@
       </ownedCreateLine>
       <ownedColumnMappings name="Firstname" headerLabelExpression="Firstname" featureName="firstname"/>
       <ownedColumnMappings name="Lastname" headerLabelExpression="LastName" featureName="lastname"/>
-      <ownedColumnMappings name="Trigraf" headerLabelExpression="Trigraf" featureName="trigraf"/>
+      <ownedColumnMappings name="Trigraph" headerLabelExpression="Trigraph" featureName="trigraph"/>
       <ownedColumnMappings name="Title" headerLabelExpression="Title" featureName="title"/>
       <ownedColumnMappings name="Manager" headerLabelExpression="Manager" featureName="manager" labelExpression="aql:if self.manager = null then null else self.manager.firstname + ' ' + self.manager.lastname endif"/>
       <ownedColumnMappings name="Structure" headerLabelExpression="Structure" featureName="belongsTo" labelExpression="aql:if self.belongsTo = null then null else self.belongsTo.name endif"/>
