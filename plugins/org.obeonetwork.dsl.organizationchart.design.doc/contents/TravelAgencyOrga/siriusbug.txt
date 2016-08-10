@@ -33,7 +33,7 @@ edge
 	SR manager + SC struct function
 		it's hard to do a conditional style based on target or source
 		
-	
+OrderTreeLayout : children expression validation/completion is based on root element of diagram instead of NodeMapping 	
 	
 Q
 	Del et unset dans SC Del FctEmp
