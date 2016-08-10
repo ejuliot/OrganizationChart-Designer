@@ -876,7 +876,7 @@
       <additionalLayers name="Managers'Pictures">
         <containerMappings xsi:type="description_1:ContainerMappingImport" name="SR_MP_Structure" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']">
           <borderedNodeMappings name="SR_MP_Manager" semanticCandidatesExpression="feature:manager" domainClass="organizationchart.Employee">
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
               <forbiddenSides>SOUTH</forbiddenSides>
@@ -885,6 +885,11 @@
             </style>
           </borderedNodeMappings>
         </containerMappings>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@additionalLayers[name='Managers%27Pictures']/@containerMappings[name='SR_MP_Structure']/@borderedNodeMappings[name='SR_MP_Manager']/@style" attributeName="workspacePath" value="service:getPicture"/>
+          </vsmElementCustomizations>
+        </customization>
       </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structure Composition" titleExpression="[name + ' Functions'/]" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
@@ -1118,8 +1123,8 @@
           <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" labelPosition="node" resizeKind="NSEW" width="12" height="5">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
           </style>
         </nodeMappings>
         <edgeMappings name="MH_Hierarchy" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']" targetFinderExpression="feature:manages">
@@ -1208,19 +1213,25 @@
       </defaultLayer>
       <additionalLayers name="Pictures">
         <nodeMappings xsi:type="description_1:NodeMappingImport" name="MH_Employee_Picture" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + if (diagram.activatedLayers.name->indexOf('with Title') > 0) then '\r\n' + self.title else '' endif" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + if (diagram.activatedLayers.name->indexOf('with Title') > 0) then '\r\n' + self.title else '' endif" sizeComputationExpression="6" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
           </style>
         </nodeMappings>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@additionalLayers[name='Pictures']/@nodeMappings[name='MH_Employee_Picture']/@style" attributeName="workspacePath" value="service:getPicture"/>
+          </vsmElementCustomizations>
+        </customization>
       </additionalLayers>
       <additionalLayers name="with Title">
         <nodeMappings xsi:type="description_1:NodeMappingImport" name="MH_Employee_Title" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']">
           <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + '\r\n' + self.title" labelPosition="node" resizeKind="NSEW" width="12" height="5">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
           </style>
         </nodeMappings>
       </additionalLayers>
@@ -1613,7 +1624,7 @@
         </edgeMappings>
         <containerMappings xsi:type="description_1:ContainerMappingImport" name="AEWTS_Structure" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@defaultLayer/@toolSections.0/@ownedTools[name='AEWTS_Drop_Employee']" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']">
           <subNodeMappings name="AEWTS_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@defaultLayer/@toolSections.0/@ownedTools[name='NameEmployee']" semanticCandidatesExpression="aql:self.employees" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@defaultLayer/@toolSections.0/@ownedTools[name='AEWTS_Become%20Manager']" domainClass="organizationchart.Employee">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" sizeComputationExpression="5" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" sizeComputationExpression="5" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             </style>
@@ -1774,6 +1785,11 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@defaultLayer/@containerMappings[name='AEWTS_Structure']/@subNodeMappings[name='AEWTS_Employee']/@style //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@defaultLayer/@containerMappings[name='AEWTS_Structure']/@subNodeMappings[name='AEWTS_Employee']/@conditionnalStyles.0/@style" attributeName="workspacePath" value="service:getPicture"/>
+          </vsmElementCustomizations>
+        </customization>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_3:EditionTableDescription" name="Employees Description" titleExpression="All Employees Description" initialisation="true" domainClass="organizationchart.Organization">
@@ -2103,6 +2119,7 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.common.tools.api.interpreter.StandardServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.organizationchart.design.services.CommonDiagramServices"/>
   </ownedViewpoints>
   <ownedViewpoints name="Incubation" modelFileExtension="orgchart">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Custom%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='EmployeeDrop'] //@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Custom%20Organization%20Chart']/@defaultLayer/@toolSections.0/@ownedTools[name='StructureDrop']" name="Custom Organization Chart" titleExpression="Custom Organization Chart" domainClass="organizationchart.Organization" enablePopupBars="true">

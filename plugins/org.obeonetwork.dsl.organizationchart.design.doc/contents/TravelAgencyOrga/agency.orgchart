@@ -2,7 +2,7 @@
 <organizationChart:Organization xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:organizationChart="http://www.obeonetwork.org/dsl/organizationchart/1.0.0" name="TravelAgency Organization">
   <employees firstname="Albert" lastname="Addams" belongsTo="//@structures.0" trigraph="AAD" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@owns.4"/>
   <employees firstname="Erwan" lastname="Pineau" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="EPI" manager="//@employees.3"/>
-  <employees firstname="Michel" lastname="Dubois" belongsTo="//@structures.0/@subStructures.0" location="//@locations.0" trigraph="MDU" manager="//@employees.8"/>
+  <employees firstname="Michelle" lastname="Dubois" belongsTo="//@structures.0/@subStructures.0" location="//@locations.0" trigraph="MDU" manager="//@employees.8"/>
   <employees firstname="Christophe" lastname="Dubois" manages="//@employees.4 //@employees.1" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="CDU" manager="//@employees.13" leads="//@structures.0/@subStructures.1"/>
   <employees firstname="Stéphan" lastname="Dubois" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="SDU" manager="//@employees.3"/>
   <employees firstname="Dana" lastname="Bertrand" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="DBE" manager="//@employees.8"/>

@@ -27,6 +27,7 @@ Tools
 			otherEnd is about DEdge for target reconnection and DNode for source reconnection. It is not consistent
 Tree
 	Drop doesn't work
+	tree edge doesn't respect the doc : "Tree: this style can be seen as a special case of Manhattan, with always two vertical segments and an horizontal one between them. If one graphical element serves as the source for several edges using this style, their first vertical segment (the stem of the tree) will be merged, and their horizontal segments will all appear as a single line."
 	
 edge
 	SR manager + SC struct function
