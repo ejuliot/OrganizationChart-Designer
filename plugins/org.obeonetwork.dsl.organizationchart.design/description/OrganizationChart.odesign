@@ -22,7 +22,7 @@
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:'Employees: ' + self.employees->size()" sizeComputationExpression="12" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/usergroup_wiz.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
           </style>
         </nodeMappings>
         <containerMappings name="OV_Locations" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Overview']/@defaultLayer/@toolSections.0/@ownedTools[name='Location%20Map']" semanticCandidatesExpression="var:self" domainClass="organizationchart.Organization" childrenPresentation="List">
@@ -273,7 +273,7 @@
           </style>
         </containerMappings>
         <containerMappings name="AG_Location" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@toolSections.0/@ownedTools[name='AG_DE_Location']" semanticCandidatesExpression="feature:locations" createElements="false" domainClass="organizationchart.Location" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@toolSections.0/@ownedTools[name='AG_Drop_EmployeLocation']" childrenPresentation="List">
-          <subNodeMappings name="AG_Loc_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Employee_Name']" semanticCandidatesExpression="feature:employees" domainClass="organizationchart.Employee">
+          <subNodeMappings name="AG_Loc_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Employee_Name']" semanticCandidatesExpression="aql:self.employees->sortedBy(emp|emp.firstname)" domainClass="organizationchart.Employee">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -288,7 +288,7 @@
           </style>
         </containerMappings>
         <containerMappings name="AG_Without Location" semanticCandidatesExpression="var:self" domainClass="organizationchart.Organization" childrenPresentation="List">
-          <subNodeMappings name="AG_WithoutLoc_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Employee_Name']" semanticCandidatesExpression="aql:self.employees->select(emp|emp.location = null)" domainClass="organizationchart.Employee">
+          <subNodeMappings name="AG_WithoutLoc_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Employee_Name']" semanticCandidatesExpression="aql:self.employees->select(emp|emp.location = null)->sortedBy(emp|emp.firstname)" domainClass="organizationchart.Employee">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
