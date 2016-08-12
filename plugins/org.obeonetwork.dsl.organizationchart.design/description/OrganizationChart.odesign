@@ -217,13 +217,13 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Locations" titleExpression="Locations Map" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
-      <filters xsi:type="filter:CompositeFilterDescription" name="Employees">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide Employees List">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Managers only">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']" semanticConditionExpression="aql:not self.manages->isEmpty()"/>
       </filters>
-      <filters xsi:type="filter:CompositeFilterDescription" name="Employees without Location">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide Employees without Location">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Without%20Location']"/>
       </filters>
       <defaultLayer name="Default">
@@ -968,7 +968,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Functions">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SC_Create_Function" label="Function" containerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SC_Create_Function" label="Function" elementsToSelect="var:instance" containerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1484,6 +1484,11 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']/@style" attributeName="workspacePath" value="service:getPicture"/>
+          </vsmElementCustomizations>
+        </customization>
       </defaultLayer>
       <additionalLayers name="Indirect Responsabilities">
         <edgeMappings name="MR_Hierarchy-Indirect" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect']" targetFinderExpression="feature:manages">
@@ -1684,6 +1689,20 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers name="Pictures">
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="MT_Manager_Picture" semanticCandidatesExpression="aql:self.employees->select(myEmployee | myEmployee.leads->notEmpty())" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@nodeMappings[name='MT_Manager']">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + if (diagram.activatedLayers.name->indexOf('with Title') > 0) then '\r\n' + self.title else '' endif" sizeComputationExpression="6" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+          </style>
+        </nodeMappings>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@additionalLayers[name='Pictures']/@nodeMappings[name='MT_Manager_Picture']/@style" attributeName="workspacePath" value="service:getPicture"/>
+          </vsmElementCustomizations>
+        </customization>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="All Employees with their Structures" titleExpression="All Employees with their Structures" initialisation="true" domainClass="organizationchart.Organization" defaultConcern="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@concerns/@ownedConcernDescriptions.0" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
@@ -2091,7 +2110,7 @@
             <container name="manager"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:For" expression="var:emp">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='FA_Employee_Indirect']" containerViewExpression="var:orgaView"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='FA_Employee_Indirect']" containerViewExpression="aql:orgaView"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -2118,7 +2137,27 @@
             </style>
           </foregroundConditionalStyle>
         </ownedSubLines>
+        <create name="Create Function" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']">
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <firstModelOperation xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationchart.Function" referenceName="owns">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="&lt;Write a function name>"/>
+            </subModelOperations>
+          </firstModelOperation>
+        </create>
       </ownedLineMappings>
+      <ownedCreateLine name="Create Structure" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool_1:ChangeContext" browseExpression="var:root">
+          <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationchart.OrganizationalStructure" referenceName="structures">
+            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="&lt;Write a structure name>"/>
+          </subModelOperations>
+        </firstModelOperation>
+      </ownedCreateLine>
       <ownedColumnMappings name="FM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->sortedBy(emp | if not emp.leads->isEmpty() then '0' + emp.firstname else emp.firstname endif)"/>
       <intersection name="FM_Performed" lineMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']" columnMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="feature:isPerformedBy">
         <directEdit>

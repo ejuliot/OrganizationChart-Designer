@@ -13360,6 +13360,85 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_VedNgUErEeaeuPeDTZdtCw" fontColor="789660" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VedNgkErEeaeuPeDTZdtCw"/>
           </children>
+          <children xmi:type="notation:Node" xmi:id="_2uOcMF_DEeaWXM9JdVAfIw" type="2002" element="_2uHugF_DEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_2uPDQF_DEeaWXM9JdVAfIw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_2uPDQV_DEeaWXM9JdVAfIw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_2uPDQl_DEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_2uPDQ1_DEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2uOcMV_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2uOcMl_DEeaWXM9JdVAfIw" x="185" y="105"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_48S2QF_DEeaWXM9JdVAfIw" type="2003" element="_48IeMF_DEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_48TdUF_DEeaWXM9JdVAfIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_48UEYF_DEeaWXM9JdVAfIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_48UrdF_DEeaWXM9JdVAfIw" type="3010" element="_48MIkF_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48UrdV_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48VSgF_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48VSgV_DEeaWXM9JdVAfIw" type="3010" element="_48MvoF_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48VSgl_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48VSg1_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48VShF_DEeaWXM9JdVAfIw" type="3010" element="_48Mvol_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48VShV_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48VShl_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48VSh1_DEeaWXM9JdVAfIw" type="3010" element="_48MvpF_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48VSiF_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48VSiV_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48V5kF_DEeaWXM9JdVAfIw" type="3010" element="_48Mvpl_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48V5kV_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48V5kl_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48V5k1_DEeaWXM9JdVAfIw" type="3010" element="_48NWsV_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48V5lF_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48V5lV_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48V5ll_DEeaWXM9JdVAfIw" type="3010" element="_48NWs1_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48V5l1_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48V5mF_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48V5mV_DEeaWXM9JdVAfIw" type="3010" element="_48NWtV_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48V5ml_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48V5m1_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48WgoF_DEeaWXM9JdVAfIw" type="3010" element="_48N9wF_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48WgoV_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48Wgol_DEeaWXM9JdVAfIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_48UEYV_DEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_48UEYl_DEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_48S2QV_DEeaWXM9JdVAfIw" fontColor="230880" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_48S2Ql_DEeaWXM9JdVAfIw" x="25" y="235"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_48UEY1_DEeaWXM9JdVAfIw" type="2003" element="_48JsUF_DEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_48UrcF_DEeaWXM9JdVAfIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_48UrcV_DEeaWXM9JdVAfIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_48Wgo1_DEeaWXM9JdVAfIw" type="3010" element="_48N9wl_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48WgpF_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48WgpV_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48Wgpl_DEeaWXM9JdVAfIw" type="3010" element="_48N9xF_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48Wgp1_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48WgqF_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48WgqV_DEeaWXM9JdVAfIw" type="3010" element="_48Ok0F_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48Wgql_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48Wgq1_DEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_48WgrF_DEeaWXM9JdVAfIw" type="3010" element="_48Ok0l_DEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_48WgrV_DEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_48Wgrl_DEeaWXM9JdVAfIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_48Urcl_DEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_48Urc1_DEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_48UEZF_DEeaWXM9JdVAfIw" fontColor="230880" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_48UEZV_DEeaWXM9JdVAfIw" x="865" y="230"/>
+          </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_Veb_bEErEeaeuPeDTZdtCw"/>
         </data>
       </ownedAnnotationEntries>
@@ -13385,6 +13464,143 @@
             <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Without%20Location']/@subNodeMappings[name='AG_WithoutLoc_Employee']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Without%20Location']/@subNodeMappings[name='AG_WithoutLoc_Employee']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2uHugF_DEeaWXM9JdVAfIw">
+        <target xmi:type="organizationChart:Organization" href="agency.orgchart#/"/>
+        <semanticElements xmi:type="organizationChart:Organization" href="agency.orgchart#/"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_2uIVkF_DEeaWXM9JdVAfIw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/map-france.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Map_France']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Map_France']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_48IeMF_DEeaWXM9JdVAfIw" name="Nantes ( 9 employees)">
+        <target xmi:type="organizationChart:Location" href="agency.orgchart#//@locations.0"/>
+        <semanticElements xmi:type="organizationChart:Location" href="agency.orgchart#//@locations.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_48JFQF_DEeaWXM9JdVAfIw" labelColor="224,133,3" borderSize="1" borderSizeComputationExpression="1" borderColor="252,175,62" foregroundColor="253,206,137">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48MIkF_DEeaWXM9JdVAfIw" name="Christophe Dubois">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48MIkV_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48MvoF_DEeaWXM9JdVAfIw" name="David Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48MvoV_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48Mvol_DEeaWXM9JdVAfIw" name="Elodie Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.6"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.6"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48Mvo1_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48MvpF_DEeaWXM9JdVAfIw" name="Erwan Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.1"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48MvpV_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48Mvpl_DEeaWXM9JdVAfIw" name="Florent Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.10"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.10"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48NWsF_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48NWsV_DEeaWXM9JdVAfIw" name="Gabriel Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48NWsl_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48NWs1_DEeaWXM9JdVAfIw" name="Isabelle Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.17"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.17"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48NWtF_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48NWtV_DEeaWXM9JdVAfIw" name="Michelle Dubois">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.2"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.2"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48NWtl_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48N9wF_DEeaWXM9JdVAfIw" name="Stéphan Dubois">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.4"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.4"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48N9wV_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_48JsUF_DEeaWXM9JdVAfIw" name="Paris ( 4 employees)">
+        <target xmi:type="organizationChart:Location" href="agency.orgchart#//@locations.1"/>
+        <semanticElements xmi:type="organizationChart:Location" href="agency.orgchart#//@locations.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_48JsUV_DEeaWXM9JdVAfIw" labelColor="224,133,3" borderSize="1" borderSizeComputationExpression="1" borderColor="252,175,62" foregroundColor="253,206,137">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48N9wl_DEeaWXM9JdVAfIw" name="Dana Bertrand">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.5"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.5"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48N9w1_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48N9xF_DEeaWXM9JdVAfIw" name="Jean Dubois">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.8"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.8"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48N9xV_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48Ok0F_DEeaWXM9JdVAfIw" name="Marie Dubois">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.15"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.15"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48Ok0V_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_48Ok0l_DEeaWXM9JdVAfIw" name="Sylvie Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.18"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.18"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_48Ok01_DEeaWXM9JdVAfIw" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
         </ownedElements>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']"/>
@@ -16416,7 +16632,14 @@
     </ownedRepresentations>
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_0N-BcEFwEeaV_dDlKYcASQ" name="Alain Brooks Management Responsabilities">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_0N-BcUFwEeaV_dDlKYcASQ" source="DANNOTATION_CUSTOMIZATION_KEY">
-        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_0N-BckFwEeaV_dDlKYcASQ"/>
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_0N-BckFwEeaV_dDlKYcASQ">
+          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="_nqa9QF-sEeaWXM9JdVAfIw" showIcon="false" labelExpression="" tooltipExpression="Change Picture with Appearance view" sizeComputationExpression="5" arcWidth="1" arcHeight="1" workspacePath="/TravelAgencyOrga/pictures/Alain Brooks.svg">
+            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <forbiddenSides>SOUTH</forbiddenSides>
+            <forbiddenSides>EAST</forbiddenSides>
+          </computedStyleDescriptions>
+        </data>
       </ownedAnnotationEntries>
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_0N-ohUFwEeaV_dDlKYcASQ" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_0N-ohkFwEeaV_dDlKYcASQ" type="Sirius" element="_0N-BcEFwEeaV_dDlKYcASQ" measurementUnit="Pixel">
@@ -16701,9 +16924,9 @@
               <children xmi:type="notation:Node" xmi:id="_0Odws0FwEeaV_dDlKYcASQ" type="5010">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_0OdwtEFwEeaV_dDlKYcASQ" x="-1"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_0OeXwEFwEeaV_dDlKYcASQ" type="3005" element="_0N-BsUFwEeaV_dDlKYcASQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_0OeXwUFwEeaV_dDlKYcASQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0OeXwkFwEeaV_dDlKYcASQ"/>
+              <children xmi:type="notation:Node" xmi:id="_nqiSAF-sEeaWXM9JdVAfIw" type="3005" element="_nqa9QV-sEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_nqiSAV-sEeaWXM9JdVAfIw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nqiSAl-sEeaWXM9JdVAfIw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_0OdwsUFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0OdwskFwEeaV_dDlKYcASQ" x="-42" y="-2" width="50" height="50"/>
@@ -16749,7 +16972,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pIzOYkFxEeaV_dDlKYcASQ"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_pIyAQUFxEeaV_dDlKYcASQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pIyAQkFxEeaV_dDlKYcASQ" x="899" y="166" width="150" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pIyAQkFxEeaV_dDlKYcASQ" x="870" y="35" width="150" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Dg2PwEUNEeaPkdf8SNggsg" type="2001" element="_DgVSYEUNEeaPkdf8SNggsg">
             <children xmi:type="notation:Node" xmi:id="_Dg2Pw0UNEeaPkdf8SNggsg" type="5002">
@@ -16761,6 +16984,46 @@
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Dg2PwUUNEeaPkdf8SNggsg" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Dg2PwkUNEeaPkdf8SNggsg" width="130" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZHpQUF-sEeaWXM9JdVAfIw" type="2002" element="_ZHHr4F-sEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ZHthwF-sEeaWXM9JdVAfIw" type="3012" element="_ZHL9UF-sEeaWXM9JdVAfIw">
+              <children xmi:type="notation:Node" xmi:id="_ZHvW8F-sEeaWXM9JdVAfIw" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ZHvW8V-sEeaWXM9JdVAfIw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ZH5H8F-sEeaWXM9JdVAfIw" type="3005" element="_ZHMkYF-sEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ZH5H8V-sEeaWXM9JdVAfIw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZH5H8l-sEeaWXM9JdVAfIw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ZHthwV-sEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZHthwl-sEeaWXM9JdVAfIw" x="-42" y="-2" width="50" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZHp3YF-sEeaWXM9JdVAfIw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_ZHqecF-sEeaWXM9JdVAfIw" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_ZH5vAF-sEeaWXM9JdVAfIw" type="3008" element="_ZHNygF-sEeaWXM9JdVAfIw">
+                <children xmi:type="notation:Node" xmi:id="_ZH6WEF-sEeaWXM9JdVAfIw" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_ZH6WEV-sEeaWXM9JdVAfIw" type="7002">
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_ZH6WEl-sEeaWXM9JdVAfIw"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_ZH6WE1-sEeaWXM9JdVAfIw"/>
+                  <styles xmi:type="notation:DrawerStyle" xmi:id="_ZH6WFF-sEeaWXM9JdVAfIw"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ZH5vAV-sEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZH5vAl-sEeaWXM9JdVAfIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ZH7kMF-sEeaWXM9JdVAfIw" type="3009" element="_ZHOZkF-sEeaWXM9JdVAfIw">
+                <children xmi:type="notation:Node" xmi:id="_ZH8LQF-sEeaWXM9JdVAfIw" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_ZH8yUF-sEeaWXM9JdVAfIw" type="7003">
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_ZH8yUV-sEeaWXM9JdVAfIw"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_ZH8yUl-sEeaWXM9JdVAfIw"/>
+                  <styles xmi:type="notation:DrawerStyle" xmi:id="_ZH8yU1-sEeaWXM9JdVAfIw"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ZH7kMV-sEeaWXM9JdVAfIw" fontColor="7490599" fontName="Segoe UI" fontHeight="8" italic="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZH7kMl-sEeaWXM9JdVAfIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ZHqecV-sEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ZHqecl-sEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ZHpQUV-sEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="10" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZHpQUl-sEeaWXM9JdVAfIw" x="930" y="172"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_0N-oh0FwEeaV_dDlKYcASQ"/>
           <edges xmi:type="notation:Edge" xmi:id="_0Ofl4EFwEeaV_dDlKYcASQ" type="4001" element="_0N-BuUFwEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_0N-oiEFwEeaV_dDlKYcASQ">
@@ -16775,8 +17038,8 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_0Ofl4UFwEeaV_dDlKYcASQ" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_0Ofl4kFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Ofl40FwEeaV_dDlKYcASQ" points="[0, 0, 396, -58]$[0, 37, 396, -21]$[-399, 37, -3, -21]$[-399, 58, -3, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OgM9kFwEeaV_dDlKYcASQ" id="(0.4938271604938271,1.0)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Ofl40FwEeaV_dDlKYcASQ" points="[0, -110, 396, -166]$[0, 35, 396, -21]$[-396, 35, 0, -21]$[-396, 135, 0, 79]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OgM9kFwEeaV_dDlKYcASQ" id="(0.48148148148148145,1.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OgM90FwEeaV_dDlKYcASQ" id="(0.5189873417721519,0.0)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_0Og0AEFwEeaV_dDlKYcASQ" type="4001" element="_0N-BvEFwEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_0N_2o0FwEeaV_dDlKYcASQ">
@@ -16791,8 +17054,8 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_0Og0AUFwEeaV_dDlKYcASQ" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_0Og0AkFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Og0A0FwEeaV_dDlKYcASQ" points="[0, -110, -233, -166]$[0, 35, -233, -21]$[233, 35, 0, -21]$[233, 139, 0, 83]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Og0CkFwEeaV_dDlKYcASQ" id="(0.4938271604938271,1.0)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Og0A0FwEeaV_dDlKYcASQ" points="[0, -110, -234, -166]$[0, 35, -234, -21]$[234, 35, 0, -21]$[234, 139, 0, 83]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Og0CkFwEeaV_dDlKYcASQ" id="(0.48148148148148145,1.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Og0C0FwEeaV_dDlKYcASQ" id="(0.4939759036144578,0.0)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_0Og0DEFwEeaV_dDlKYcASQ" type="4001" element="_0N-Bv0FwEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_0OAdtEFwEeaV_dDlKYcASQ">
@@ -16807,8 +17070,8 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_0Og0DUFwEeaV_dDlKYcASQ" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_0Og0DkFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Og0D0FwEeaV_dDlKYcASQ" points="[0, -110, -78, -166]$[0, 35, -78, -21]$[78, 35, 0, -21]$[78, 149, 0, 93]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OhbFkFwEeaV_dDlKYcASQ" id="(0.4938271604938271,1.0)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Og0D0FwEeaV_dDlKYcASQ" points="[0, -110, -79, -166]$[0, 35, -79, -21]$[79, 35, 0, -21]$[79, 149, 0, 93]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OhbFkFwEeaV_dDlKYcASQ" id="(0.48148148148148145,1.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OhbF0FwEeaV_dDlKYcASQ" id="(0.49462365591397844,0.0)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_0OhbGEFwEeaV_dDlKYcASQ" type="4001" element="_0N-BwkFwEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_0OAdu0FwEeaV_dDlKYcASQ">
@@ -16823,8 +17086,8 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_0OhbGUFwEeaV_dDlKYcASQ" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_0OhbGkFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0OhbG0FwEeaV_dDlKYcASQ" points="[0, -110, 241, -166]$[0, 35, 241, -21]$[-241, 35, 0, -21]$[-241, 151, 0, 95]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OiCIEFwEeaV_dDlKYcASQ" id="(0.4938271604938271,1.0)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0OhbG0FwEeaV_dDlKYcASQ" points="[0, -110, 240, -166]$[0, 35, 240, -21]$[-240, 35, 0, -21]$[-240, 151, 0, 95]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OiCIEFwEeaV_dDlKYcASQ" id="(0.48148148148148145,1.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OiCIUFwEeaV_dDlKYcASQ" id="(0.49473684210526314,0.0)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_0OiCIkFwEeaV_dDlKYcASQ" type="4001" element="_0N-BxUFwEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_0OBExEFwEeaV_dDlKYcASQ">
@@ -16839,8 +17102,8 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_0OiCI0FwEeaV_dDlKYcASQ" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_0OiCJEFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0OiCJUFwEeaV_dDlKYcASQ" points="[0, -110, 79, -166]$[0, 35, 79, -21]$[-79, 35, 0, -21]$[-79, 146, 0, 90]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OiCLEFwEeaV_dDlKYcASQ" id="(0.4938271604938271,1.0)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0OiCJUFwEeaV_dDlKYcASQ" points="[0, -110, 78, -166]$[0, 35, 78, -21]$[-78, 35, 0, -21]$[-78, 146, 0, 90]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OiCLEFwEeaV_dDlKYcASQ" id="(0.48148148148148145,1.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OiCLUFwEeaV_dDlKYcASQ" id="(0.5,0.0)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_0OipMEFwEeaV_dDlKYcASQ" type="4001" element="_0N-ogUFwEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_0OBEy0FwEeaV_dDlKYcASQ">
@@ -16855,25 +17118,41 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_0OipMUFwEeaV_dDlKYcASQ" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_0OipMkFwEeaV_dDlKYcASQ" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0OipM0FwEeaV_dDlKYcASQ" points="[0, -110, -384, -166]$[0, 35, -384, -21]$[384, 35, 0, -21]$[384, 141, 0, 85]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OipOkFwEeaV_dDlKYcASQ" id="(0.4938271604938271,1.0)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0OipM0FwEeaV_dDlKYcASQ" points="[0, -110, -385, -166]$[0, 35, -385, -21]$[385, 35, 0, -21]$[385, 141, 0, 85]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OipOkFwEeaV_dDlKYcASQ" id="(0.48148148148148145,1.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0OipO0FwEeaV_dDlKYcASQ" id="(0.49411764705882355,0.0)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_pI1qqEFxEeaV_dDlKYcASQ" type="4001" element="_pIqrgEFxEeaV_dDlKYcASQ" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_pIyAQEFxEeaV_dDlKYcASQ">
-            <children xmi:type="notation:Node" xmi:id="_pI1qrEFxEeaV_dDlKYcASQ" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pI1qrUFxEeaV_dDlKYcASQ" x="189" y="-10"/>
+          <edges xmi:type="notation:Edge" xmi:id="_ZIBq0F-sEeaWXM9JdVAfIw" type="4001" element="_ZHgGYF-sEeaWXM9JdVAfIw" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_pIyAQEFxEeaV_dDlKYcASQ">
+            <children xmi:type="notation:Node" xmi:id="_ZIEHEF-sEeaWXM9JdVAfIw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZIEHEV-sEeaWXM9JdVAfIw" x="1" y="-10"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_pI1qrkFxEeaV_dDlKYcASQ" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pI1qr0FxEeaV_dDlKYcASQ" x="204" y="-10"/>
+            <children xmi:type="notation:Node" xmi:id="_ZIEuIF-sEeaWXM9JdVAfIw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZIEuIV-sEeaWXM9JdVAfIw" x="-2" y="10"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_pI2RsEFxEeaV_dDlKYcASQ" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pI2RsUFxEeaV_dDlKYcASQ" x="64" y="8"/>
+            <children xmi:type="notation:Node" xmi:id="_ZIF8QF-sEeaWXM9JdVAfIw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZIF8QV-sEeaWXM9JdVAfIw" x="-1" y="9"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_pI1qqUFxEeaV_dDlKYcASQ" routing="Rectilinear"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_pI1qqkFxEeaV_dDlKYcASQ" fontName="Segoe UI"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pI1qq0FxEeaV_dDlKYcASQ" points="[1, 54, -541, -73]$[1, 86, -541, -41]$[541, 86, -1, -41]$[541, 112, -1, -15]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pI2RskFxEeaV_dDlKYcASQ" id="(0.5,0.5)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pI2Rs0FxEeaV_dDlKYcASQ" id="(0.5,0.5)"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZIBq0V-sEeaWXM9JdVAfIw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ZIBq0l-sEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZIBq01-sEeaWXM9JdVAfIw" points="[40, 9, -473, 13]$[438, -2, -75, 2]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZIaFUF-sEeaWXM9JdVAfIw" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZIaFUV-sEeaWXM9JdVAfIw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ZIaFUl-sEeaWXM9JdVAfIw" type="4001" element="_ZHiioF-sEeaWXM9JdVAfIw" source="_0OBr1EFwEeaV_dDlKYcASQ" target="_ZHpQUF-sEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ZIasYF-sEeaWXM9JdVAfIw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZIasYV-sEeaWXM9JdVAfIw" x="122" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZIasYl-sEeaWXM9JdVAfIw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZIasY1-sEeaWXM9JdVAfIw" x="-66" y="-3"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZIasZF-sEeaWXM9JdVAfIw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZIasZV-sEeaWXM9JdVAfIw" x="-67" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZIaFU1-sEeaWXM9JdVAfIw" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ZIaFVF-sEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZIaFVV-sEeaWXM9JdVAfIw" points="[0, 0, -557, -64]$[0, 37, -557, -27]$[558, 37, 1, -27]$[558, 64, 1, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZIb6gF-sEeaWXM9JdVAfIw" id="(0.48148148148148145,1.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZIb6gV-sEeaWXM9JdVAfIw" id="(0.5,0.0)"/>
           </edges>
         </data>
       </ownedAnnotationEntries>
@@ -17168,15 +17447,13 @@
           </ownedElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_0N-Br0FwEeaV_dDlKYcASQ" name="Alain Brooks" outgoingEdges="_0N-BuUFwEeaV_dDlKYcASQ _0N-BvEFwEeaV_dDlKYcASQ _0N-Bv0FwEeaV_dDlKYcASQ _0N-BwkFwEeaV_dDlKYcASQ _0N-BxUFwEeaV_dDlKYcASQ _0N-ogUFwEeaV_dDlKYcASQ _pIqrgEFxEeaV_dDlKYcASQ" childrenPresentation="VerticalStack">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_0N-Br0FwEeaV_dDlKYcASQ" name="Alain Brooks" outgoingEdges="_0N-BuUFwEeaV_dDlKYcASQ _0N-BvEFwEeaV_dDlKYcASQ _0N-Bv0FwEeaV_dDlKYcASQ _0N-BwkFwEeaV_dDlKYcASQ _0N-BxUFwEeaV_dDlKYcASQ _0N-ogUFwEeaV_dDlKYcASQ _ZHgGYF-sEeaWXM9JdVAfIw _ZHiioF-sEeaWXM9JdVAfIw" childrenPresentation="VerticalStack">
         <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
         <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_0N-BsEFwEeaV_dDlKYcASQ" tooltipText="Change Picture with Appearance view" width="5" height="5">
           <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
           <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_0N-BsUFwEeaV_dDlKYcASQ" showIcon="false" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']/@style"/>
-          </ownedStyle>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_nqa9QV-sEeaWXM9JdVAfIw" showIcon="false" description="_nqa9QF-sEeaWXM9JdVAfIw" workspacePath="/TravelAgencyOrga/pictures/Alain Brooks.svg"/>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']"/>
         </ownedBorderedNodes>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_0N-BskFwEeaV_dDlKYcASQ" labelSize="10" showIcon="false" borderColor="114,159,207" backgroundColor="114,159,207" foregroundColor="255,255,255">
@@ -17258,7 +17535,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@edgeMappings[name='MR_Hierarchy-N-1']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_pId3MEFxEeaV_dDlKYcASQ" name="Direction" incomingEdges="_pIqrgEFxEeaV_dDlKYcASQ" width="15" height="3">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_pId3MEFxEeaV_dDlKYcASQ" name="Direction" incomingEdges="_ZHgGYF-sEeaWXM9JdVAfIw" width="15" height="3">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -17269,14 +17546,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_pIqrgEFxEeaV_dDlKYcASQ" sourceNode="_0N-Br0FwEeaV_dDlKYcASQ" targetNode="_pId3MEFxEeaV_dDlKYcASQ">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_pIrSkEFxEeaV_dDlKYcASQ" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@edgeMappings[name='MR_Function_Performed']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@edgeMappings[name='MR_Function_Performed']"/>
-      </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_DgVSYEUNEeaPkdf8SNggsg" name="InBounding" width="13" height="2">
         <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
         <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
@@ -17284,6 +17553,59 @@
           <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@nodeMappings[name='MR_Function']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@nodeMappings[name='MR_Function']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ZHHr4F-sEeaWXM9JdVAfIw" name="Christophe Dubois" incomingEdges="_ZHiioF-sEeaWXM9JdVAfIw" childrenPresentation="VerticalStack">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+        <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_ZHL9UF-sEeaWXM9JdVAfIw" tooltipText="Change Picture with Appearance view" width="5" height="5">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_ZHMkYF-sEeaWXM9JdVAfIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']/@borderedNodeMappings[name='MR_E_Pic']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']/@borderedNodeMappings[name='MR_E_Pic']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ZHLWQF-sEeaWXM9JdVAfIw" labelSize="10" showIcon="false" borderColor="114,159,207" backgroundColor="114,159,207" foregroundColor="255,255,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ZHNygF-sEeaWXM9JdVAfIw" height="1">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ZHNygV-sEeaWXM9JdVAfIw" showIcon="false" borderColor="114,159,207" backgroundColor="114,159,207" foregroundColor="255,255,255">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ZHOZkF-sEeaWXM9JdVAfIw" name="Functions">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ZHPAoF-sEeaWXM9JdVAfIw" showIcon="false" labelColor="39,76,114" borderSize="1" borderSizeComputationExpression="1" borderColor="114,159,207" backgroundColor="114,159,207" foregroundColor="255,255,255">
+            <labelFormat>italic</labelFormat>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Functions']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Functions']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ZHgGYF-sEeaWXM9JdVAfIw" sourceNode="_0N-Br0FwEeaV_dDlKYcASQ" targetNode="_pId3MEFxEeaV_dDlKYcASQ">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ZHgGYV-sEeaWXM9JdVAfIw" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@edgeMappings[name='MR_Leads']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ZHgGYl-sEeaWXM9JdVAfIw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@edgeMappings[name='MR_Leads']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ZHiioF-sEeaWXM9JdVAfIw" sourceNode="_0N-Br0FwEeaV_dDlKYcASQ" targetNode="_ZHHr4F-sEeaWXM9JdVAfIw">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ZHiioV-sEeaWXM9JdVAfIw" targetArrow="NoDecoration" size="2" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@edgeMappings[name='MR_Hierarchy-N-1']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ZHiiol-sEeaWXM9JdVAfIw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@edgeMappings[name='MR_Hierarchy-N-1']"/>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
       <currentConcern xmi:type="concern:ConcernDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@concerns/@ownedConcernDescriptions.0"/>
@@ -18224,7 +18546,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8ljkl1CEeaytv-9eH-Oog"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_v8k8gV1CEeaytv-9eH-Oog" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8k8gl1CEeaytv-9eH-Oog" x="685" y="105" width="130" height="40"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8k8gl1CEeaytv-9eH-Oog" x="645" y="120" width="130" height="40"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_s1NAUkHBEeaV_dDlKYcASQ"/>
           <edges xmi:type="notation:Edge" xmi:id="_4i3c4F1CEeaytv-9eH-Oog" type="4001" element="_4iykYF1CEeaytv-9eH-Oog" source="_s1NnYkHBEeaV_dDlKYcASQ" target="_s1OOdEHBEeaV_dDlKYcASQ">
@@ -18947,20 +19269,20 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_c9-5C1sDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8" bold="true"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c9-5DFsDEea0n9atIXsi9g" x="410" y="30" width="150" height="60"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_c9_f4lsDEea0n9atIXsi9g" type="2003" element="_c9-41VsDEea0n9atIXsi9g">
+          <children xmi:type="notation:Node" xmi:id="_c9_f4lsDEea0n9atIXsi9g" type="2003" element="_DkG3kF_GEeaWXM9JdVAfIw">
             <children xmi:type="notation:Node" xmi:id="_c9_f5VsDEea0n9atIXsi9g" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_c9_f5lsDEea0n9atIXsi9g" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_c-AuB1sDEea0n9atIXsi9g" type="3010" element="_c9-411sDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-AuCFsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-AuCVsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkTr4F_GEeaWXM9JdVAfIw" type="3010" element="_DkKh8F_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkTr4V_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkTr4l_GEeaWXM9JdVAfIw"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_c-AuClsDEea0n9atIXsi9g" type="3010" element="_c9-42VsDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-AuC1sDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-AuDFsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkUS8F_GEeaWXM9JdVAfIw" type="3010" element="_DkKh8l_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkUS8V_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkUS8l_GEeaWXM9JdVAfIw"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_c-BVEFsDEea0n9atIXsi9g" type="3010" element="_c9-421sDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-BVEVsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-BVElsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkUS81_GEeaWXM9JdVAfIw" type="3010" element="_DkKh9F_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkUS9F_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkUS9V_GEeaWXM9JdVAfIw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_c9_f51sDEea0n9atIXsi9g"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_c9_f6FsDEea0n9atIXsi9g"/>
@@ -18968,12 +19290,12 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_c9_f41sDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c9_f5FsDEea0n9atIXsi9g" x="50" y="150"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_c9_f6VsDEea0n9atIXsi9g" type="2003" element="_c9-43VsDEea0n9atIXsi9g">
+          <children xmi:type="notation:Node" xmi:id="_c9_f6VsDEea0n9atIXsi9g" type="2003" element="_DkHeoV_GEeaWXM9JdVAfIw">
             <children xmi:type="notation:Node" xmi:id="_c9_f7FsDEea0n9atIXsi9g" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_c9_f7VsDEea0n9atIXsi9g" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_c-BVE1sDEea0n9atIXsi9g" type="3010" element="_c9-431sDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-BVFFsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-BVFVsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkU6AF_GEeaWXM9JdVAfIw" type="3010" element="_DkLJAV_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkU6AV_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkU6Al_GEeaWXM9JdVAfIw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_c9_f7lsDEea0n9atIXsi9g"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_c9_f71sDEea0n9atIXsi9g"/>
@@ -18981,12 +19303,12 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_c9_f6lsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c9_f61sDEea0n9atIXsi9g" x="175" y="150"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_c-AG8FsDEea0n9atIXsi9g" type="2003" element="_c9-44VsDEea0n9atIXsi9g">
+          <children xmi:type="notation:Node" xmi:id="_c-AG8FsDEea0n9atIXsi9g" type="2003" element="_DkIFsF_GEeaWXM9JdVAfIw">
             <children xmi:type="notation:Node" xmi:id="_c-AG81sDEea0n9atIXsi9g" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_c-AG9FsDEea0n9atIXsi9g" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_c-BVFlsDEea0n9atIXsi9g" type="3010" element="_c9-441sDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-BVF1sDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-BVGFsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkU6A1_GEeaWXM9JdVAfIw" type="3010" element="_DkLJA1_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkU6BF_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkU6BV_GEeaWXM9JdVAfIw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_c-AG9VsDEea0n9atIXsi9g"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_c-AG9lsDEea0n9atIXsi9g"/>
@@ -18994,16 +19316,16 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_c-AG8VsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c-AG8lsDEea0n9atIXsi9g" x="290" y="150"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_c-AG91sDEea0n9atIXsi9g" type="2003" element="_c9-45VsDEea0n9atIXsi9g">
+          <children xmi:type="notation:Node" xmi:id="_c-AG91sDEea0n9atIXsi9g" type="2003" element="_DkIswF_GEeaWXM9JdVAfIw">
             <children xmi:type="notation:Node" xmi:id="_c-AG-lsDEea0n9atIXsi9g" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_c-AG-1sDEea0n9atIXsi9g" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_c-B8IFsDEea0n9atIXsi9g" type="3010" element="_c9-451sDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-B8IVsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-B8IlsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkU6Bl_GEeaWXM9JdVAfIw" type="3010" element="_DkLwEV_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkU6B1_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkU6CF_GEeaWXM9JdVAfIw"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_c-B8I1sDEea0n9atIXsi9g" type="3010" element="_c9-46VsDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-B8JFsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-B8JVsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkVhEF_GEeaWXM9JdVAfIw" type="3010" element="_DkLwE1_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkVhEV_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkVhEl_GEeaWXM9JdVAfIw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_c-AG_FsDEea0n9atIXsi9g"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_c-AG_VsDEea0n9atIXsi9g"/>
@@ -19011,12 +19333,12 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_c-AG-FsDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c-AG-VsDEea0n9atIXsi9g" x="580" y="150"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_c-AG_lsDEea0n9atIXsi9g" type="2003" element="_c9-461sDEea0n9atIXsi9g">
+          <children xmi:type="notation:Node" xmi:id="_c-AG_lsDEea0n9atIXsi9g" type="2003" element="_DkJT0F_GEeaWXM9JdVAfIw">
             <children xmi:type="notation:Node" xmi:id="_c-AHAVsDEea0n9atIXsi9g" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_c-AHAlsDEea0n9atIXsi9g" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_c-B8JlsDEea0n9atIXsi9g" type="3010" element="_c9-47VsDEea0n9atIXsi9g">
-                <styles xmi:type="notation:FontStyle" xmi:id="_c-B8J1sDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_c-B8KFsDEea0n9atIXsi9g"/>
+              <children xmi:type="notation:Node" xmi:id="_DkVhE1_GEeaWXM9JdVAfIw" type="3010" element="_DkLwFV_GEeaWXM9JdVAfIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_DkVhFF_GEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DkVhFV_GEeaWXM9JdVAfIw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_c-AHA1sDEea0n9atIXsi9g"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_c-AHBFsDEea0n9atIXsi9g"/>
@@ -19024,7 +19346,7 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_c-AG_1sDEea0n9atIXsi9g" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c-AHAFsDEea0n9atIXsi9g" x="705" y="150"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_c-AHBVsDEea0n9atIXsi9g" type="2003" element="_c9-471sDEea0n9atIXsi9g">
+          <children xmi:type="notation:Node" xmi:id="_c-AHBVsDEea0n9atIXsi9g" type="2003" element="_DkJT0l_GEeaWXM9JdVAfIw">
             <children xmi:type="notation:Node" xmi:id="_c-AuAFsDEea0n9atIXsi9g" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_c-AuAVsDEea0n9atIXsi9g" type="7004">
               <styles xmi:type="notation:SortingStyle" xmi:id="_c-AuAlsDEea0n9atIXsi9g"/>
@@ -19141,119 +19463,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@nodeMappings[name='SC_Structure']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_c9-41VsDEea0n9atIXsi9g" name="Vice President" incomingEdges="_c9-48VsDEea0n9atIXsi9g">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_c9-41lsDEea0n9atIXsi9g" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-411sDEea0n9atIXsi9g" name="Albert Addams">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-42FsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-42VsDEea0n9atIXsi9g" name="Alice Royanne">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.7"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.7"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-42lsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-421sDEea0n9atIXsi9g" name="Anna Clerck">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-43FsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_c9-43VsDEea0n9atIXsi9g" name="Strategy" incomingEdges="_c9-49FsDEea0n9atIXsi9g">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_c9-43lsDEea0n9atIXsi9g" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-431sDEea0n9atIXsi9g" name="Alain Brooks">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_n8hPUF06Eeaytv-9eH-Oog" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_c9-44VsDEea0n9atIXsi9g" name="Recruitement" incomingEdges="_c9-491sDEea0n9atIXsi9g">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_c9-44lsDEea0n9atIXsi9g" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-441sDEea0n9atIXsi9g" name="David Pineau">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-45FsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_c9-45VsDEea0n9atIXsi9g" name="Accounting" incomingEdges="_c9-4-lsDEea0n9atIXsi9g">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_c9-45lsDEea0n9atIXsi9g" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-451sDEea0n9atIXsi9g" name="Gabriel Pineau">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-46FsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-46VsDEea0n9atIXsi9g" name="Anna Clerck">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-46lsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_c9-461sDEea0n9atIXsi9g" name="International" incomingEdges="_c9-4_VsDEea0n9atIXsi9g">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_c9-47FsDEea0n9atIXsi9g" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_c9-47VsDEea0n9atIXsi9g" name="Albert Addams">
-          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
-          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_c9-47lsDEea0n9atIXsi9g" labelColor="154,103,23" labelAlignment="LEFT">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
-        </ownedElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_c9-471sDEea0n9atIXsi9g" name="InBounding" incomingEdges="_c9-5AFsDEea0n9atIXsi9g">
-        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
-        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_c9-48FsDEea0n9atIXsi9g" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-48VsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_c9-41VsDEea0n9atIXsi9g">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-48VsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_DkG3kF_GEeaWXM9JdVAfIw">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c9-48lsDEea0n9atIXsi9g" targetArrow="NoDecoration" size="2" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']/@style"/>
@@ -19261,7 +19471,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-49FsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_c9-43VsDEea0n9atIXsi9g">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-49FsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_DkHeoV_GEeaWXM9JdVAfIw">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c9-49VsDEea0n9atIXsi9g" targetArrow="NoDecoration" size="2" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']/@style"/>
@@ -19269,7 +19479,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-491sDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_c9-44VsDEea0n9atIXsi9g">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-491sDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_DkIFsF_GEeaWXM9JdVAfIw">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c9-4-FsDEea0n9atIXsi9g" targetArrow="NoDecoration" size="2" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']/@style"/>
@@ -19277,7 +19487,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-4-lsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_c9-45VsDEea0n9atIXsi9g">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-4-lsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_DkIswF_GEeaWXM9JdVAfIw">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c9-4-1sDEea0n9atIXsi9g" targetArrow="NoDecoration" size="2" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']/@style"/>
@@ -19285,7 +19495,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-4_VsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_c9-461sDEea0n9atIXsi9g">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-4_VsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_DkJT0F_GEeaWXM9JdVAfIw">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c9-4_lsDEea0n9atIXsi9g" targetArrow="NoDecoration" size="2" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']/@style"/>
@@ -19293,13 +19503,125 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-5AFsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_c9-471sDEea0n9atIXsi9g">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_c9-5AFsDEea0n9atIXsi9g" sourceNode="_c9-401sDEea0n9atIXsi9g" targetNode="_DkJT0l_GEeaWXM9JdVAfIw">
         <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_c9-5AVsDEea0n9atIXsi9g" targetArrow="NoDecoration" size="2" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']/@style"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_c9-5AlsDEea0n9atIXsi9g"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@edgeMappings[name='SC_Struc_Function']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DkG3kF_GEeaWXM9JdVAfIw" name="Vice President" incomingEdges="_c9-48VsDEea0n9atIXsi9g">
+        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_DkHeoF_GEeaWXM9JdVAfIw" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkKh8F_GEeaWXM9JdVAfIw" name="Albert Addams">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkKh8V_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkKh8l_GEeaWXM9JdVAfIw" name="Alice Royanne">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.7"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.7"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkKh81_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkKh9F_GEeaWXM9JdVAfIw" name="Anna Clerck">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkLJAF_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DkHeoV_GEeaWXM9JdVAfIw" name="Strategy" incomingEdges="_c9-49FsDEea0n9atIXsi9g">
+        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
+        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_DkHeol_GEeaWXM9JdVAfIw" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkLJAV_GEeaWXM9JdVAfIw" name="Alain Brooks">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.13"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkLJAl_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DkIFsF_GEeaWXM9JdVAfIw" name="Recruitement" incomingEdges="_c9-491sDEea0n9atIXsi9g">
+        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
+        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_DkIFsV_GEeaWXM9JdVAfIw" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkLJA1_GEeaWXM9JdVAfIw" name="David Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.12"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkLwEF_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DkIswF_GEeaWXM9JdVAfIw" name="Accounting" incomingEdges="_c9-4-lsDEea0n9atIXsi9g">
+        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
+        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_DkIswV_GEeaWXM9JdVAfIw" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkLwEV_GEeaWXM9JdVAfIw" name="Gabriel Pineau">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.11"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkLwEl_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkLwE1_GEeaWXM9JdVAfIw" name="Anna Clerck">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.23"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkLwFF_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DkJT0F_GEeaWXM9JdVAfIw" name="International" incomingEdges="_c9-4_VsDEea0n9atIXsi9g">
+        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
+        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_DkJT0V_GEeaWXM9JdVAfIw" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DkLwFV_GEeaWXM9JdVAfIw" name="Albert Addams">
+          <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
+          <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_DkMXIF_GEeaWXM9JdVAfIw" labelColor="154,103,23" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DkJT0l_GEeaWXM9JdVAfIw" name="InBounding" incomingEdges="_c9-5AFsDEea0n9atIXsi9g">
+        <target xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
+        <semanticElements xmi:type="organizationChart:Function" href="agency.orgchart#//@structures.0/@owns.5"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_DkJT01_GEeaWXM9JdVAfIw" borderSize="1" borderSizeComputationExpression="1" borderColor="214,197,66" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']"/>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_c9-5BlsDEea0n9atIXsi9g"/>
@@ -20566,6 +20888,122 @@
         <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_JvM0L171EeazaKDPvdsiaA"/>
       </columns>
       <description xmi:type="description_3:CrossTableDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_ezj00F-tEeaWXM9JdVAfIw" name="IT Functions Allocation">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ezj00V-tEeaWXM9JdVAfIw" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_ezj00l-tEeaWXM9JdVAfIw"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ezmREF-tEeaWXM9JdVAfIw" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_ezmREV-tEeaWXM9JdVAfIw" type="Sirius" element="_ezj00F-tEeaWXM9JdVAfIw" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_ezotUF-tEeaWXM9JdVAfIw" type="2002" element="_ezj021-tEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ezotU1-tEeaWXM9JdVAfIw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_ezotVF-tEeaWXM9JdVAfIw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ezotVV-tEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ezotVl-tEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ezotUV-tEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="10" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezotUl-tEeaWXM9JdVAfIw" x="110" y="120"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ezotV1-tEeaWXM9JdVAfIw" type="2002" element="_ezj03V-tEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ezpUYF-tEeaWXM9JdVAfIw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_ezpUYV-tEeaWXM9JdVAfIw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ezpUYl-tEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ezpUY1-tEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ezotWF-tEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="10" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezotWV-tEeaWXM9JdVAfIw" x="20" y="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ezpUZF-tEeaWXM9JdVAfIw" type="2002" element="_ezj031-tEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ezpUZ1-tEeaWXM9JdVAfIw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_ezpUaF-tEeaWXM9JdVAfIw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ezpUaV-tEeaWXM9JdVAfIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ezpUal-tEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ezpUZV-tEeaWXM9JdVAfIw" fontColor="1533850" fontName="Segoe UI" fontHeight="10" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezpUZl-tEeaWXM9JdVAfIw" x="195" y="20"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_ezmREl-tEeaWXM9JdVAfIw"/>
+          <edges xmi:type="notation:Edge" xmi:id="_ezrJkF-tEeaWXM9JdVAfIw" type="4001" element="_ezj04V-tEeaWXM9JdVAfIw" source="_ezotUF-tEeaWXM9JdVAfIw" target="_ezpUZF-tEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ezrJlF-tEeaWXM9JdVAfIw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezrJlV-tEeaWXM9JdVAfIw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ezrJll-tEeaWXM9JdVAfIw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezrJl1-tEeaWXM9JdVAfIw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ezrJmF-tEeaWXM9JdVAfIw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezrJmV-tEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ezrJkV-tEeaWXM9JdVAfIw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ezrJkl-tEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ezrJk1-tEeaWXM9JdVAfIw" points="[0, 0, -78, 60]$[78, -60, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ezrwoF-tEeaWXM9JdVAfIw" id="(0.4957983193277311,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ezrwoV-tEeaWXM9JdVAfIw" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ezrwol-tEeaWXM9JdVAfIw" type="4001" element="_ezj05F-tEeaWXM9JdVAfIw" source="_ezotUF-tEeaWXM9JdVAfIw" target="_ezotV1-tEeaWXM9JdVAfIw">
+            <children xmi:type="notation:Node" xmi:id="_ezrwpl-tEeaWXM9JdVAfIw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezrwp1-tEeaWXM9JdVAfIw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ezrwqF-tEeaWXM9JdVAfIw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezrwqV-tEeaWXM9JdVAfIw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ezrwql-tEeaWXM9JdVAfIw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ezrwq1-tEeaWXM9JdVAfIw"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ezrwo1-tEeaWXM9JdVAfIw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ezrwpF-tEeaWXM9JdVAfIw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ezrwpV-tEeaWXM9JdVAfIw" points="[0, 0, 77, 60]$[-77, -60, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ezsXsF-tEeaWXM9JdVAfIw" id="(0.4957983193277311,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ezsXsV-tEeaWXM9JdVAfIw" id="(0.49425287356321834,1.0)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ezj021-tEeaWXM9JdVAfIw" name="Christophe Dubois" outgoingEdges="_ezj04V-tEeaWXM9JdVAfIw _ezj05F-tEeaWXM9JdVAfIw" childrenPresentation="VerticalStack">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+        <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ezj03F-tEeaWXM9JdVAfIw" labelSize="10" showIcon="false" labelColor="154,103,23" borderSize="1" borderSizeComputationExpression="1" borderColor="154,103,23" foregroundColor="238,201,142">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ezj03V-tEeaWXM9JdVAfIw" name="Erwan Pineau" incomingEdges="_ezj05F-tEeaWXM9JdVAfIw" childrenPresentation="VerticalStack">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.1"/>
+        <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ezj03l-tEeaWXM9JdVAfIw" labelSize="10" showIcon="false" labelColor="154,103,23" borderSize="1" borderSizeComputationExpression="1" borderColor="154,103,23" foregroundColor="238,201,142">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ezj031-tEeaWXM9JdVAfIw" name="Stéphan Dubois" incomingEdges="_ezj04V-tEeaWXM9JdVAfIw" childrenPresentation="VerticalStack">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.4"/>
+        <semanticElements xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ezj04F-tEeaWXM9JdVAfIw" labelSize="10" showIcon="false" labelColor="154,103,23" borderSize="1" borderSizeComputationExpression="1" borderColor="154,103,23" foregroundColor="238,201,142">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ezj04V-tEeaWXM9JdVAfIw" sourceNode="_ezj021-tEeaWXM9JdVAfIw" targetNode="_ezj031-tEeaWXM9JdVAfIw">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ezj04l-tEeaWXM9JdVAfIw" size="2" strokeColor="154,103,23">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@edgeMappings[name='FA_Manages']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ezj041-tEeaWXM9JdVAfIw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@edgeMappings[name='FA_Manages']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ezj05F-tEeaWXM9JdVAfIw" sourceNode="_ezj021-tEeaWXM9JdVAfIw" targetNode="_ezj03V-tEeaWXM9JdVAfIw">
+        <target xmi:type="organizationChart:Employee" href="agency.orgchart#//@employees.3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ezj05V-tEeaWXM9JdVAfIw" size="2" strokeColor="154,103,23">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@edgeMappings[name='FA_Manages']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ezj05l-tEeaWXM9JdVAfIw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@edgeMappings[name='FA_Manages']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_ezj051-tEeaWXM9JdVAfIw"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer"/>
+      <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.1"/>
     </ownedRepresentations>
   </ownedViews>
 </viewpoint:DAnalysis>
