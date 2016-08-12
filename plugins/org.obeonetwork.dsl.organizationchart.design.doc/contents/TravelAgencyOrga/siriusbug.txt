@@ -46,3 +46,5 @@ bundle
   http://stackoverflow.com/questions/10999323/error-in-tycho-while-replacing-the-product-ico-files
   http://www.vogella.com/tutorials/EclipseProductDeployment/article.html#overview_productapplications
   http://andrius.velykis.lt/2012/10/creating-icons-for-eclipse-rcp-launcher/
+  
+ improve welcome page : http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fua_intro_universal_contributing.htm

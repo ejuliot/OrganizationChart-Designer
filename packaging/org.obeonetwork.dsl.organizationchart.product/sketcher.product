@@ -11,9 +11,9 @@
 Version  1.0.0
 
 
-Copyright (c) 2014 Etienne Juliot. All Rights Reserved.
+Copyright (c) 2014 - 2016 Etienne Juliot. All Rights Reserved.
 
-Visit http://www.obeo.fr
+Visit https://www.obeo.fr
       </text>
    </aboutInfo>
 
@@ -32,7 +32,7 @@ Visit http://www.obeo.fr
       </vmArgsMac>
    </launcherArgs>
 
-   <windowImages i16="icons/logo_16.png" i32="icons/logo_32.png" i48="icons/logo_48.png" i64="icons/logo_64.png" i128="icons/logo_128.png"/>
+   <windowImages i16="icons/logo_16.png" i32="icons/logo_32.png" i48="icons/logo_48.png" i64="icons/logo_64.png" i128="icons/logo_128.png" i256="icons/logo_256.png"/>
 
    <splash
       location="org.obeonetwork.dsl.organizationchart.branding"
@@ -45,13 +45,13 @@ Visit http://www.obeo.fr
       <solaris/>
       <win useIco="false">
          <bmp
-            winSmallHigh="icons/logo_16_2.png"
-            winSmallLow="icons/logo_16.bmp"
-            winMediumHigh="icons/logo_32.png"
-            winMediumLow="icons/logo_32.bmp"
-            winLargeHigh="icons/logo_48.png"
-            winLargeLow="icons/logo_48.png"
-            winExtraLargeHigh="icons/logo_256.png"/>
+            winSmallHigh="icons/16x16.bmp"
+            winSmallLow="icons/16x16_8.bmp"
+            winMediumHigh="icons/32x32.bmp"
+            winMediumLow="icons/32x32_8.bmp"
+            winLargeHigh="icons/48x48.bmp"
+            winLargeLow="icons/48x48_8.bmp"
+            winExtraLargeHigh="icons/256x256.bmp"/>
       </win>
    </launcher>
 
@@ -159,5 +159,12 @@ This Agreement is governed by the laws of the State of New York and the intellec
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="3" />
       <property name="osgi.instance.area.default" value="@user.home/organizationchartws" os="macosx" />
    </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>
