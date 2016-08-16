@@ -86,7 +86,7 @@ Contributors:
               </nonFilteredFileExtensions>
               <resources>
                 <resource>
-                  <directory>../icons</directory>
+                  <directory>icons</directory>
                 </resource>
               </resources>
             </configuration>

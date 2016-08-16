@@ -40,10 +40,11 @@ Visit https://www.obeo.fr
       startupMessageRect="7,308,458,18"
       startupForegroundColor="000000" />
    <launcher name="organizationchart">
-      <linux icon="/icons/logo_64.xpm"/>
-      <macosx icon="/icons/organizationchart.icns"/>
+      <linux icon="/icons/logo_256.xpm"/>
+      <macosx icon="/icons/icon_OD.icns"/>
       <solaris/>
-      <win useIco="false">
+      <win useIco="true">
+         <ico path="icons/logo_win_fromgimp.ico"/>
          <bmp
             winSmallHigh="icons/16x16.bmp"
             winSmallLow="icons/16x16_8.bmp"
@@ -61,7 +62,7 @@ Visit https://www.obeo.fr
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
       <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</macos>
       <solaris include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</solaris>
-      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/OSGi%Minimum-1.2</windows>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
    </vm>
 
    <license>

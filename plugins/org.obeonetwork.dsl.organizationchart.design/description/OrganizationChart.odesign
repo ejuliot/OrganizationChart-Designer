@@ -2213,8 +2213,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Custom_Employee" labelDirectEdit="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Custom%20Organization%20Chart']/@defaultLayer/@toolSections.2/@ownedTools[name='Partial_DE_Name']" createElements="false" domainClass="organizationchart.Employee">
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.title + '\r\n' + self.firstname + ' ' + self.lastname" roundedCorner="true">
+        <containerMappings name="Custom_Employee" labelDirectEdit="//@ownedViewpoints[name='Incubation']/@ownedRepresentations[name='Custom%20Organization%20Chart']/@defaultLayer/@toolSections.2/@ownedTools[name='Partial_DE_Name']" semanticCandidatesExpression="feature:employees" createElements="false" domainClass="organizationchart.Employee">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
@@ -2338,7 +2338,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Structure - List (test - for all cases)" precondition="aql:self.oclIsTypeOf(organizationchart::Organization) or (self.oclIsTypeOf(organizationchart::OrganizationalStructure))" candidatesExpression="aql:self.oclAsType(organizationchart::Organization).structures->union(self.oclAsType(organizationchart::OrganizationalStructure).subStructures->asBag())" multiple="true" iconPath="\org.obeonetwork.dsl.organizationchart.edit\icons\full\obj16\OrganizationalStructure.gif" windowTitle="Service Selection Wizard">
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Structure - List (test - for all cases)" precondition="aql:self.oclIsTypeOf(organizationchart::Organization) or (self.oclIsTypeOf(organizationchart::OrganizationalStructure))" candidatesExpression="aql:self.oclAsType(organizationchart::Organization).structures->union(self.oclAsType(organizationchart::OrganizationalStructure).subStructures)" multiple="true" iconPath="\org.obeonetwork.dsl.organizationchart.edit\icons\full\obj16\OrganizationalStructure.gif" windowTitle="Service Selection Wizard">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2399,7 +2399,7 @@
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="employee" valueExpression="var:newEmployee"/>
                       </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:not container.oclAsType(organizationchart::OrganizationalStructure).manager = null">
+                      <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:not (container.oclAsType(organizationchart::OrganizationalStructure).manager = null)">
                         <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container.oclAsType(organizationchart::OrganizationalStructure).manager">
                           <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:newEmployee"/>
                         </subModelOperations>
