@@ -6,7 +6,7 @@
   <employees firstname="Christophe" lastname="Dubois" manages="//@employees.4 //@employees.1" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="CDU" manager="//@employees.13" leads="//@structures.0/@subStructures.1"/>
   <employees firstname="Stéphan" lastname="Dubois" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="SDU" manager="//@employees.3"/>
   <employees firstname="Dana" lastname="Bertrand" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="DBE" manager="//@employees.8"/>
-  <employees firstname="Elodie" lastname="Pineau" title="dir comme" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="EPI" manager="//@employees.11"/>
+  <employees firstname="Elodie" lastname="Pineau" title="Commercial Direction" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="EPI" manager="//@employees.11"/>
   <employees firstname="Alice" lastname="Royanne" manages="//@employees.15" belongsTo="//@structures.0" trigraph="ARO" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@subStructures.5/@owns.0"/>
   <employees firstname="Jean" lastname="Dubois" manages="//@employees.2 //@employees.5" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="JDU" manager="//@employees.13" leads="//@structures.0/@subStructures.2 //@structures.0/@subStructures.0"/>
   <employees firstname="Didier Wayne" lastname="Addams" belongsTo="//@structures.0/@subStructures.5/@subStructures.0" location="//@locations.3" trigraph="DAD" manager="//@employees.16"/>
@@ -27,7 +27,7 @@
   <structures name="Direction" employees="//@employees.13 //@employees.0 //@employees.7 //@employees.23" manager="//@employees.13">
     <subStructures name="Human Ressource" employees="//@employees.2" manager="//@employees.8"/>
     <subStructures name="IT" employees="//@employees.3 //@employees.1 //@employees.4" manager="//@employees.3"/>
-    <subStructures name="Finance &amp; Adminisitrative" employees="//@employees.8 //@employees.5" manager="//@employees.8"/>
+    <subStructures name="Finance &amp; Administrative" employees="//@employees.8 //@employees.5" manager="//@employees.8"/>
     <subStructures name="Sails" employees="//@employees.11 //@employees.6 //@employees.10" manager="//@employees.11"/>
     <subStructures name="Marketing" employees="//@employees.14 //@employees.12 //@employees.21 //@employees.22" manager="//@employees.12">
       <owns name="Manager" isPerformedBy="//@employees.12"/>

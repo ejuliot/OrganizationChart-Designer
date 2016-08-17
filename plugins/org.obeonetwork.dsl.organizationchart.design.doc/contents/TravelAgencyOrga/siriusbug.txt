@@ -1,26 +1,13 @@
 Tools
 	Operations
-		For
-			i variable is not available 
-				(The actual syntax will vary depending on the query language; for the legacy query language it would be $i, for Acceleo 3 simply i. )
-		Create Edge View, Edge Style
+		Edge Style
 			preSource is not available
 				SR_Structure_Link
-		Create view
-			... should be proposed
-		Action
-			a v ariable on the semantic element should available		
 		For
 			Need to convert a set to a sequence (without, classcastexception)
 			SR tool populate
-		Operation
-			only views variable available, with nothing possible
 		Precondition
 			during validate, should verify the query answer a boolean
-		Variable
-			ability to type variables
-		Pane Base Selection
-			no contexte and need to cast : Choose Functions
 		Reconnection
 			otherEnd variable is not proposed in the children node of the tool
 			otherEnd should be rename otherEndView and a otherEnd variable should be provided to get access to semantic element without the need to do aql:otherEnd.oclAsType(diagram::DEdge).target
@@ -33,7 +20,7 @@ edge
 	SR manager + SC struct function
 		it's hard to do a conditional style based on target or source
 
-table
+table / matrix
 	label edit doesn't work	
 		
 OrderTreeLayout : children expression validation/completion is based on root element of diagram instead of NodeMapping 	
