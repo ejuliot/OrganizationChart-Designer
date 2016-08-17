@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <organizationChart:Organization xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:organizationChart="http://www.obeonetwork.org/dsl/organizationchart/1.0.0" name="TravelAgency Organization">
-  <employees firstname="Albert" lastname="Addams" belongsTo="//@structures.0" trigraph="AAD" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@owns.4"/>
+  <employees firstname="Albert" lastname="Addams" belongsTo="//@structures.0" trigraph="AAD" manager="//@employees.13" performs="//@structures.0/@owns.4"/>
   <employees firstname="Erwan" lastname="Pineau" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="EPI" manager="//@employees.3"/>
   <employees firstname="Michelle" lastname="Dubois" belongsTo="//@structures.0/@subStructures.0" location="//@locations.0" trigraph="MDU" manager="//@employees.8"/>
   <employees firstname="Christophe" lastname="Dubois" manages="//@employees.4 //@employees.1" belongsTo="//@structures.0/@subStructures.1" location="//@locations.0" trigraph="CDU" manager="//@employees.13" leads="//@structures.0/@subStructures.1"/>
@@ -8,7 +8,7 @@
   <employees firstname="Dana" lastname="Bertrand" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="DBE" manager="//@employees.8"/>
   <employees firstname="Elodie" lastname="Pineau" title="Commercial Direction" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="EPI" manager="//@employees.11"/>
   <employees firstname="Alice" lastname="Royanne" manages="//@employees.15" belongsTo="//@structures.0" trigraph="ARO" manager="//@employees.13" performs="//@structures.0/@owns.0 //@structures.0/@subStructures.5/@owns.0"/>
-  <employees firstname="Jean" lastname="Dubois" manages="//@employees.2 //@employees.5" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="JDU" manager="//@employees.13" leads="//@structures.0/@subStructures.2 //@structures.0/@subStructures.0"/>
+  <employees firstname="Jean" lastname="Dubois" manages="//@employees.2 //@employees.5" belongsTo="//@structures.0/@subStructures.2" location="//@locations.1" trigraph="JDU" manager="//@employees.13" performs="//@structures.0/@owns.0" leads="//@structures.0/@subStructures.2 //@structures.0/@subStructures.0"/>
   <employees firstname="Didier Wayne" lastname="Addams" belongsTo="//@structures.0/@subStructures.5/@subStructures.0" location="//@locations.3" trigraph="DAD" manager="//@employees.16"/>
   <employees firstname="Florent" lastname="Pineau" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="FPI" manager="//@employees.11"/>
   <employees firstname="Gabriel" lastname="Pineau" manages="//@employees.6 //@employees.10" belongsTo="//@structures.0/@subStructures.3" location="//@locations.0" trigraph="GPI" manager="//@employees.13" performs="//@structures.0/@owns.3" leads="//@structures.0/@subStructures.3"/>
@@ -38,7 +38,7 @@
       <subStructures name="Research &amp; Development" employees="//@employees.17 //@employees.20 //@employees.18" manager="//@employees.17"/>
       <owns name="Recruitement" isPerformedBy="//@employees.7 //@employees.15"/>
     </subStructures>
-    <owns name="Vice President" isPerformedBy="//@employees.0 //@employees.7 //@employees.23"/>
+    <owns name="Vice President" isPerformedBy="//@employees.7 //@employees.23 //@employees.8"/>
     <owns name="Strategy" isPerformedBy="//@employees.13"/>
     <owns name="Recruitement" isPerformedBy="//@employees.12"/>
     <owns name="Accounting" isPerformedBy="//@employees.11 //@employees.23"/>

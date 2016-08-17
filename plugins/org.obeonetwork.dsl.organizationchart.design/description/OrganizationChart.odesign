@@ -468,8 +468,8 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <createTreeItem name="STSTWE_Structure_Create" label="Create a structure" precondition="aql:self.oclAsType(organizationchart::Organization)" elementsToSelect="service:stdEmptyCollection" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='SubStructures%20with%20Employees']/@subItemMappings[name='STWE_Structure']">
-        <firstModelOperation xsi:type="tool_1:CreateInstance" typeName="organizationchart.OrganizationalStructure" referenceName="structures"/>
+      <createTreeItem name="STSTWE_Structure_Create" label="Create a substructure" precondition="aql:self.oclAsType(organizationchart::OrganizationStructure)" elementsToSelect="service:stdEmptyCollection" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='SubStructures%20with%20Employees']/@subItemMappings[name='STWE_Structure']">
+        <firstModelOperation xsi:type="tool_1:CreateInstance" typeName="organizationchart.OrganizationalStructure" referenceName="subStructures"/>
         <variables name="root" documentation="The semantic element of the tree."/>
         <variables name="element" documentation="The semantic currently edited element."/>
         <variables name="container" documentation="The semantic element corresponding to the view container."/>
@@ -903,41 +903,79 @@
         </containerMappings>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structure Composition" titleExpression="aql:self.name + ' Functions'" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structure Composition" titleExpression="aql:self.name + ' Composition'" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="SC_NBEmp" label="Hide Number of Employees by Function">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Function']/@borderedNodeMappings[name='SC_Function_NbEmp']"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@containerMappings[name='SC_Structure_WithFctList']/@subContainerMappings[name='SC_Function_List']/@borderedNodeMappings[name='SC_Function_NbEmp']"/>
       </filters>
-      <layout xsi:type="description_1:OrderedTreeLayout" childrenExpression="feature:owns" nodeMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@nodeMappings[name='SC_Structure']"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
-        <nodeMappings name="SC_Structure" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='SC_DE']" semanticCandidatesExpression="var:self" domainClass="organizationchart.OrganizationalStructure">
-          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW" width="15" height="6">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-          </style>
-        </nodeMappings>
-        <edgeMappings name="SC_Struc_Function" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@nodeMappings[name='SC_Structure']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Function']" targetFinderExpression="feature:owns">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+        <edgeMappings name="SC_SubStructureLink" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_SubStructure']" targetFinderExpression="feature:subStructures">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="SC_Function" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@toolSections.0/@ownedTools[name='Del%20Fct']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='SC_DE']" semanticCandidatesExpression="feature:owns" domainClass="organizationchart.Function">
-          <borderedNodeMappings name="SC_Function_NbEmp" semanticCandidatesExpression="var:self" domainClass="organizationchart.Function">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.isPerformedBy->size()" sizeComputationExpression="-1" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.edit/icons/full/obj16/Employee.gif">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        <containerMappings name="SC_Structure" semanticCandidatesExpression="var:self" domainClass="organizationchart.OrganizationalStructure" childrenPresentation="VerticalStack">
+          <subContainerMappings name="SC_Stack_Employee" semanticCandidatesExpression="var:self" domainClass="organizationchart.OrganizationalStructure">
+            <subNodeMappings name="SC_Structure_Employee" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Employee_Name']" semanticCandidatesExpression="feature:employees" domainClass="organizationchart.Employee">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + if (diagram.activatedLayers.name->indexOf('with Title') > 0) then '\r\n' + self.title else '' endif" sizeComputationExpression="6" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelFormat>bold</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelExpression="aql:self.employees->size() + ' employees managed by ' + self.manager.firstname + ' ' + self.manager.lastname" iconPath="/org.obeonetwork.dsl.organizationchart.edit/icons/full/obj16/Employee.gif" roundedCorner="true" widthComputationExpression="" heightComputationExpression="">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.0"/>
             </style>
-          </borderedNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1" arcHeight="1" borderSizeComputationExpression="1" widthComputationExpression="15" heightComputationExpression="3">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </subContainerMappings>
+          <subContainerMappings name="SC_Stack_Functions" semanticCandidatesExpression="var:self" domainClass="organizationchart.OrganizationalStructure" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.1/@ownedTools[name='SC_Function_Drop']">
+            <subContainerMappings name="SC_Function" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@toolSections.0/@ownedTools[name='Del%20Fct']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='SC_DE']" semanticCandidatesExpression="feature:owns" domainClass="organizationchart.Function" childrenPresentation="List">
+              <subNodeMappings name="SC_Function_Emp" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@toolSections.0/@ownedTools[name='Del%20FctEmp']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="feature:isPerformedBy" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='Dbl_Click']" domainClass="organizationchart.Employee">
+                <style xsi:type="style:SquareDescription" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1" arcHeight="1" borderSizeComputationExpression="1" widthComputationExpression="15" heightComputationExpression="3">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelExpression="Functions" iconPath="/org.obeonetwork.dsl.organizationchart.edit/icons/full/obj16/Function.gif" roundedCorner="true" widthComputationExpression="" heightComputationExpression="">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.0"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="" heightComputationExpression="">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="SC_SubStructure" semanticCandidatesExpression="feature:subStructures" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.1/@ownedTools[name='SC_Function_Drop']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function']" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="15" heightComputationExpression="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
         <toolSections name="Usability">
@@ -957,7 +995,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Dbl_Click" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_WithOutFunction']/@subNodeMappings[name='SC_WithOutFunction_Emp']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Dbl_Click" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function']/@subNodeMappings[name='SC_Function_Emp'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@containerMappings[name='SC_WithOutFunction']/@subNodeMappings[name='SC_WithOutFunction_Emp']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -968,31 +1006,32 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Functions">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SC_Create_Function" label="Function" elementsToSelect="var:instance" containerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SC_Create_Function" label="Function" elementsToSelect="var:instance" containerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@containerMappings[name='SC_Structure_WithFctList']/@subContainerMappings[name='SC_Function_List']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationchart.Function" referenceName="owns"/>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="SC_Function_Drop" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function']" dragSource="BOTH">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:MoveElement" newContainerExpression="var:newSemanticContainer" featureName="owns"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Employee']/@subNodeMappings[name='SC_Structure_Employee']/@style" attributeName="workspacePath" value="service:getPicture"/>
+          </vsmElementCustomizations>
+        </customization>
       </defaultLayer>
-      <additionalLayers name="Employees" activeByDefault="true">
-        <containerMappings xsi:type="description_1:ContainerMappingImport" name="SC_Function_List" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@toolSections.0/@ownedTools[name='Del%20Fct']" semanticCandidatesExpression="feature:owns" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@toolSections.0/@ownedTools[name='SC_EmpDrop']" childrenPresentation="List" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Function']">
-          <subNodeMappings name="SC_FunctionCont_Emp" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@toolSections.0/@ownedTools[name='Del%20FctEmp']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="feature:isPerformedBy" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='Dbl_Click']" domainClass="organizationchart.Employee">
-            <style xsi:type="style:SquareDescription" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1" arcHeight="1" borderSizeComputationExpression="1">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-          </style>
-        </containerMappings>
+      <additionalLayers name="Focus on Functions">
         <containerMappings name="SC_WithOutFunction" preconditionExpression="aql:not self.employees->select(emp | emp.performs = null)->isEmpty()" semanticCandidatesExpression="var:self" domainClass="organizationchart.OrganizationalStructure" childrenPresentation="List">
           <subNodeMappings name="SC_WithOutFunction_Emp" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='NomEmployé']" semanticCandidatesExpression="aql:self.employees->select(emp | emp.performs = null)" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@toolSections.0/@ownedTools[name='Dbl_Click']" domainClass="organizationchart.Employee">
             <style xsi:type="style:SquareDescription" labelExpression="aql:self.firstname + ' ' + self.lastname" labelAlignment="LEFT" resizeKind="NSEW">
@@ -1008,8 +1047,27 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="SC_Structure_WithFctList" semanticCandidatesExpression="var:self" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']">
+          <subContainerMappings xsi:type="description_1:ContainerMappingImport" name="SC_Function_List" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@toolSections.0/@ownedTools[name='Del%20Fct']" semanticCandidatesExpression="feature:owns" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@toolSections.0/@ownedTools[name='SC_EmpDrop']" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function']">
+            <borderedNodeMappings name="SC_Function_NbEmp" semanticCandidatesExpression="var:self" domainClass="organizationchart.Function">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.isPerformedBy->size()" sizeComputationExpression="-1" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.edit/icons/full/obj16/Employee.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+              </style>
+            </borderedNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1" arcHeight="1" borderSizeComputationExpression="1">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </subContainerMappings>
+        </containerMappings>
         <toolSections name="Employees">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="SC_Emp" label="Create Employee" nodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SC_Emp" label="Create Employee" nodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function']/@subNodeMappings[name='SC_Function_Emp']">
             <variable name="function"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1034,7 +1092,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="SC_EmpDrop" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_WithOutFunction']/@subNodeMappings[name='SC_WithOutFunction_Emp'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Employees']/@containerMappings[name='SC_Function_List']/@subNodeMappings[name='SC_FunctionCont_Emp']">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="SC_EmpDrop" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@containerMappings[name='SC_WithOutFunction']/@subNodeMappings[name='SC_WithOutFunction_Emp'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@defaultLayer/@containerMappings[name='SC_Structure']/@subContainerMappings[name='SC_Stack_Functions']/@subContainerMappings[name='SC_Function']/@subNodeMappings[name='SC_Function_Emp']">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -1610,6 +1668,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Managers and Structures" titleExpression="Managers and Structures" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
         <nodeMappings xsi:type="description_1:NodeMappingImport" name="MT_Manager" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@toolSections.0/@ownedTools[name='MT_Employee_Name']" semanticCandidatesExpression="aql:self.employees->select(myEmployee | myEmployee.leads->notEmpty())" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@toolSections.0/@ownedTools[name='MT_Employee_DblClick']" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']"/>
         <edgeMappings name="MT_Leads" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@nodeMappings[name='MT_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@containerMappings[name='MT_Structure']" targetFinderExpression="feature:leads">
