@@ -12854,7 +12854,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign#//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Overview']/@defaultLayer/@containerMappings[name='OV_Structures']/@subNodeMappings[name='OV_Structure']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_VcKum0ErEeaeuPeDTZdtCw" name="Finance &amp; Adminisitrative">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_VcKum0ErEeaeuPeDTZdtCw" name="Finance &amp; Administrative">
           <target xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.2"/>
           <semanticElements xmi:type="organizationChart:OrganizationalStructure" href="agency.orgchart#//@structures.0/@subStructures.2"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_VcKunEErEeaeuPeDTZdtCw" labelColor="39,76,114" labelAlignment="LEFT">
