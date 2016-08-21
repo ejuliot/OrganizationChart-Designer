@@ -109,7 +109,7 @@ Detail of each employee, and his management responsibilities
 
 
 ###. Start of user code Manager Responsibilities
-	!documentation/images/generated/Alain%20Brooks%20Management%20Responsabilities.jpg!
+	!documentation/images/generated/Alain%20Brooks%20Management%20Responsibilities.jpg!
 ###. End of user code
 	
 h3. Managers and Structures
@@ -142,7 +142,7 @@ Allocation of functions between employees of a structure.
 
 
 ###. Start of user code Functions Allocation
-	!documentation/images/generated/Direction%20Functions Allocation.jpg!
+	!documentation/images/generated/Direction%20Functions%20Allocation.jpg!
 ###. End of user code
 	
 h3. Functions Matrix

@@ -116,7 +116,7 @@ h3. Manager Responsibilities
 Detail of each employee, and his management responsibilities
 
 
-	!documentation/images/generated/Alain%20Brooks%20Management%20Responsabilities.jpg!
+	!documentation/images/generated/Alain%20Brooks%20Management%20Responsibilities.jpg!
 	
 h3. Managers and Structures
 
@@ -145,7 +145,7 @@ h3. Functions Allocation
 Allocation of functions between employees of a structure.
 
 
-	!documentation/images/generated/Direction%20Functions Allocation.jpg!
+	!documentation/images/generated/Direction%20Functions%20Allocation.jpg!
 	
 h3. Functions Matrix
 
