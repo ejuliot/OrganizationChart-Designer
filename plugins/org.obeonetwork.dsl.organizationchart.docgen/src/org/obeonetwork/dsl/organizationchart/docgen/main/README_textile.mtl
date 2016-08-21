@@ -21,10 +21,10 @@ h3. [name/]
 [/if]
 
 [if (titleExpression <> null and not titleExpression.contains('aql:') and self.oclIsTypeOf(description::DiagramDescription))]
-	!documentation/images/generated/[titleExpression/].jpg!
+	!documentation/images/generated/[titleExpression.replace(' ', '%20')/].jpg!
 [else]
 ###. [protected (name)]
-###.	!documentation/images/handcreated/[titleExpression/]REPLACEWITHTHEGOODNAME.png!
+###.	!documentation/images/handcreated/[titleExpression.replace(' ', '%20')/]REPLACEWITHTHEGOODNAME.png!
 ###. [/protected]
 [/if]
 	
