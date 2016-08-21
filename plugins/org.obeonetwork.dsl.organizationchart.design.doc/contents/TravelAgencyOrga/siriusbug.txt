@@ -25,6 +25,8 @@ table / matrix
 		
 OrderTreeLayout : children expression validation/completion is based on root element of diagram instead of NodeMapping 	
 	
+Export Images : emptuy images for some layers	
+	
 Q
 	Del et unset dans SC Del FctEmp
 	StructuresRelationShip : label on end (variable for target ?)

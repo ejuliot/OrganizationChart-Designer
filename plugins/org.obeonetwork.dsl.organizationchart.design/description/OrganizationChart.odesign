@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="OrganizationChart" version="11.0.0.201601261200">
   <ownedViewpoints name="OrganizationChart" modelFileExtension="orgchart">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Give an overview of the organization chart of your company :&#xD;&#xA;* how many locations&#xD;&#xA;* how many structures&#xD;&#xA;* how many employees and managers&#xD;&#xA;&#xD;&#xA;This diagram is automaticlly opened as it is the entry point." name="Overview" titleExpression="aql:self.name + ' Overview'" initialisation="true" showOnStartup="true" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Give an overview of the organization chart of your company :&#xD;&#xA;* how many locations&#xD;&#xA;* how many structures&#xD;&#xA;* how many employees and managers&#xD;&#xA;&#xD;&#xA;This diagram is automatically opened as it is the entry point." name="Overview" titleExpression="aql:self.name + ' Overview'" initialisation="true" showOnStartup="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="OV_Locations_Img" semanticCandidatesExpression="var:self" domainClass="organizationchart.Organization">
@@ -164,7 +164,7 @@
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -215,7 +215,7 @@
         <variables name="container" documentation="The semantic element corresponding to the view container."/>
       </createTreeItem>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Show a map of some locations.&#xD;&#xA;Some pre-define maps are available for a worlwide diagram, europe, US, and some countries.&#xD;&#xA;A layer is available to show employees without any locations." name="Locations" titleExpression="Locations Map" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Show a map of some locations.&#xD;&#xA;Some pre-define maps are available for a worlwide diagram, europe, US, and some countries.&#xD;&#xA;You can use a pointer to point on the map where is precisely this location.&#xD;&#xA;A layer is available to show employees without any locations.&#xD;&#xA;Several location diagrams could be created to show several regions, different levels of zoom." name="Locations" titleExpression="Locations Map" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide Employees List">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Locations']/@defaultLayer/@containerMappings[name='AG_Location']/@subNodeMappings[name='AG_Loc_Employee']"/>
@@ -415,7 +415,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Structures Tree" titleExpression="Structures Tree" initialisation="true" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="Show all structures as a containment tree" name="Structures Tree" titleExpression="Structures Tree" initialisation="true" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <subItemMappings name="ST_Structure" domainClass="organizationchart.OrganizationalStructure" semanticCandidatesExpression="aql:self.structures->sortedBy(str | str.name)">
         <defaultStyle>
@@ -442,14 +442,14 @@
         <variables name="container" documentation="The semantic element corresponding to the view container."/>
       </createTreeItem>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="SubStructures with Employees" titleExpression="aql:self.name + ' Structure With Employees Tree'" initialisation="true" domainClass="organizationchart.OrganizationalStructure">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="Show the substructure of a current structure, and all its employees." name="SubStructures with Employees" titleExpression="aql:self.name + ' Structure With Employees Tree'" initialisation="true" domainClass="organizationchart.OrganizationalStructure">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <subItemMappings name="STWE_Structure" domainClass="organizationchart.OrganizationalStructure" semanticCandidatesExpression="var:self">
         <defaultStyle>
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="STWE_S_SubStructure" domainClass="organizationchart.OrganizationalStructure" semanticCandidatesExpression="aql:self.subStructures->sortedBy(str | str.name)" reusedTreeItemMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='SubStructures%20with%20Employees']/@subItemMappings[name='STWE_Structure']/@subItemMappings[name='STWE_S_SubStructure']">
+        <subItemMappings name="STWE_S_SubStructure" domainClass="organizationchart.OrganizationalStructure" semanticCandidatesExpression="aql:self.subStructures->sortedBy(str | str.name)" reusedTreeItemMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='SubStructures%20with%20Employees']/@subItemMappings[name='STWE_Structure']/@subItemMappings[name='STWE_S_SubStructure'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='SubStructures%20with%20Employees']/@subItemMappings[name='STWE_Structure']/@subItemMappings[name='STWE_Employee']">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -475,7 +475,7 @@
         <variables name="container" documentation="The semantic element corresponding to the view container."/>
       </createTreeItem>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structures Organization" titleExpression="Structures Organization" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Main diagram to show all structures and all employees.&#xD;&#xA;Managers are shown with bold and underline style.&#xD;&#xA;Double clic on one employee to make him manager of his structure." name="Structures Organization" titleExpression="Structures Organization" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide Manager in their own Structure">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Organization']/@defaultLayer/@containerMappings[name='SO_Structure']/@subNodeMappings[name='SO_S_Employee']" semanticConditionExpression="aql:not (self.manages)->includes(self.belongsTo)"/>
@@ -720,7 +720,7 @@
         </containerMappings>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structures Relationship" titleExpression="Structures Relationship" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Relation between structure.&#xD;&#xA;You can active a layer to analyse the size of each structure with dynamic size computed from nomber of employees.&#xD;&#xA;&#xD;&#xA;A template is available to easily initiate an organization chart with a standard organization." name="Structures Relationship" titleExpression="Structures Relationship" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <layout xsi:type="description_1:OrderedTreeLayout" childrenExpression="aql:self.oclAsType(organizationchart::OrganizationalStructure).subStructures" nodeMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']"/>
       <defaultLayer name="Default">
@@ -903,7 +903,7 @@
         </containerMappings>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Structure Composition" titleExpression="aql:self.name + ' Composition'" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Details of one organization.&#xD;&#xA;It shows also sub structures.&#xD;&#xA;You can easily drag and drop functions to sub structures." name="Structure Composition" titleExpression="aql:self.name + ' Composition'" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="SC_NBEmp" label="Hide Number of Employees by Function">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structure%20Composition']/@additionalLayers[name='Focus%20on%20Functions']/@containerMappings[name='SC_Structure_WithFctList']/@subContainerMappings[name='SC_Function_List']/@borderedNodeMappings[name='SC_Function_NbEmp']"/>
@@ -1000,7 +1000,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1132,15 +1132,15 @@
         </toolSections>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Management Tree" titleExpression="Management Tree" initialisation="true" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="All employees as a tree from the boss to any employees, organized by management responsability." name="Management Tree" titleExpression="Management Tree" initialisation="true" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <subItemMappings name="MT_TopManager" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->select(emp | emp.manager = null)">
-        <defaultStyle labelExpression="aql:self.firstname + ' ' + self.lastname">
+        <defaultStyle labelExpression="aql:self.firstname + ' ' + self.lastname" iconPath="/org.obeonetwork.dsl.organizationchart.design/images/manager-16.png">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
         <subItemMappings name="MT_Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.manages->sortedBy(emp | if not emp.manages->isEmpty() then '0' + emp.firstname else emp.firstname endif)" reusedTreeItemMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Tree']/@subItemMappings[name='MT_TopManager']/@subItemMappings[name='MT_Employee']">
-          <defaultStyle labelExpression="aql:self.firstname + ' ' + self.lastname">
+          <defaultStyle labelExpression="aql:self.firstname + ' ' + self.lastname" iconPath="/org.obeonetwork.dsl.organizationchart.design/images/manager-16.png">
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1164,7 +1164,7 @@
         <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
       </dropTools>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Management Hierarchy" titleExpression="Management Hierarchy" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="All employees organized by hierarchy link.&#xD;&#xA;A layer is available to show picture. To automaticly associate an employee to a picture, just create an image file (.svg, .png or .jpg) with the name composed of &quot;firstname lastname&quot; inside a &quot;pictures&quot; folder." name="Management Hierarchy" titleExpression="Management Hierarchy" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
@@ -1217,14 +1217,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MH_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MH_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <containerViewVariable name="containerView"/>
             <containerVariable name="container"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MH_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MH_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
@@ -1233,7 +1233,7 @@
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="New Employee" elementsToSelect="var:newEmployee" nodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']" extraMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Management%20Hierarchy']/@defaultLayer/@nodeMappings[name='MH_Employee']">
@@ -1285,27 +1285,27 @@
         </nodeMappings>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Manager Responsabilities" titleExpression="aql:self.firstname + ' ' + self.lastname + ' Management Responsabilities'" domainClass="organizationchart.Employee" defaultConcern="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@concerns/@ownedConcernDescriptions.0" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Detail of each employee, and his management responsibilities" name="Manager Responsibilities" titleExpression="aql:self.firstname + ' ' + self.lastname + ' Management Responsibilities'" domainClass="organizationchart.Employee" defaultConcern="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@concerns/@ownedConcernDescriptions.0" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide Pictures">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide Details">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@nodeMappings[name='MR_Function']"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@nodeMappings[name='MR_Function']"/>
       </filters>
       <concerns>
-        <ownedConcernDescriptions name="MR_Default Concern" filters="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@filters[name='Hide%20Details']"/>
+        <ownedConcernDescriptions name="MR_Default Concern" filters="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@filters[name='Hide%20Details']"/>
       </concerns>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
-        <nodeMappings name="MR_Function" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_DE_Function']" semanticCandidatesExpression="aql:self.belongsTo.owns->reject(myFunction | myFunction.isPerformedBy->notEmpty())" domainClass="organizationchart.Function">
+        <nodeMappings name="MR_Function" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_DE_Function']" semanticCandidatesExpression="aql:self.belongsTo.owns->reject(myFunction | myFunction.isPerformedBy->notEmpty())" domainClass="organizationchart.Function">
           <style xsi:type="style:SquareDescription" labelPosition="node" width="13" height="2">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="MR_Hierarchy-N-1" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']" targetFinderExpression="feature:manages">
+        <edgeMappings name="MR_Hierarchy-N-1" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']" targetFinderExpression="feature:manages">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -1313,8 +1313,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="MR_Manager" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_EmployeeName']" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20Emp'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" childrenPresentation="VerticalStack">
-          <borderedNodeMappings name="MR_M_Pic" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']">
+        <containerMappings name="MR_Manager" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_EmployeeName']" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20Emp'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" childrenPresentation="VerticalStack">
+          <borderedNodeMappings name="MR_M_Pic" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']">
             <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" tooltipExpression="Change Picture with Appearance view" sizeComputationExpression="5" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.organizationchart.design/images/man64.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1322,7 +1322,7 @@
               <forbiddenSides>EAST</forbiddenSides>
             </style>
           </borderedNodeMappings>
-          <subContainerMappings name="MR_M_Title" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']">
+          <subContainerMappings name="MR_M_Title" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']">
             <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" showIcon="false" labelExpression="feature:title" roundedCorner="true" heightComputationExpression="1">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1330,22 +1330,22 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="MR_M_Details" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" childrenPresentation="List">
-            <subNodeMappings name="MR_M_Trigraph" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_Trigraph']" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee">
+          <subContainerMappings name="MR_M_Details" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" childrenPresentation="List">
+            <subNodeMappings name="MR_M_Trigraph" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_Trigraph']" semanticCandidatesExpression="var:self" domainClass="organizationchart.Employee">
               <style xsi:type="style:SquareDescription" labelExpression="aql:'Trigraph: ' + self.trigraph" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="MR_M_Function" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Del-FunctionAllocated']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_DE_Function']" semanticCandidatesExpression="feature:performs" domainClass="organizationchart.Function">
+            <subNodeMappings name="MR_M_Function" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Del-FunctionAllocated']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_DE_Function']" semanticCandidatesExpression="feature:performs" domainClass="organizationchart.Function">
               <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="MR_M_Structure" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_Structure']" semanticCandidatesExpression="feature:belongsTo" domainClass="organizationchart.OrganizationalStructure">
+            <subNodeMappings name="MR_M_Structure" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_Structure']" semanticCandidatesExpression="feature:belongsTo" domainClass="organizationchart.OrganizationalStructure">
               <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
@@ -1377,7 +1377,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings xsi:type="description_1:ContainerMappingImport" name="MR_Employee_N-1" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.1/@ownedTools[name='Management%20Responsability']" semanticCandidatesExpression="feature:manages" reusedBorderedNodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']" childrenPresentation="VerticalStack" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']"/>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="MR_Employee_N-1" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.1/@ownedTools[name='Management%20Responsability']" semanticCandidatesExpression="feature:manages" reusedBorderedNodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']" childrenPresentation="VerticalStack" importedMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']"/>
         <toolSections name="Usability">
           <ownedTools xsi:type="tool:DirectEditLabel" name="MR_DE_EmployeeName">
             <mask mask="{0} {1}"/>
@@ -1412,23 +1412,23 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MR_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MR_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <containerViewVariable name="containerView"/>
             <containerVariable name="container"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MR_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MR_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="MR_Employee_DblClick" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="MR_Employee_DblClick" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:DeleteElementDescription" name="Del Emp">
@@ -1449,7 +1449,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Managed Employees">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new Employee" containerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new Employee" containerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1494,7 +1494,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="manages" edgeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@edgeMappings[name='MR_Hierarchy-N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@edgeMappings[name='MR_Hierarchy-Indirect']" iconPath="/org.obeonetwork.dsl.organizationchart.design/icons/hierarchical.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="manages" edgeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@edgeMappings[name='MR_Hierarchy-N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@edgeMappings[name='MR_Hierarchy-Indirect']" iconPath="/org.obeonetwork.dsl.organizationchart.design/icons/hierarchical.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1516,16 +1516,16 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="Management Responsability" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="Management Responsability" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
         </toolSections>
         <toolSections name="Functions">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Function" nodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@nodeMappings[name='MR_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']/@subNodeMappings[name='MR_M_Function']" extraMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@nodeMappings[name='MR_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']/@subNodeMappings[name='MR_M_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Function" nodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@nodeMappings[name='MR_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']/@subNodeMappings[name='MR_M_Function']" extraMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@nodeMappings[name='MR_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']/@subNodeMappings[name='MR_M_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1549,7 +1549,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="MR_Drop_Function" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@nodeMappings[name='MR_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']/@subNodeMappings[name='MR_M_Function']">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="MR_Drop_Function" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@nodeMappings[name='MR_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']/@subNodeMappings[name='MR_M_Function']">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -1578,12 +1578,12 @@
         </toolSections>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']/@style" attributeName="workspacePath" value="service:getPicture"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']/@style" attributeName="workspacePath" value="service:getPicture"/>
           </vsmElementCustomizations>
         </customization>
       </defaultLayer>
-      <additionalLayers name="Indirect Responsabilities">
-        <edgeMappings name="MR_Hierarchy-Indirect" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect']" targetFinderExpression="feature:manages">
+      <additionalLayers name="Indirect Responsibilities">
+        <edgeMappings name="MR_Hierarchy-Indirect" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect']" targetFinderExpression="feature:manages">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -1591,7 +1591,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="MR_Employee_Indirect" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_NavCreate'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.1/@ownedTools[name='Management%20Responsability']" navigationDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_Nav']" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='Del%20Indirect']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_EmployeeName']" semanticCandidatesExpression="aql:self.eContainer(organizationchart::Organization).employees" createElements="false" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_Employee_DblClick']" domainClass="organizationchart.Employee" reusedBorderedNodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']">
+        <containerMappings name="MR_Employee_Indirect" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_NavCreate'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.1/@ownedTools[name='Management%20Responsability']" navigationDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_Nav']" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='Del%20Indirect']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_EmployeeName']" semanticCandidatesExpression="aql:self.eContainer(organizationchart::Organization).employees" createElements="false" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_Employee_DblClick']" domainClass="organizationchart.Employee" reusedBorderedNodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@borderedNodeMappings[name='MR_M_Pic']" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Title'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']/@subContainerMappings[name='MR_M_Details']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1599,28 +1599,28 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections name="Indirect Reponsabilities">
+        <toolSections name="Indirect Reponsibilities">
           <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="MR_IndirectEmployees" label="Indirect Managed Employees" precondition="aql:self.oclIsTypeOf(organizationchart::Employee) or self.oclIsTypeOf(organizationchart::OrganizationalStructure)" candidatesExpression="aql:if self.oclIsTypeOf(organizationchart::Employee) then self.eContainer(organizationchart::Organization).employees else if self.oclIsTypeOf(organizationchart::OrganizationalStructure) then self.oclAsType(organizationchart::OrganizationalStructure).employees else Set{} endif endif" multiple="true" iconPath="\org.obeonetwork.dsl.organizationchart.edit\icons\full\obj16\Employee.gif" windowTitle="Manages">
             <element name="emp"/>
             <containerView name="orgaView"/>
             <container name="manager"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:For" expression="var:emp">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect']" containerViewExpression="var:orgaView"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect']" containerViewExpression="var:orgaView"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
       </additionalLayers>
       <additionalLayers name="Structure Management">
-        <nodeMappings name="MR_Structure" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_Structure']" semanticCandidatesExpression="aql:self.leads->union(self.manages.leads)" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@toolSections.0/@ownedTools[name='Dbl%20Click%20Structure']" domainClass="organizationchart.OrganizationalStructure">
+        <nodeMappings name="MR_Structure" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_DE_Structure']" semanticCandidatesExpression="aql:self.leads->union(self.manages.leads)" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Structure%20Management']/@toolSections.0/@ownedTools[name='Dbl%20Click%20Structure']" domainClass="organizationchart.OrganizationalStructure">
           <style xsi:type="style:SquareDescription" labelPosition="node" width="15" height="3">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="MR_Leads" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@containerMappings[name='MR_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']" targetFinderExpression="feature:leads">
+        <edgeMappings name="MR_Leads" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Indirect%20Responsibilities']/@containerMappings[name='MR_Employee_Indirect'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Employee_N-1'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@containerMappings[name='MR_Manager']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']" targetFinderExpression="feature:leads">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -1629,7 +1629,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Usuability">
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Dbl Click Structure" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Dbl Click Structure" mappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1644,11 +1644,11 @@
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:For" expression="var:element">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']" containerViewExpression="var:containerView"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Structure%20Management']/@nodeMappings[name='MR_Structure']" containerViewExpression="var:containerView"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="leads" edgeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@additionalLayers[name='Structure%20Management']/@edgeMappings[name='MR_Leads']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="leads" edgeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@additionalLayers[name='Structure%20Management']/@edgeMappings[name='MR_Leads']">
             <sourceVariable name="emp"/>
             <targetVariable name="structure"/>
             <sourceViewVariable name="sourceView"/>
@@ -1666,7 +1666,7 @@
         </toolSections>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Managers and Structures" titleExpression="Managers and Structures" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Show all structures and their managers. Links are based on relationship between managers and structures, not on hierarchy between managers." name="Managers and Structures" titleExpression="Managers and Structures" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
@@ -1727,14 +1727,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MH_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MH_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <containerViewVariable name="containerView"/>
             <containerVariable name="container"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MH_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MH_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
@@ -1743,7 +1743,7 @@
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Manager" precondition="aql:container.oclIsTypeOf(organizationchart::OrganizationalStructure)" elementsToSelect="var:newManager" nodeMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@nodeMappings[name='MT_Manager']" extraMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Managers%20and%20Structures']/@defaultLayer/@containerMappings[name='MT_Structure']">
@@ -1797,7 +1797,7 @@
         </customization>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="All Employees with their Structures" titleExpression="All Employees with their Structures" initialisation="true" domainClass="organizationchart.Organization" defaultConcern="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@concerns/@ownedConcernDescriptions.0" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Show all structures as a container with inside them the picture of employees.&#xD;&#xA;Several filters are available to select which information need to be shown." name="All Employees with their Structures" titleExpression="All Employees with their Structures" initialisation="true" domainClass="organizationchart.Organization" defaultConcern="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='All%20Employees%20with%20their%20Structures']/@concerns/@ownedConcernDescriptions.0" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide Employees without structures">
@@ -1890,14 +1890,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MH_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="MH_ToMR_Nav" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <containerViewVariable name="containerView"/>
             <containerVariable name="container"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MH_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="MH_ToMR_NavCreate" label="Responsabilities" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']">
             <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']"/>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']"/>
             </initialOperation>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
@@ -2011,7 +2011,7 @@
         </customization>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_3:EditionTableDescription" name="Employees Description" titleExpression="All Employees Description" initialisation="true" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description_3:EditionTableDescription" endUserDocumentation="Table to view and edit details of all employees." name="Employees Description" titleExpression="Employees Description" initialisation="true" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <ownedLineMappings name="Employee" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->sortedBy(emp | emp.firstname)" headerLabelExpression="aql:self.firstname + ' ' + self.lastname + if self.manages->size() > 0 then ' (' + self.manages->size() + ')' else '' endif">
         <foregroundConditionalStyle predicateExpression="self.manages->size() > 0">
@@ -2033,13 +2033,15 @@
       <ownedColumnMappings name="Title" headerLabelExpression="Title" featureName="title"/>
       <ownedColumnMappings name="Manager" headerLabelExpression="Manager" featureName="manager" labelExpression="aql:if self.manager = null then null else self.manager.firstname + ' ' + self.manager.lastname endif"/>
       <ownedColumnMappings name="Structure" headerLabelExpression="Structure" featureName="belongsTo" labelExpression="aql:if self.belongsTo = null then null else self.belongsTo.name endif"/>
+      <ownedColumnMappings name="Location" headerLabelExpression="Location" featureName="location" labelExpression="aql:self.location.name"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Functions Allocation" titleExpression="aql:self.name + ' Functions Allocation'" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Allocation of functions between employees of a structure." name="Functions Allocation" titleExpression="aql:self.name + ' Functions Allocation'" domainClass="organizationchart.OrganizationalStructure" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
       <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#//description"/>
       <metamodel href="http://www.eclipse.org/sirius/1.1.0#/"/>
       <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#//description/tool"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
         <nodeMappings name="FA_Function_Notallocated" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.0/@ownedTools[name='FA_DE_Name']" semanticCandidatesExpression="aql:self.owns->reject(myFunction | myFunction.isPerformedBy->notEmpty())" domainClass="organizationchart.Function">
           <style xsi:type="style:SquareDescription" labelPosition="node" width="13" height="4">
@@ -2049,7 +2051,7 @@
           </style>
         </nodeMappings>
         <edgeMappings name="FA_Manages" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']" targetFinderExpression="feature:manages">
-          <style sizeComputationExpression="2">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2180,26 +2182,25 @@
       </defaultLayer>
       <additionalLayers name="Indirect Responsabilities">
         <edgeMappings name="FA_Hierarchy-Indirect" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='FA_Employee_Other'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='FA_Employee_Indirect']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='FA_Employee_Other'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@containerMappings[name='FA_Employee_Indirect']" targetFinderExpression="feature:manages">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="FA_Employee_Other" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_NavCreate']" navigationDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_Nav']" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='Del%20Indirect']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.0/@ownedTools[name='FA_DE_Employee_Name']" semanticCandidatesExpression="aql:self.eContainer(organizationchart::Organization).employees" createElements="false" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@toolSections.0/@ownedTools[name='FA_DblClick_IndirectEmployees']" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.1/@ownedTools[name='FA_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@subContainerMappings[name='FA_Function_Allocated']" childrenPresentation="VerticalStack">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname">
+        <containerMappings name="FA_Employee_Other" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_NavCreate']" navigationDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_Nav']" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='Del%20Indirect']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.0/@ownedTools[name='FA_DE_Employee_Name']" semanticCandidatesExpression="aql:self.eContainer(organizationchart::Organization).employees" createElements="false" doubleClickDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@additionalLayers[name='Indirect%20Responsabilities']/@toolSections.0/@ownedTools[name='FA_DblClick_IndirectEmployees']" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.1/@ownedTools[name='FA_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@subContainerMappings[name='FA_Function_Allocated']" childrenPresentation="VerticalStack">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + '\r\n (' + self.belongsTo.name + ')'">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
-            <labelFormat>bold</labelFormat>
+            <labelFormat>italic</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
           </style>
         </containerMappings>
-        <containerMappings name="FA_Employee_Indirect" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_NavCreate']" navigationDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_Nav']" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='Del%20Indirect']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.0/@ownedTools[name='FA_DE_Employee_Name']" semanticCandidatesExpression="aql:self.employees.manages->reject(emp|emp.belongsTo = self)" synchronizationLock="true" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsabilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.1/@ownedTools[name='FA_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@subContainerMappings[name='FA_Function_Allocated']" childrenPresentation="VerticalStack">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname">
+        <containerMappings name="FA_Employee_Indirect" detailDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_NavCreate']" navigationDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MR_ToMR_Nav']" deletionDescription="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='Del%20Indirect']" labelDirectEdit="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.0/@ownedTools[name='FA_DE_Employee_Name']" semanticCandidatesExpression="aql:self.employees.manages->reject(emp|emp.belongsTo = self)" synchronizationLock="true" domainClass="organizationchart.Employee" dropDescriptions="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.0/@ownedTools[name='MH_Drop_Employee'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Manager%20Responsibilities']/@defaultLayer/@toolSections.2/@ownedTools[name='MR_Drop_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@toolSections.1/@ownedTools[name='FA_Drop_Function']" reusedContainerMappings="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Allocation']/@defaultLayer/@containerMappings[name='FA_Employe']/@subContainerMappings[name='FA_Function_Allocated']" childrenPresentation="VerticalStack">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="aql:self.firstname + ' ' + self.lastname + '\r\n (' + self.belongsTo.name + ')'">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
-            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
@@ -2228,7 +2229,7 @@
         </toolSections>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_3:CrossTableDescription" name="Functions Matrix" titleExpression="All Functions Matrix" initialisation="true" domainClass="organizationchart.Organization">
+    <ownedRepresentations xsi:type="description_3:CrossTableDescription" endUserDocumentation="Matrix of all functions, organized by structures. Columns are for all employees." name="Functions Matrix" titleExpression="All Functions Matrix" initialisation="true" domainClass="organizationchart.Organization">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <ownedLineMappings name="FM_Structure" domainClass="organizationchart.OrganizationalStructure" semanticCandidatesExpression="aql:self.eAllContents(organizationchart::OrganizationalStructure)->sortedBy(str | str.name)" headerLabelExpression="feature:name">
         <ownedSubLines name="FM_Function" domainClass="organizationchart.Function" semanticCandidatesExpression="aql:self.owns->sortedBy(fct|fct.name)" headerLabelExpression="feature:name">
@@ -2260,7 +2261,14 @@
           </subModelOperations>
         </firstModelOperation>
       </ownedCreateLine>
-      <ownedColumnMappings name="FM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->sortedBy(emp | if not emp.leads->isEmpty() then '0' + emp.firstname else emp.firstname endif)"/>
+      <ownedColumnMappings name="FM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->sortedBy(emp | emp.belongsTo.name + (if not emp.leads->isEmpty() then '0' else '' endif) + emp.trigraph)">
+        <foregroundConditionalStyle predicateExpression="aql:not self.leads->isEmpty()">
+          <style>
+            <labelFormat>bold</labelFormat>
+            <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </foregroundConditionalStyle>
+      </ownedColumnMappings>
       <intersection name="FM_Performed" lineMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedLineMappings[name='FM_Structure']/@ownedSubLines[name='FM_Function']" columnMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="feature:isPerformedBy">
         <directEdit>
           <variables name="element" documentation="The semantic currently edited element."/>
@@ -2276,7 +2284,7 @@
         </directEdit>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_3:CrossTableDescription" name="Functions by Structure Matrix" titleExpression="aql:self.name + ' Functions Matrix'" initialisation="true" domainClass="organizationchart.OrganizationalStructure">
+    <ownedRepresentations xsi:type="description_3:CrossTableDescription" endUserDocumentation="Functions Matrix focus on one specific structure and its direct sunstructures. Only employee which belongs to these structures are shown in columns." name="Functions by Structure Matrix" titleExpression="aql:self.name + ' Functions Matrix'" initialisation="true" domainClass="organizationchart.OrganizationalStructure">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
       <ownedLineMappings name="FbySM_Structure" domainClass="organizationchart.OrganizationalStructure" semanticCandidatesExpression="aql:self" headerLabelExpression="feature:name">
         <ownedSubLines name="FbySM_Function" domainClass="organizationchart.Function" semanticCandidatesExpression="aql:self.owns->sortedBy(fct|fct.name)" headerLabelExpression="feature:name">
@@ -2328,7 +2336,14 @@
           </subModelOperations>
         </firstModelOperation>
       </ownedCreateLine>
-      <ownedColumnMappings name="FM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->union(self.subStructures.manager)->sortedBy(emp | if not emp.leads->isEmpty() then '0' + emp.firstname else emp.firstname endif)"/>
+      <ownedColumnMappings name="FbySM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->union(self.subStructures.manager)->sortedBy(emp | emp.belongsTo.name if not emp.leads->isEmpty() then '0' + emp.firstname else emp.firstname endif)">
+        <foregroundConditionalStyle predicateExpression="aql:not self.leads->isEmpty()">
+          <style>
+            <labelFormat>bold</labelFormat>
+            <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </foregroundConditionalStyle>
+      </ownedColumnMappings>
       <intersection name="FM_Performed" lineMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20by%20Structure%20Matrix']/@ownedLineMappings[name='FbySM_Structure']/@ownedSubLines[name='FbySM_Function'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20by%20Structure%20Matrix']/@ownedLineMappings[name='FbySM_Structure']/@ownedSubLines[name='FbySM_SubStructure']/@ownedSubLines[name='FbySM_Sub_Function']" columnMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20by%20Structure%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="feature:isPerformedBy">
         <directEdit>
           <variables name="element" documentation="The semantic currently edited element."/>
@@ -2342,6 +2357,11 @@
           </firstModelOperation>
           <mask mask="{0}"/>
         </directEdit>
+      </intersection>
+      <intersection name="FbySM_belongs" lineMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20by%20Structure%20Matrix']/@ownedLineMappings[name='FbySM_Structure'] //@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20by%20Structure%20Matrix']/@ownedLineMappings[name='FbySM_Structure']/@ownedSubLines[name='FbySM_SubStructure']" columnMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Functions%20by%20Structure%20Matrix']/@ownedColumnMappings.0" columnFinderExpression="feature:employees">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
       </intersection>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.common.tools.api.interpreter.StandardServices"/>

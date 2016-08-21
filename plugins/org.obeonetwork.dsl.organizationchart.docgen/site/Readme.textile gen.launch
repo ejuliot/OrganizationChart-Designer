@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+<stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/org.obeonetwork.dsl.organizationchart.docgen/site"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/org.obeonetwork.dsl.organizationchart.docgen/src/org/obeonetwork/dsl/organizationchart/docgen/main/README_textile.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.obeonetwork.dsl.organizationchart.docgen.main.README_textile"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/obeo/dev/OrgaChart/od9/git/plugins/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign&quot; &quot;C:/obeo/dev/OrgaChart/od9/git/plugins/org.obeonetwork.dsl.organizationchart.docgen/site&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.obeonetwork.dsl.organizationchart.docgen"/>
+</launchConfiguration>

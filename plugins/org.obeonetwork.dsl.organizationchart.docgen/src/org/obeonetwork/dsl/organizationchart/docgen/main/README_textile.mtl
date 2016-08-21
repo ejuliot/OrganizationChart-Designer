@@ -1,0 +1,34 @@
+[comment encoding = UTF-8 /]
+[module README_textile('http://www.eclipse.org/sirius/description/1.1.0', 'http://www.eclipse.org/sirius/diagram/description/1.1.0', 'http://www.eclipse.org/sirius/table/description/1.1.0', 'http://www.eclipse.org/sirius/tree/description/1.0.0')]
+
+
+[template public generateElement(vp : Viewpoint)]
+[comment @main/]
+[file ('README-' + vp.name + '.textile', false, 'UTF-8')]
+
+h2. Available representations
+
+[documentation/]
+
+[for (rep : RepresentationDescription | ownedRepresentations)]
+h3. [name/]
+
+[endUserDocumentation/]
+
+[if (documentation = ' ')]
+*Comments and Development documentation:*
+	[documentation/]
+[/if]
+
+[if (titleExpression <> null and not titleExpression.contains('aql:') and self.oclIsTypeOf(description::DiagramDescription))]
+	!documentation/images/generated/[titleExpression/].jpg!
+[else]
+###. [protected (name)]
+###.	!documentation/images/handcreated/[titleExpression/]REPLACEWITHTHEGOODNAME.png!
+###. [/protected]
+[/if]
+	
+[/for]
+
+[/file]
+[/template]
