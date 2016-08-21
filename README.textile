@@ -34,18 +34,14 @@ Give an overview of the organization chart of your company :
 This diagram is automatically opened as it is the entry point.
 
 
-###. Start of user code Overview
-	!documentation/images/generated/TravelAgency Organization Overview.jpg!
-###. End of user code
+	!documentation/images/generated/TravelAgency%20Organization%20Overview.jpg!
 	
 h3. Locations with Employees
 
 Show all locations and the list of employees located at each location.
 
 
-###. Start of user code Locations with Employees
-	!documentation/images/handcreated/Locations Tree.png!
-###. End of user code
+	!documentation/images/handcreated/Locations%20Tree.png!
 	
 h3. Locations
 
@@ -56,25 +52,21 @@ A layer is available to show employees without any locations.
 Several location diagrams could be created to show several regions, different levels of zoom.
 
 
-	!documentation/images/generated/Locations Map.jpg!
+	!documentation/images/generated/Locations%20Map.jpg!
 	
 h3. Structures Tree
 
 Show all structures as a containment tree
 
 
-###. Start of user code Structures Tree
-	!documentation/images/handcreated/Structures Tree.png!
-###. End of user code
+	!documentation/images/handcreated/Structures%20Tree.png!
 	
 h3. SubStructures with Employees
 
 Show the substructure of a current structure, and all its employees.
 
 
-###. Start of user code SubStructures with Employees
-	!documentation/images/handcreated/Direction Structure With Employees Tree.png!
-###. End of user code
+	!documentation/images/handcreated/Direction%20Structure%20With%20Employees%20Tree.png!
 	
 h3. Structures Organization
 
@@ -83,7 +75,7 @@ Managers are shown with bold and underline style.
 Double clic on one employee to make him manager of his structure.
 
 
-	!documentation/images/generated/Structures Organization.jpg!
+	!documentation/images/generated/Structures%20Organization.jpg!
 	
 h3. Structures Relationship
 
@@ -93,7 +85,7 @@ You can active a layer to analyse the size of each structure with dynamic size c
 A template is available to easily initiate an organization chart with a standard organization.
 
 
-	!documentation/images/generated/Structures Relationship.jpg!
+	!documentation/images/generated/Structures%20Relationship.jpg!
 	
 h3. Structure Composition
 
@@ -102,18 +94,14 @@ It shows also sub structures.
 You can easily drag and drop functions to sub structures.
 
 
-###. Start of user code Structure Composition
-	!documentation/images/generated/Direction Composition.jpg!
-###. End of user code
+	!documentation/images/generated/Direction%20Composition.jpg!
 	
 h3. Management Tree
 
 All employees as a tree from the boss to any employees, organized by management responsability.
 
 
-###. Start of user code Management Tree
-	!documentation/images/handcreated/Management Tree.png!
-###. End of user code
+	!documentation/images/handcreated/Management%20Tree.png!
 	
 h3. Management Hierarchy
 
@@ -121,23 +109,21 @@ All employees organized by hierarchy link.
 A layer is available to show picture. To automaticly associate an employee to a picture, just create an image file (.svg, .png or .jpg) with the name composed of "firstname lastname" inside a "pictures" folder.
 
 
-	!documentation/images/generated/Management Hierarchy.jpg!
+	!documentation/images/generated/Management%20Hierarchy.jpg!
 	
 h3. Manager Responsibilities
 
 Detail of each employee, and his management responsibilities
 
 
-###. Start of user code Manager Responsibilities
-	!documentation/images/generated/Alan Brooks Manager Responsabilities.jpg!
-###. End of user code
+	!documentation/images/generated/Alain%20Brooks%20Management%20Responsabilities.jpg!
 	
 h3. Managers and Structures
 
 Show all structures and their managers. Links are based on relationship between managers and structures, not on hierarchy between managers.
 
 
-	!documentation/images/generated/Managers and Structures.jpg!
+	!documentation/images/generated/Managers%20and%20Structures.jpg!
 	
 h3. All Employees with their Structures
 
@@ -145,43 +131,35 @@ Show all structures as a container with inside them the picture of employees.
 Several filters are available to select which information need to be shown.
 
 
-	!documentation/images/generated/All Employees with their Structures.jpg!
+	!documentation/images/generated/All%20Employees%20with%20their%20Structures.jpg!
 	
 h3. Employees Description
 
 Table to view and edit details of all employees.
 
 
-###. Start of user code Employees Description
-	!documentation/images/handcreated/Employees Description.png!
-###. End of user code
+	!documentation/images/handcreated/Employees%20Description.png!
 	
 h3. Functions Allocation
 
 Allocation of functions between employees of a structure.
 
 
-###. Start of user code Functions Allocation
-	!documentation/images/generated/Direction Functions Allocation.jpg!
-###. End of user code
+	!documentation/images/generated/Direction%20Functions Allocation.jpg!
 	
 h3. Functions Matrix
 
 Matrix of all functions, organized by structures. Columns are for all employees.
 
 
-###. Start of user code Functions Matrix
-	!documentation/images/handcreated/Functions Matrix.png!
-###. End of user code
+	!documentation/images/handcreated/Functions%20Matrix.png!
 	
 h3. Functions by Structure Matrix
 
 Functions Matrix focus on one specific structure and its direct sunstructures. Only employee which belongs to these structures are shown in columns.
 
 
-###. Start of user code Functions by Structure Matrix
-	!documentation/images/handcreated/Direction Functions Matrix.png!
-###. End of user code
+	!documentation/images/handcreated/Direction%20Functions%20Matrix.png!
 	
 
 
