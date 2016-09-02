@@ -1,35 +1,51 @@
 Tools
 	Operations
-		Edge Style
-			preSource is not available
-				SR_Structure_Link
-		For
-			Need to convert a set to a sequence (without, classcastexception)
-			SR tool populate
 		Precondition
-			during validate, should verify the query answer a boolean
+			VSM validation: should verify the query answer a boolean with a warning.
 		Reconnection
-			otherEnd variable is not proposed in the children node of the tool
+			otherEnd variable is not proposed in the tree list of variables (but is available in completion)
 			otherEnd should be rename otherEndView and a otherEnd variable should be provided to get access to semantic element without the need to do aql:otherEnd.oclAsType(diagram::DEdge).target
-			otherEnd is about DEdge for target reconnection and DNode for source reconnection. It is not consistent
+			otherEnd is about DEdge for target reconnection and DNode for source reconnection. It is not consistent.
+		Operation Action
+			a new variable (selectedElements?) should be proposed to obtain semantic elements concerned by this action, without the need to go inside VP MM (such as aql:self.oclAsType(diagram::DNodeListElement).target.oclAsType(organizationchart::Employee))
+			-> SO_Op_Set Manager
+		Change Context
+			Need to use change context to just perform a Java service operation in a tool.
 Tree
-	Drop doesn't work
-	tree edge doesn't respect the doc : "Tree: this style can be seen as a special case of Manhattan, with always two vertical segments and an horizontal one between them. If one graphical element serves as the source for several edges using this style, their first vertical segment (the stem of the tree) will be merged, and their horizontal segments will all appear as a single line."
+	Drop doesn't allow any d'n d even if precondition is aql:true 
+	Precondition don't have access to element, or self is on root of diagram, not drop element 
+	-> MT_Drop_Employee
 	
 edge
-	SR manager + SC struct function
-		it's hard to do a conditional style based on target or source
+	it should be easier to add 2 variables for conditionstyle on edge : source & target (to semantic elements)
+	tree edge doesn't respect the doc : "Tree: this style can be seen as a special case of Manhattan, with always two vertical segments and an horizontal one between them. If one graphical element serves as the source for several edges using this style, their first vertical segment (the stem of the tree) will be merged, and their horizontal segments will all appear as a single line." Tree edges move several edges instead of only one and horizontal segments aren't aligned.
+		-> Structure Organization, Management Hierarchy, ...
 
 table / matrix
-	label edit doesn't work	
+	label edit doesn't work (no action performs)
+	variable 0 should be removed (dixit PCD)	
+	-> FM_Performed
+
+VSM completion
+	- the tooltip associated to self variable should print the EClass name (and documentation)
+	- completion on the parameter of oclIsTypeOf() search only in EClass name, not in prefix. So, all domain class are not proposed to completion. As the best practices is now to use prefix, it is a bigger problem than previous versions of Sirius. 
 		
-OrderTreeLayout : children expression validation/completion is based on root element of diagram instead of NodeMapping 	
+OrderTreeLayout : children expression validation/completion is based on root element of diagram instead of NodeMapping. Not consistent with the rest of VSM. 	
 	
-Export Images : emptuy images for some layers	
+SVG image is not rendered at the contrainted size during initial creation of diagram or apply a new layer. An automatic resize fix it.
+	-> Management Hierarchy
 	
+Export Images : some images are a blank vertical picture. Several image per representations with suffix _1 _2 , etc.
+
+NPE at org.eclipse.sirius.diagram.business.internal.componentization.mappings.DiagramDescriptionMappingsRegistryImpl.cleanDiagramDescriptionNoMoreInResource(DiagramDescriptionMappingsRegistryImpl.java:121)
+
+Structure Organization : underline on Node label works but this exception is launched : org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value 'underline' is not legal. (file:/C:/org.obeonetwork.dsl.organizationchart.design/description/OrganizationChart.odesign, 518, 53)
+Caused by: java.lang.IllegalArgumentException: The value '' is not a valid enumerator of 'FontFormat'
+
+Manager Responsibilities : Filter on compartiment is not valid but works. Move the validation error to a warning
+
 Q
 	Del et unset dans SC Del FctEmp
-	StructuresRelationShip : label on end (variable for target ?)
   
 bundle
   http://stackoverflow.com/questions/10999323/error-in-tycho-while-replacing-the-product-ico-files

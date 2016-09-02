@@ -1,20 +1,9 @@
 package org.obeonetwork.dsl.organizationchart.design.services;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.sirius.common.tools.api.util.WorkspaceUtil;
 //import org.eclipse.core.runtime.Platform;
 import org.obeonetwork.dsl.organizationchart.Employee;
 //import org.obeonetwork.dsl.organizationchart.design.Activator;

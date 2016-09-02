@@ -22,6 +22,8 @@ h3. [name/]
 
 [if (titleExpression <> null and not titleExpression.contains('aql:') and self.oclIsTypeOf(description::DiagramDescription))]
 	!documentation/images/generated/[titleExpression.replace(' ', '%20')/].jpg!
+[elseif (documentation.contains('screenshot:'))]
+	![documentation.substring(documentation.index('screenshot:') + 'screenshot:'.size(), documentation.size())/]!	
 [else]
 ###. [protected (name)]
 ###.	!documentation/images/handcreated/[titleExpression.replace(' ', '%20')/]REPLACEWITHTHEGOODNAME.png!
