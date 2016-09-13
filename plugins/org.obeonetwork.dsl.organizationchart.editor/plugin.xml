@@ -31,5 +31,12 @@
             contributorClass="org.obeonetwork.dsl.organizationchart.presentation.OrganizationChartActionBarContributor">
       </editor>
    </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <file-association
+            content-type="org.eclipse.emf.compare.content.type"
+            file-extensions="orgachart">
+      </file-association>
+   </extension>
 
 </plugin>
