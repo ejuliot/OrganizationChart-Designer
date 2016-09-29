@@ -220,6 +220,10 @@ Each party waives its rights to a jury trial in any resulting
 litigation.
    </license>
 
+   <url>
+      <discovery label="OrganizationChart" url="https://raw.githubusercontent.com/ejuliot/OrganizationChart-Designer/updates/latest/repository/"/>
+   </url>
+
    <requires>
       <import feature="org.eclipse.gmf.runtime.notation" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime" version="0.0.0" match="greaterOrEqual"/>

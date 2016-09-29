@@ -176,7 +176,7 @@
       <property name="aboutImage" value="icons/about.gif"/>
       <property
             name="aboutText"
-            value="OrganizationChart&#x0A;&#x0A;Version  1.0.0&#x0A;&#x0A;&#x0A;Copyright (c) 2014 Etienne Juliot. All Rights Reserved.&#x0A;&#x0A;Visit http://www.obeo.fr"/>
+            value="OrganizationChart&#x0A;&#x0A;Version  1.0.0&#x0A;&#x0A;&#x0A;Copyright (c) 2014-2016 Etienne Juliot. All Rights Reserved.&#x0A;&#x0A;Visit http://www.obeo.fr"/>
       <property name="startupForegroundColor" value="000000"/>
       <property name="startupMessageRect" value="7,308,458,18"/>
       <property name="startupProgressRect" value="0,328,458,18"/>

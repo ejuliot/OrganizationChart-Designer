@@ -1,5 +1,7 @@
 h1. Welcome to OrganizationChart Designer
 
+	!documentation/images/orgachart.svg!
+
 This modeler provides a set of common diagrams to work with Organization Chart. 
 
 These plugins are released under the EPL Open-Source License.
