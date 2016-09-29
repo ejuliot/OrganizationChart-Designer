@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2014 Etienne Juliot.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Etienne Juliot - initial API and implementation
+
+Launch with mvn clean install -Pcreate-installer 
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--parent>
+    <groupId>org.obeonetwork.dsl.organizationchart</groupId>
+    <artifactId>product.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../../releng/org.obeonetwork.dsl.organizationchart.product.parent</relativePath>
+  </parent-->
+
+	<properties>
+		<maven.version>3.0.3</maven.version>
+		<tycho.version>0.14.1</tycho.version>
+   		<product-id>org.obeonetwork.dsl.organizationchart.branding.product</product-id>
+	</properties>
+	
+  <artifactId>org.obeonetwork.dsl.organizationchart.installer</artifactId>
+  <!--packaging>eclipse-repository</packaging-->
+
+  <name>OrganizationChart Installer Repository</name>
+
+
+  <profiles> 
+  	<profile> 
+  		<id>create-installer</id> 
+  		<build> 
+  			<plugins> 
+  				<plugin> 
+  					<groupId>org.eclipselabs.tycho.installer.plugin</groupId> 
+  					<artifactId>tycho-installer-plugin</artifactId> 
+  					<version>0.9.0-SNAPSHOT</version> 
+  					<executions> 
+  						<execution> 
+  							<id>create-installer</id> 
+  							<phase>package</phase> 
+  							<goals> 
+  								<goal>create-installer</goal> 
+  							</goals> 
+  						</execution> 
+  					</executions> 
+  					<configuration> 
+  						<manufacturer>Etienne Juliot</manufacturer> 
+  						<productFile>../../packaging/org.obeonetwork.dsl.organizationchart.product/sketcher.product</productFile> 
+  						<rootFolder>${project.build.directory}/products/${product-id}/installer</rootFolder> 
+  						<installerName>OrganizationChart-${project.version}</installerName> 
+  					</configuration> 
+  				</plugin> 
+  			</plugins> 
+  		</build> 
+  	</profile>
+  </profiles>
+
+</project>
