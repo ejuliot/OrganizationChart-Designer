@@ -1,6 +1,6 @@
 h1. Welcome to OrganizationChart Designer
 
-	!documentation/images/orgachart.svg!
+	!documentation/images/orgachart.png!
 
 This modeler provides a set of common diagrams to work with Organization Chart. 
 
