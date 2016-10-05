@@ -1,0 +1,33 @@
+<project name="org.obeonetwork.dsl.organizationchart.installer.nsis" default="make-installer">
+	
+	<property file="build.properties" />
+	
+	<target name="prepare-installer">
+		<delete dir="${build.dir}" />
+		<unzip dest="${build.inflated.dir}">
+			<fileset dir="${product.dir}">
+				<include name="*-win32.win32.x86_64.zip" />
+			</fileset>
+		</unzip>
+     <move file="${build.inflated.dir}/${product.name}" tofile="${build.inflated.dir}"/>
+	</target>
+	
+	<target name="make-installer" depends="prepare-installer">
+		<copy todir="${build.dir}">
+			<fileset dir=".">
+				<include name="*.nsi" />
+				<include name="*.ico" />
+				<include name="*.bmp" />
+				<include name="*.png" />
+			</fileset>
+		</copy>
+		<exec executable="${nsisMaker}" dir="${build.dir}">
+			<arg value="${product.name}_x86_64.nsi" />
+		</exec>
+		<delete dir="${build.inflated.dir}" />
+		<!--move todir="${project.build.directory}">
+		    <fileset dir="${build.dir}"/>
+		</move-->
+	</target>
+	
+</project>

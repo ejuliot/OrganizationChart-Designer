@@ -20,6 +20,27 @@ Function .onInit
 	  StrCpy $INSTDIR "$LOCALAPPDATA\OrganizationChart"
 	${endif}
   ${endif}
+  
+  ; set the splash screen
+  SetOutPath $TEMP
+  File /oname=spltmp.bmp "splash.bmp"
+
+; optional
+; File /oname=spltmp.wav "my_splashsound.wav"
+
+  splash::show 2000 $TEMP\spltmp
+
+  Pop $0 ; $0 has '1' if the user closed the splash screen early,
+	 ; '0' if everything closed normally, and '-1' if some error occurred.
+
+  Delete $TEMP\spltmp.bmp
+;  Delete $TEMP\spltmp.wav
+  
+  
+  ;AddBrandingImage top 20
+  ;SetBrandingImage "splash.bmp"
+  ;SetBrandingImage orgachart.bmp
+  
 FunctionEnd
 
 Function un.isEmptyDir
@@ -50,18 +71,20 @@ FunctionEnd
 ;--------------------------------
 Name "OrganizationChart"
 OutFile "OrganizationChart-setup.exe"
+XPStyle on
 
 ;--------------------------------
 !define MUI_ICON "logo_win.ico"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "orgachart.png"
+!define MUI_HEADERIMAGE_BITMAP "orgachart.bmp"
 !define MUI_ABORTWARNING
 
 ;--------------------------------
 ;Pages
 
-!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_WELCOME   
+;!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
@@ -81,7 +104,8 @@ Section "OrganizationChart" SecInstall
   SetOutPath $INSTDIR
   
   ; Unzip program files
-  File /r ..\org.obeonetwork.dsl.organizationchart.product\target\products\org.obeonetwork.dsl.organizationchart.branding.product\win32\win32\x86_64\OrganizationChart\*.*
+  ;File /r ..\org.obeonetwork.dsl.organizationchart.product\target\products\org.obeonetwork.dsl.organizationchart.branding.product\win32\win32\x86_64\OrganizationChart\*.*
+  File /r .\f\*.*
 
   ; Create Desktop & Start Menu shortcuts
   CreateShortCut "$DESKTOP\OrganizationChart.lnk" "$INSTDIR\organizationchart.exe" ""
@@ -111,11 +135,12 @@ SectionEnd
 ;--------------------------------
 ;Descriptions
 
-LangString DESC_SecInstall ${LANG_ENGLISH} "The OrganizationChart Application"
+LangString DESC_SecInstall ${LANG_ENGLISH} "OrganizationChart Designer"   
 
-!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-!insertmacro MUI_DESCRIPTION_TEXT ${SecInstall} $(DESC_SecInstall)
-!insertmacro MUI_FUNCTION_DESCRIPTION_END
+; if components page is activated
+;!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+;  !insertmacro MUI_DESCRIPTION_TEXT ${SecInstall} $(DESC_SecInstall)
+;!insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
 ;Uninstaller Section
