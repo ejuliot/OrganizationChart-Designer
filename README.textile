@@ -12,11 +12,19 @@ More details about features, screenshots, release notes, dependencies here:
 This tool isn't yet stable. 
 
 
-h2. Download
+h2. Download and Installation
 
-Download the last version of OrganizationChart here: https://github.com/ejuliot/OrganizationChart-Designer/releases
+h3. Ready to use binary
 
-h3. Update Sites
+Download the last version of OrganizationChart here: https://github.com/ejuliot/OrganizationChart-Designer/releases.
+You can just the zip file which doesn't require any installation and works for Windows, MacOS and Linux.
+
+For Windows users, you can use the installer by using OrganizationChart-setup.exe. It will add a launcher in your start menu and an uninstaller.
+
+h3. Eclipse Update Sites
+
+Eclipse users can install OrganizationChart Designer as a plug-in.
+It has been tested with Eclipse Neon.
 
 Nightly (Eclipse and Sirius based) : https://github.com/ejuliot/OrganizationChart-Designer/releases
 
@@ -173,6 +181,13 @@ h1. Contributing
 
 Just use github, fork our "main repository":https://github.com/ejuliot/OrganizationChart-Designer do your changes and trigger a "pull request":https://help.github.com/articles/using-pull-requests , we'll be happy to consider it for inclusion.
 To setup your dev environment, just download Obeo Designer 9, configure EGit and import all these projects.  
+
+h2. Add new representations
+
+!https://www.eclipse.org/sirius/images/logos/logo.png!
+
+You can use Sirius to create your own graphical representation to add new view on your organization chart. It is simple to use and you can find plenty of nice tutorials at https://www.eclipse.org/sirius
+
 
 h2. Building the updatesite for Sirius
 
