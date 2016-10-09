@@ -235,6 +235,10 @@ litigation.
       <import feature="org.eclipse.emf.compare" version="3.2.0.201605311222"/>
       <import feature="org.eclipse.emf.compare.diagram.sirius" version="3.2.0.201605311222"/>
       <import feature="org.eclipse.emf.compare.ide.ui" version="3.2.0.201605311222"/>
+      <import plugin="org.eclipse.emf.compare.diagram"/>
+      <import plugin="org.eclipse.emf.compare.diagram.edit"/>
+      <import plugin="org.eclipse.emf.compare.diagram.ide.ui"/>
+      <import plugin="org.eclipse.emf.compare.diagram.ide.ui.sirius"/>
    </requires>
 
    <plugin
