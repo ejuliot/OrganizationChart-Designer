@@ -55,4 +55,11 @@ Contributors:
     </plugins>
   </build>
 
+	<distributionManagement>
+	  <repository>
+	      <id>bintray-ejuliot-maven-repo</id>
+	      <url>https://api.bintray.com/maven/ejuliot/maven-repo/org.obeonetwork.dsl.organizationchart/;publish=1</url>
+	  </repository>
+	</distributionManagement>
+
 </project>
