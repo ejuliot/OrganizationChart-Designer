@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="OrganizationChart" version="11.0.0.201601261200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="OrganizationChart" version="11.1.1.201610211630">
   <ownedViewpoints name="OrganizationChart" modelFileExtension="orgchart">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" documentation="screenshot:documentation/images/generated/TravelAgency%20Organization%20Overview.jpg" endUserDocumentation="Give an overview of the organization chart of your company :&#xD;&#xA;* how many locations&#xD;&#xA;* how many structures&#xD;&#xA;* how many employees and managers&#xD;&#xA;&#xD;&#xA;This diagram is automatically opened as it is the entry point." name="Overview" titleExpression="aql:self.name + ' Overview'" initialisation="true" showOnStartup="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
@@ -730,17 +730,18 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="Relation between structure.&#xD;&#xA;You can active a layer to analyse the size of each structure with dynamic size computed from nomber of employees.&#xD;&#xA;&#xD;&#xA;A template is available to easily initiate an organization chart with a standard organization." name="Structures Relationship" titleExpression="Structures Relationship" initialisation="true" domainClass="organizationchart.Organization" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/organizationchart/1.0.0#/"/>
+      <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
       <layout xsi:type="description_1:OrderedTreeLayout" childrenExpression="aql:self.oclAsType(organizationchart::OrganizationalStructure).subStructures" nodeMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']"/>
       <defaultLayer name="Default">
         <edgeMappings name="SR_Structure_Link" sourceMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']" targetMapping="//@ownedViewpoints[name='OrganizationChart']/@ownedRepresentations[name='Structures%20Relationship']/@defaultLayer/@containerMappings[name='SR_Structure']" targetFinderExpression="feature:subStructures">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <endLabelStyleDescription labelSize="6" showIcon="false" labelExpression="aql:view.targetNode.oclAsType(diagram::DNodeContainer).target.manager.firstname + ' ' + view.targetNode.oclAsType(diagram::DNodeContainer).target.manager.lastname">
+            <endLabelStyleDescription labelSize="6" showIcon="false" labelExpression="aql:view.oclAsType(diagram::DEdge).targetNode.oclAsType(diagram::DNodeContainer).target.oclAsType(organizationchart::OrganizationalStructure).manager.firstname + ' ' + view.oclAsType(diagram::DEdge).targetNode.oclAsType(diagram::DNodeContainer).target.oclAsType(organizationchart::OrganizationalStructure).manager.lastname">
               <labelFormat>italic</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </endLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="aql:view.targetNode.oclAsType(diagram::DNodeContainer).target.manager = null">
+          <conditionnalStyles predicateExpression="aql:view.oclAsType(diagram::DEdge).targetNode.oclAsType(diagram::DNodeContainer).target.oclAsType(organizationchart::OrganizationalStructure).manager = null">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
@@ -1160,9 +1161,29 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </conditionalStyles>
+          <dropTools name="MT_Drop_Employee_3" precondition="aql:true" forceRefresh="true" elementsToSelect="var:element">
+            <firstModelOperation xsi:type="tool_1:ChangeContext" browseExpression="aql:newContainer.oclAsType(organizationchart::Employee)">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:element"/>
+            </firstModelOperation>
+            <oldContainer name="oldContainer"/>
+            <newContainer name="newContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newViewContainer"/>
+            <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+          </dropTools>
         </subItemMappings>
+        <dropTools name="MT_Drop_Employee_2" precondition="aql:true" forceRefresh="true" elementsToSelect="var:element">
+          <firstModelOperation xsi:type="tool_1:ChangeContext" browseExpression="aql:newContainer.oclAsType(organizationchart::Employee)">
+            <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:element"/>
+          </firstModelOperation>
+          <oldContainer name="oldContainer"/>
+          <newContainer name="newContainer"/>
+          <element name="element"/>
+          <newViewContainer name="newViewContainer"/>
+          <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+        </dropTools>
       </subItemMappings>
-      <dropTools name="MT_Drop_Employee" precondition="aql:true" forceRefresh="true" elementsToSelect="var:element">
+      <dropTools name="MT_Drop_Employee_1" precondition="aql:true" forceRefresh="true" elementsToSelect="var:element">
         <firstModelOperation xsi:type="tool_1:ChangeContext" browseExpression="aql:newContainer.oclAsType(organizationchart::Employee)">
           <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:element"/>
         </firstModelOperation>
@@ -1468,28 +1489,14 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:Switch">
-                <cases conditionExpression="aql:container.oclIsTypeOf(organizationchart::Organization)">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationchart.Employee" referenceName="employees" variableName="newEmployee">
-                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                      <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:newEmployee"/>
-                    </subModelOperations>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="firstname" valueExpression="&lt;Firstname>"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="lastname" valueExpression="&lt;Lastname>"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer(organizationchart::Organization)">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationchart.Employee" referenceName="employees" variableName="newEmployee">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:newEmployee"/>
                   </subModelOperations>
-                </cases>
-                <cases conditionExpression="aql:container.oclIsTypeOf(organizationchart::Employee)">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer(organizationchart::Organization)">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationchart.Employee" referenceName="employees" variableName="newEmployee">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="manages" valueExpression="var:newEmployee"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:SetValue" featureName="firstname" valueExpression="&lt;Firstname>"/>
-                      <subModelOperations xsi:type="tool_1:SetValue" featureName="lastname" valueExpression="&lt;Lastname>"/>
-                    </subModelOperations>
-                  </subModelOperations>
-                </cases>
-                <default/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="firstname" valueExpression="&lt;Firstname>"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="lastname" valueExpression="&lt;Lastname>"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1619,7 +1626,7 @@
           </style>
         </containerMappings>
         <toolSections name="Indirect Reponsibilities">
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="MR_IndirectEmployees" label="Indirect Managed Employees" precondition="aql:self.oclIsTypeOf(organizationchart::Employee) or self.oclIsTypeOf(organizationchart::OrganizationalStructure)" candidatesExpression="aql:if self.oclIsTypeOf(organizationchart::Employee) then self.eContainer(organizationchart::Organization).employees else if self.oclIsTypeOf(organizationchart::OrganizationalStructure) then self.oclAsType(organizationchart::OrganizationalStructure).employees else Set{} endif endif" multiple="true" iconPath="\org.obeonetwork.dsl.organizationchart.edit\icons\full\obj16\Employee.gif" windowTitle="Manages">
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="MR_IndirectEmployees" label="Indirect Managed Employees" precondition="aql:self.oclIsTypeOf(organizationchart::Employee) or self.oclIsTypeOf(organizationchart::OrganizationalStructure)" candidatesExpression="aql:if self.oclIsTypeOf(organizationchart::Employee) then self.eContainer(organizationchart::Organization).employees else if self.oclIsTypeOf(organizationchart::OrganizationalStructure) then self.oclAsType(organizationchart::OrganizationalStructure).employees else Sequence{} endif endif" multiple="true" iconPath="\org.obeonetwork.dsl.organizationchart.edit\icons\full\obj16\Employee.gif" windowTitle="Manages">
             <element name="emp"/>
             <containerView name="orgaView"/>
             <container name="manager"/>
@@ -2130,7 +2137,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.oclAsType(organizationchart::OrganizationalStructure)">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="manager" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
@@ -2366,7 +2373,7 @@
           </subModelOperations>
         </firstModelOperation>
       </ownedCreateLine>
-      <ownedColumnMappings name="FbySM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->union(self.subStructures.manager)->sortedBy(emp | emp.belongsTo.name if not emp.leads->isEmpty() then '0' + emp.firstname else emp.firstname endif)">
+      <ownedColumnMappings name="FbySM_Emp" headerLabelExpression="aql:self.trigraph" domainClass="organizationchart.Employee" semanticCandidatesExpression="aql:self.employees->union(self.subStructures.manager)->sortedBy(emp | if not emp.leads->isEmpty() then '0' + emp.firstname else emp.firstname endif)">
         <foregroundConditionalStyle predicateExpression="aql:not self.leads->isEmpty()">
           <style>
             <labelFormat>bold</labelFormat>

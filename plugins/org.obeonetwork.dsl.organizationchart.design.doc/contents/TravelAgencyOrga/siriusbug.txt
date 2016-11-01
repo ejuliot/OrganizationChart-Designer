@@ -12,7 +12,7 @@ Tools
 		Change Context
 			Need to use change context to just perform a Java service operation in a tool.
 Tree
-	Drop doesn't allow any d'n d even if precondition is aql:true 
+	Drop doesn't allow any d'n d even if precondition is aql:true. Need to duplicate tool but still doesn't work.
 	Precondition don't have access to element, or self is on root of diagram, not drop element 
 	-> MT_Drop_Employee
 	

@@ -225,20 +225,26 @@ litigation.
    </url>
 
    <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.intro.universal"/>
+      <import plugin="org.eclipse.ui.intro" version="3.4.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui"/>
       <import feature="org.eclipse.gmf.runtime.notation" version="0.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.runtime" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime" version="4.1.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime.acceleo" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime.ide.eef" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime.ide.ui" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.runtime.ide.ui.acceleo" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.sirius.properties.feature" version="0.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.emf.compare" version="3.2.0.201605311222"/>
-      <import feature="org.eclipse.emf.compare.diagram.sirius" version="3.2.0.201605311222"/>
-      <import feature="org.eclipse.emf.compare.ide.ui" version="3.2.0.201605311222"/>
-      <import plugin="org.eclipse.emf.compare.diagram"/>
-      <import plugin="org.eclipse.emf.compare.diagram.edit"/>
-      <import plugin="org.eclipse.emf.compare.diagram.ide.ui"/>
-      <import plugin="org.eclipse.emf.compare.diagram.ide.ui.sirius"/>
+      <import feature="org.eclipse.emf.compare"/>
+      <import feature="org.eclipse.emf.compare.diagram.sirius"/>
+      <import feature="org.eclipse.emf.compare.ide.ui"/>
    </requires>
 
    <plugin
