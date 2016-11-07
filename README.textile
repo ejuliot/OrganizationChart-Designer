@@ -19,7 +19,13 @@ h3. Ready to use binary
 Download the last version of OrganizationChart here: https://github.com/ejuliot/OrganizationChart-Designer/releases.
 You can just the zip file which doesn't require any installation and works for Windows, MacOS and Linux.
 
+	!documentation/images/splash.png!
+
+
 For Windows users, you can use the installer by using OrganizationChart-setup.exe. It will add a launcher in your start menu and an uninstaller.
+
+	!documentation/images/installer_screenshot.png!
+  
 
 h3. Eclipse Update Sites
 
