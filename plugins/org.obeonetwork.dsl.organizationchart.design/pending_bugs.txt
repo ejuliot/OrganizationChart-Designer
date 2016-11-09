@@ -1,3 +1,8 @@
+This file contains the list of pending bug or missing features. It will be moved to github tracker and eclipse bugzilla.
+
+Packaging
+  when install built-in sample, initialized representation are recreated. So users have two time the same representations.
+
 Tools
 	Operations
 		Precondition
