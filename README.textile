@@ -3,13 +3,18 @@ h1. Welcome to OrganizationChart Designer
 	!documentation/images/orgachart.png!
 
 This modeler provides a set of common diagrams to work with Organization Chart. 
+It provides several representations to edit and visualize:
+* locations
+* structures
+* employees
+* hierarchy
+* functions
 
 These plugins are released under the EPL Open-Source License.
 
 More details about features, screenshots, release notes, dependencies here:
  * https://github.com/ejuliot/OrganizationChart-Designer
 
-This tool isn't yet stable. 
 
 
 h2. Download and Installation
